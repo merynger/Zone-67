@@ -134,6 +134,21 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
 @media (max-width:520px){ h2{font-size:1.45rem} }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 html{scroll-behavior:smooth}
+
+.src-list{display:grid;gap:14px}
+.src{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px}
+.src-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
+.src-n{font:700 1.3rem/1 var(--display);color:var(--c,var(--muted))}
+.src h3{font-size:1.05rem}
+.src .cite{font:13px/1.5 var(--mono);color:var(--muted);word-break:break-word}
+.src blockquote{margin:0;padding:8px 14px;border-left:3px solid var(--c,var(--line));font-style:italic;background:var(--bg)}
+.src dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;font-size:14px}
+.src dt{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.src dd{margin:0}
+@media (max-width:560px){.src dl{grid-template-columns:1fr}.src dt{padding-top:6px}}
+.ref{display:inline-block;font:600 11px var(--mono);text-decoration:none;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted);vertical-align:1px}
+.ref:hover,.ref:focus-visible{color:var(--ink);border-color:var(--ink)}
+.star{font:600 11px var(--mono);color:var(--ok);letter-spacing:.06em;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -155,7 +170,7 @@ html{scroll-behavior:smooth}
 </header>
 
 <nav class="toc" aria-label="Sections">
-  <a href="#mission">Mission</a><a href="#overview">Big picture</a><a href="#server">Server</a><a href="#network">Network</a><a href="#security">Security</a><a href="#backup">Backup</a><a href="#recovery">Disaster recovery</a><a href="#team">Who presents</a><a href="#glossary">Glossary</a>
+  <a href="#mission">Mission</a><a href="#overview">Big picture</a><a href="#server">Server</a><a href="#network">Network</a><a href="#security">Security</a><a href="#backup">Backup</a><a href="#recovery">Disaster recovery</a><a href="#team">Who presents</a><a href="#sources">Sources</a><a href="#glossary">Glossary</a>
 </nav>
 
 <!-- MISSION -->
@@ -180,7 +195,7 @@ html{scroll-behavior:smooth}
   <div class="sec-head">
     <span class="who c-lead">Presented by · Team lead</span>
     <h2>The big picture</h2>
-    <p>Everything goes through the firewall. Behind it, the core switch splits the site into four isolated zones (VLANs). The backups live in their own zone, which nobody can reach from the users' side.</p>
+    <p>Everything goes through the firewall. Behind it, the core switch splits the site into four isolated zones (VLANs). The backups live in their own zone, which nobody can reach from the users' side. <a class="ref" href="#src2">[2]</a></p>
   </div>
   <figure>
     <div class="scroll">
@@ -418,7 +433,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-net">Presented by · Network technician</span>
     <h2>Network and remote access</h2>
-    <p>The network is split into VLANs, and the firewall decides who can talk to whom. Admins working from outside never touch a server directly: they go through a VPN, then through the bastion.</p>
+    <p>The network is split into VLANs, and the firewall decides who can talk to whom. Admins working from outside never touch a server directly: they go through a VPN, then through the bastion. <a class="ref" href="#src3">[3]</a></p>
   </div>
 
   <h3>Addressing plan</h3>
@@ -505,7 +520,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-sec">Presented by · Cyber security expert</span>
     <h2>Security: defence in depth</h2>
-    <p>No single protection is perfect, so we stack them. An attacker has to break every layer to reach the data, and each layer raises an alarm.</p>
+    <p>No single protection is perfect, so we stack them. An attacker has to break every layer to reach the data, and each layer raises an alarm. <a class="ref" href="#src3">[3]</a></p>
   </div>
   <figure>
     <div class="scroll">
@@ -545,7 +560,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-bak">Presented by · Backup manager</span>
     <h2>The backup strategy</h2>
-    <p>We follow the 3-2-1-1-0 rule, the current standard for protection against ransomware. Every backup job runs by itself; humans only check the reports and test restores.</p>
+    <p>We follow the 3-2-1-1-0 rule, the current standard for protection against ransomware. Every backup job runs by itself; humans only check the reports and test restores. <a class="ref" href="#src1">[1]</a> <a class="ref" href="#src2">[2]</a></p>
   </div>
 
   <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
@@ -684,7 +699,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-bak">Presented by · Backup manager</span>
     <h2>Disaster recovery plan</h2>
-    <p>Two numbers drive the whole plan. RPO is how much recent work we can afford to lose. RTO is how long the service can stay down.</p>
+    <p>Two numbers drive the whole plan. RPO is how much recent work we can afford to lose. RTO is how long the service can stay down. <a class="ref" href="#src4">[4]</a> <a class="ref" href="#src1">[1]</a></p>
   </div>
   <figure>
     <div class="scroll">
@@ -761,6 +776,57 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
     </tbody>
   </table></div>
 </section>
+
+<section id="sources">
+  <div class="sec-head">
+    <span class="who c-lead">Documentary research</span>
+    <h2>Sources that justify our choices</h2>
+    <p>Four reliable English sources: two official government guides, one U.S. standard and one industry survey. The small tags like <a class="ref" href="#src1">[1]</a> across the page show where each source supports a choice.</p>
+  </div>
+  <div class="src-list">
+  <article class="src c-bak" id="src1">
+      <div class="src-top"><span class="src-n">[1]</span><h3>#StopRansomware Guide</h3><span class="star">★ Main source for the oral</span></div>
+      <dl>
+        <dt>Reference</dt><dd class="cite">CISA, FBI, NSA &amp; MS-ISAC (U.S. government), updated September 2023. <a href="https://www.cisa.gov/stopransomware/ransomware-guide" target="_blank" rel="noopener">https://www.cisa.gov/stopransomware/ransomware-guide</a></dd>
+        <dt>Key idea</dt><dd><blockquote>“Maintain offline, encrypted backups of critical data, and regularly test the availability and integrity of backups in a disaster recovery scenario.”</blockquote></dd>
+        <dt>In our own words</dt><dd>Ransomware looks for backups it can reach and destroys them. So at least one copy must be unplugged, all copies must be encrypted, and a backup only counts if you have tested the restore.</dd>
+        <dt>Why it is relevant</dt><dd>Written jointly by U.S. cyber and intelligence agencies, so it is an official reference. It directly justifies our offline LTO tape, the AES-256 encryption in PBS and our monthly restore test.</dd>
+        <dt>Used in</dt><dd><a href="#backup">Backup strategy</a> · <a href="#recovery">Disaster recovery</a></dd>
+      </dl>
+    </article>
+  <article class="src c-bak" id="src2">
+      <div class="src-top"><span class="src-n">[2]</span><h3>2023 Ransomware Trends Report</h3><span class="star">★ Main source for the oral</span></div>
+      <dl>
+        <dt>Reference</dt><dd class="cite">Veeam Software, press release of 23 May 2023, survey of 1,200 organisations hit by ransomware. <a href="https://www.businesswire.com/news/home/20230523005553/en" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20230523005553/en</a></dd>
+        <dt>Key idea</dt><dd><blockquote>“Attackers almost always (93%+) target backups during cyber-attacks”, and 75% of victims lost at least some of their backup repositories.</blockquote></dd>
+        <dt>In our own words</dt><dd>In almost every attack, the criminals go after the backups first, because without backups the victim is forced to pay. Three victims out of four lost part of their backups.</dd>
+        <dt>Why it is relevant</dt><dd>It gives real numbers that show why the backup zone must be isolated (VLAN 40, one port only) and why we keep a copy with no network. It is a vendor survey, so we use it for the trend and check it against the CISA guide.</dd>
+        <dt>Used in</dt><dd><a href="#overview">Big picture</a> · <a href="#backup">Backup strategy</a></dd>
+      </dl>
+    </article>
+  <article class="src c-sec" id="src3">
+      <div class="src-top"><span class="src-n">[3]</span><h3>Recommendations to secure administration of IT systems</h3></div>
+      <dl>
+        <dt>Reference</dt><dd class="cite">ANSSI (French National Cybersecurity Agency), guide ANSSI-PA-022-EN, English version, 2018. <a href="https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems" target="_blank" rel="noopener">https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems</a></dd>
+        <dt>Key idea</dt><dd><blockquote>The guide sets “security objectives and the principles for developing a secure technical architecture for administration”.</blockquote></dd>
+        <dt>In our own words</dt><dd>Administrator accounts are the keys to everything, so admin work must happen in a separate, protected zone, through controlled entry points, with strong authentication.</dd>
+        <dt>Why it is relevant</dt><dd>ANSSI is the French government agency that advises state administrations, including the Ministry of Defence, our client. It justifies our management VLAN, the bastion and MFA for admins.</dd>
+        <dt>Used in</dt><dd><a href="#network">Remote access</a> · <a href="#security">Security</a></dd>
+      </dl>
+    </article>
+  <article class="src c-sys" id="src4">
+      <div class="src-top"><span class="src-n">[4]</span><h3>SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems</h3></div>
+      <dl>
+        <dt>Reference</dt><dd class="cite">NIST (U.S. National Institute of Standards and Technology), 2010. <a href="https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf" target="_blank" rel="noopener">https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf</a></dd>
+        <dt>Key idea</dt><dd><blockquote>Defines the Recovery Time Objective (RTO) and the Recovery Point Objective (RPO) as the targets that drive a recovery plan.</blockquote></dd>
+        <dt>In our own words</dt><dd>Before choosing backup tools, you decide how much data you can lose and how long you can be down. Those two numbers decide how often you back up and how fast you must restore.</dd>
+        <dt>Why it is relevant</dt><dd>It is the international reference for disaster recovery planning. Our tiers, backup frequencies and the RPO/RTO timeline follow its method.</dd>
+        <dt>Used in</dt><dd><a href="#recovery">Disaster recovery</a></dd>
+      </dl>
+    </article>
+  </div>
+  <p style="font-size:13px;color:var(--muted)">The brief asks for at least two sources: [1] and [2] are the ones to explain in class; [3] and [4] support the answers to questions.</p>
+  </section>
 
 <!-- GLOSSARY -->
 <section id="glossary">

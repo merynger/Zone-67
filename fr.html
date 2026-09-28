@@ -134,6 +134,21 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
 @media (max-width:520px){ h2{font-size:1.45rem} }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 html{scroll-behavior:smooth}
+
+.src-list{display:grid;gap:14px}
+.src{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px}
+.src-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
+.src-n{font:700 1.3rem/1 var(--display);color:var(--c,var(--muted))}
+.src h3{font-size:1.05rem}
+.src .cite{font:13px/1.5 var(--mono);color:var(--muted);word-break:break-word}
+.src blockquote{margin:0;padding:8px 14px;border-left:3px solid var(--c,var(--line));font-style:italic;background:var(--bg)}
+.src dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;font-size:14px}
+.src dt{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.src dd{margin:0}
+@media (max-width:560px){.src dl{grid-template-columns:1fr}.src dt{padding-top:6px}}
+.ref{display:inline-block;font:600 11px var(--mono);text-decoration:none;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted);vertical-align:1px}
+.ref:hover,.ref:focus-visible{color:var(--ink);border-color:var(--ink)}
+.star{font:600 11px var(--mono);color:var(--ok);letter-spacing:.06em;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -155,7 +170,7 @@ html{scroll-behavior:smooth}
 </header>
 
 <nav class="toc" aria-label="Sommaire">
-  <a href="#mission">Mission</a><a href="#overview">Vue d'ensemble</a><a href="#server">Serveur</a><a href="#network">Réseau</a><a href="#security">Sécurité</a><a href="#backup">Sauvegarde</a><a href="#recovery">Reprise (PRA)</a><a href="#team">Qui présente</a><a href="#glossary">Glossaire</a>
+  <a href="#mission">Mission</a><a href="#overview">Vue d'ensemble</a><a href="#server">Serveur</a><a href="#network">Réseau</a><a href="#security">Sécurité</a><a href="#backup">Sauvegarde</a><a href="#recovery">Reprise (PRA)</a><a href="#team">Qui présente</a><a href="#sources">Sources</a><a href="#glossary">Glossaire</a>
 </nav>
 
 <!-- MISSION -->
@@ -180,7 +195,7 @@ html{scroll-behavior:smooth}
   <div class="sec-head">
     <span class="who c-lead">Présenté par · Cheffe d'équipe</span>
     <h2>Vue d'ensemble</h2>
-    <p>Tout passe par le pare-feu. Derrière lui, le switch cœur découpe le site en quatre zones isolées (VLAN). Les sauvegardes ont leur propre zone, inaccessible depuis le côté utilisateurs.</p>
+    <p>Tout passe par le pare-feu. Derrière lui, le switch cœur découpe le site en quatre zones isolées (VLAN). Les sauvegardes ont leur propre zone, inaccessible depuis le côté utilisateurs. <a class="ref" href="#src2">[2]</a></p>
   </div>
   <figure>
     <div class="scroll">
@@ -418,7 +433,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-net">Présenté par · Technicien réseau</span>
     <h2>Réseau et accès distant</h2>
-    <p>Le réseau est découpé en VLAN, et le pare-feu décide qui a le droit de parler à qui. Les admins qui travaillent de l'extérieur ne touchent jamais un serveur directement : ils passent par un VPN, puis par le bastion.</p>
+    <p>Le réseau est découpé en VLAN, et le pare-feu décide qui a le droit de parler à qui. Les admins qui travaillent de l'extérieur ne touchent jamais un serveur directement : ils passent par un VPN, puis par le bastion. <a class="ref" href="#src3">[3]</a></p>
   </div>
 
   <h3>Plan d'adressage</h3>
@@ -505,7 +520,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-sec">Présenté par · Expert cybersécurité</span>
     <h2>Sécurité : la défense en profondeur</h2>
-    <p>Aucune protection n'est parfaite, alors on les empile. Un attaquant doit franchir chaque couche pour atteindre les données, et chaque couche déclenche une alerte.</p>
+    <p>Aucune protection n'est parfaite, alors on les empile. Un attaquant doit franchir chaque couche pour atteindre les données, et chaque couche déclenche une alerte. <a class="ref" href="#src3">[3]</a></p>
   </div>
   <figure>
     <div class="scroll">
@@ -545,7 +560,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-bak">Présenté par · Responsable des sauvegardes</span>
     <h2>La stratégie de sauvegarde</h2>
-    <p>Nous appliquons la règle 3-2-1-1-0, la référence actuelle contre les rançongiciels. Toutes les sauvegardes tournent seules ; les humains se contentent de lire les rapports et de tester les restaurations.</p>
+    <p>Nous appliquons la règle 3-2-1-1-0, la référence actuelle contre les rançongiciels. Toutes les sauvegardes tournent seules ; les humains se contentent de lire les rapports et de tester les restaurations. <a class="ref" href="#src1">[1]</a> <a class="ref" href="#src2">[2]</a></p>
   </div>
 
   <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
@@ -684,7 +699,7 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
   <div class="sec-head">
     <span class="who c-bak">Présenté par · Responsable des sauvegardes</span>
     <h2>Plan de reprise d'activité (PRA)</h2>
-    <p>Deux chiffres pilotent tout le plan. Le RPO, c'est la quantité de travail récent qu'on accepte de perdre. Le RTO, c'est la durée pendant laquelle le service peut rester coupé.</p>
+    <p>Deux chiffres pilotent tout le plan. Le RPO, c'est la quantité de travail récent qu'on accepte de perdre. Le RTO, c'est la durée pendant laquelle le service peut rester coupé. <a class="ref" href="#src4">[4]</a> <a class="ref" href="#src1">[1]</a></p>
   </div>
   <figure>
     <div class="scroll">
@@ -761,6 +776,57 @@ sudo apt install unattended-upgrades fail2ban</pre></div>
     </tbody>
   </table></div>
 </section>
+
+<section id="sources">
+  <div class="sec-head">
+    <span class="who c-lead">Recherche documentaire</span>
+    <h2>Les sources qui justifient nos choix</h2>
+    <p>Quatre sources fiables en anglais : deux guides gouvernementaux officiels, un standard américain et une étude du secteur. Les petites étiquettes comme <a class="ref" href="#src1">[1]</a> dans la page montrent où chaque source appuie un choix.</p>
+  </div>
+  <div class="src-list">
+  <article class="src c-bak" id="src1">
+      <div class="src-top"><span class="src-n">[1]</span><h3>#StopRansomware Guide</h3><span class="star">★ Source principale pour l'oral</span></div>
+      <dl>
+        <dt>Référence</dt><dd class="cite">CISA, FBI, NSA &amp; MS-ISAC (gouvernement américain), mise à jour septembre 2023. <a href="https://www.cisa.gov/stopransomware/ransomware-guide" target="_blank" rel="noopener">https://www.cisa.gov/stopransomware/ransomware-guide</a></dd>
+        <dt>Idée clé</dt><dd><blockquote>“Maintain offline, encrypted backups of critical data, and regularly test the availability and integrity of backups in a disaster recovery scenario.”</blockquote></dd>
+        <dt>Avec nos mots</dt><dd>Un rançongiciel cherche les sauvegardes qu'il peut atteindre et les détruit. Il faut donc au moins une copie débranchée, des copies chiffrées, et une sauvegarde ne compte que si sa restauration a été testée.</dd>
+        <dt>Pourquoi elle est pertinente</dt><dd>Rédigé conjointement par des agences américaines de cybersécurité et de renseignement : c'est une référence officielle. Il justifie directement notre bande LTO hors ligne, le chiffrement AES-256 dans PBS et le test de restauration mensuel.</dd>
+        <dt>Utilisée dans</dt><dd><a href="#backup">Stratégie de sauvegarde</a> · <a href="#recovery">PRA</a></dd>
+      </dl>
+    </article>
+  <article class="src c-bak" id="src2">
+      <div class="src-top"><span class="src-n">[2]</span><h3>2023 Ransomware Trends Report</h3><span class="star">★ Source principale pour l'oral</span></div>
+      <dl>
+        <dt>Référence</dt><dd class="cite">Veeam Software, communiqué du 23 mai 2023, enquête auprès de 1 200 organisations victimes de rançongiciels. <a href="https://www.businesswire.com/news/home/20230523005553/en" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20230523005553/en</a></dd>
+        <dt>Idée clé</dt><dd><blockquote>“Attackers almost always (93%+) target backups during cyber-attacks”, et 75 % des victimes ont perdu au moins une partie de leurs dépôts de sauvegarde.</blockquote></dd>
+        <dt>Avec nos mots</dt><dd>Dans presque toutes les attaques, les criminels visent d'abord les sauvegardes : sans elles, la victime est obligée de payer. Trois victimes sur quatre ont perdu une partie de leurs sauvegardes.</dd>
+        <dt>Pourquoi elle est pertinente</dt><dd>Elle donne de vrais chiffres qui montrent pourquoi la zone de sauvegarde doit être isolée (VLAN 40, un seul port) et pourquoi on garde une copie sans réseau. C'est une étude d'éditeur : on l'utilise pour la tendance, confirmée par le guide de la CISA.</dd>
+        <dt>Utilisée dans</dt><dd><a href="#overview">Vue d'ensemble</a> · <a href="#backup">Stratégie de sauvegarde</a></dd>
+      </dl>
+    </article>
+  <article class="src c-sec" id="src3">
+      <div class="src-top"><span class="src-n">[3]</span><h3>Recommendations to secure administration of IT systems</h3></div>
+      <dl>
+        <dt>Référence</dt><dd class="cite">ANSSI (Agence nationale de la sécurité des systèmes d'information), guide ANSSI-PA-022-EN, version anglaise, 2018. <a href="https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems" target="_blank" rel="noopener">https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems</a></dd>
+        <dt>Idée clé</dt><dd><blockquote>Le guide fixe “security objectives and the principles for developing a secure technical architecture for administration”.</blockquote></dd>
+        <dt>Avec nos mots</dt><dd>Les comptes administrateurs donnent accès à tout : l'administration doit donc se faire dans une zone séparée et protégée, par des points d'entrée contrôlés, avec une authentification forte.</dd>
+        <dt>Pourquoi elle est pertinente</dt><dd>L'ANSSI est l'agence nationale qui conseille les administrations de l'État, dont le ministère de la Défense, notre client. Elle justifie notre VLAN d'administration, le bastion et la MFA des admins.</dd>
+        <dt>Utilisée dans</dt><dd><a href="#network">Accès distant</a> · <a href="#security">Sécurité</a></dd>
+      </dl>
+    </article>
+  <article class="src c-sys" id="src4">
+      <div class="src-top"><span class="src-n">[4]</span><h3>SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems</h3></div>
+      <dl>
+        <dt>Référence</dt><dd class="cite">NIST (National Institute of Standards and Technology, États-Unis), 2010. <a href="https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf" target="_blank" rel="noopener">https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf</a></dd>
+        <dt>Idée clé</dt><dd><blockquote>Définit le Recovery Time Objective (RTO) et le Recovery Point Objective (RPO) comme les objectifs qui pilotent un plan de reprise.</blockquote></dd>
+        <dt>Avec nos mots</dt><dd>Avant de choisir les outils de sauvegarde, on décide combien de données on peut perdre et combien de temps on peut être coupé. Ces deux chiffres fixent la fréquence des sauvegardes et la vitesse de restauration.</dd>
+        <dt>Pourquoi elle est pertinente</dt><dd>C'est la référence internationale pour les plans de reprise. Nos niveaux de criticité, nos fréquences et la frise RPO/RTO suivent sa méthode.</dd>
+        <dt>Utilisée dans</dt><dd><a href="#recovery">PRA</a></dd>
+      </dl>
+    </article>
+  </div>
+  <p style="font-size:13px;color:var(--muted)">La consigne demande au moins deux sources : [1] et [2] sont celles à expliquer en classe ; [3] et [4] servent à répondre aux questions.</p>
+  </section>
 
 <!-- GLOSSARY -->
 <section id="glossary">
