@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan serveur Zone 67</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#ECEFEC; --surface:#F8FAF8; --ink:#17201B; --muted:#56625B; --line:#C6CFC9;
+  --sys:#2B5E8C; --net:#1B7568; --sec:#A3322C; --bak:#A8620E; --lead:#5A4C8A;
+  --ok:#2E7D3A; --no:#A3322C;
+  --display:"Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#101512; --surface:#181F1B; --ink:#E2E8E4; --muted:#9BA69F; --line:#2F3A34;
+    --sys:#72A8DC; --net:#4FC1AE; --sec:#E5746C; --bak:#E3A14B; --lead:#A89AD9;
+    --ok:#6CC77A; --no:#E5746C;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#101512; --surface:#181F1B; --ink:#E2E8E4; --muted:#9BA69F; --line:#2F3A34;
+  --sys:#72A8DC; --net:#4FC1AE; --sec:#E5746C; --bak:#E3A14B; --lead:#A89AD9;
+  --ok:#6CC77A; --no:#E5746C;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:700;letter-spacing:.01em}
+h2{font-size:1.75rem;font-weight:700}
+h3{font-size:1.1rem;font-weight:600}
+p{margin:0;max-width:68ch}
+code,.mono{font-family:var(--mono);font-size:.88em}
+a{color:inherit}
+
+/* header */
+header.top{padding-block:40px 28px;display:grid;gap:16px}
+.stamp{display:inline-flex;gap:10px;align-items:center;font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sec);border:1.5px solid var(--sec);padding:6px 10px;width:max-content;max-width:100%;transform:rotate(-1.2deg)}
+.lede{font-size:1.08rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font:500 13px var(--mono);color:var(--muted)}
+.meta b{color:var(--ink);font-weight:500}
+
+/* nav */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-20px;padding:10px 20px;overflow-x:auto;white-space:nowrap}
+nav.toc a{display:inline-block;text-decoration:none;font:500 13px var(--mono);padding:5px 10px;border-radius:4px;color:var(--muted)}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--ink);background:var(--surface);outline:none}
+
+section{padding-block:48px 8px;display:grid;gap:22px;scroll-margin-top:56px}
+.sec-head{display:grid;gap:8px}
+.who{display:inline-flex;align-items:center;gap:8px;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c,var(--muted))}
+.who::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--c,var(--muted))}
+.c-sys{--c:var(--sys)} .c-net{--c:var(--net)} .c-sec{--c:var(--sec)} .c-bak{--c:var(--bak)} .c-lead{--c:var(--lead)}
+
+/* plain-words and say-it callouts */
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.plain,.say{padding:14px 16px;border-radius:6px}
+.plain{background:var(--surface);border:1px solid var(--line)}
+.say{border:1px dashed var(--c,var(--line))}
+.plain .lbl,.say .lbl{display:block;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.say p{font-style:italic}
+
+/* figures */
+figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px}
+figure .scroll{overflow-x:auto}
+figure svg{display:block;width:100%;height:auto;min-width:640px;color:var(--ink)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px;max-width:none}
+svg text{font-family:var(--body);fill:currentColor}
+svg .t{font-size:13px;font-weight:600}
+svg .s{font-size:11.5px;fill:var(--muted)}
+svg .m{font-family:var(--mono);font-size:11.5px}
+svg .lab{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+svg .box{fill:var(--surface);stroke:var(--line);stroke-width:1.2}
+svg .wire{stroke:currentColor;stroke-width:1.4;fill:none}
+svg .dash{stroke-dasharray:5 4}
+svg .z-sys{fill:color-mix(in srgb,var(--sys) 12%,var(--surface));stroke:var(--sys);stroke-width:1.3}
+svg .z-net{fill:color-mix(in srgb,var(--net) 12%,var(--surface));stroke:var(--net);stroke-width:1.3}
+svg .z-sec{fill:color-mix(in srgb,var(--sec) 12%,var(--surface));stroke:var(--sec);stroke-width:1.3}
+svg .z-bak{fill:color-mix(in srgb,var(--bak) 13%,var(--surface));stroke:var(--bak);stroke-width:1.3}
+svg .z-lead{fill:color-mix(in srgb,var(--lead) 12%,var(--surface));stroke:var(--lead);stroke-width:1.3}
+svg .z-mute{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+svg .f-sys{fill:var(--sys)} svg .f-net{fill:var(--net)} svg .f-sec{fill:var(--sec)} svg .f-bak{fill:var(--bak)} svg .f-lead{fill:var(--lead)}
+svg .st-sec{stroke:var(--sec)} svg .st-bak{stroke:var(--bak)} svg .st-sys{stroke:var(--sys)} svg .st-net{stroke:var(--net)}
+svg .grid{stroke:var(--line);stroke-width:1}
+svg .chip{fill:var(--surface);stroke:var(--sys);stroke-width:1}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:none}
+th{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+td.k{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.matrix td{text-align:center;font-size:12.5px;min-width:110px}
+.matrix td.k,.matrix th:first-child{text-align:left}
+.yes{color:var(--ok);font-weight:600}
+.no{color:var(--no);font-weight:600}
+.cell-yes{background:color-mix(in srgb,var(--ok) 9%,var(--surface))}
+.cell-no{background:color-mix(in srgb,var(--no) 7%,var(--surface))}
+.tag{display:inline-block;font:500 11.5px var(--mono);padding:2px 7px;border-radius:3px;border:1px solid var(--c,var(--line));color:var(--c,var(--ink));white-space:nowrap}
+
+/* steps */
+ol.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;counter-reset:s}
+ol.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px 12px 50px;position:relative;font-size:14px}
+ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:11px;font:700 15px var(--display);color:var(--c,var(--muted))}
+ol.steps b{display:block;font-weight:600}
+
+/* grids of small cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:6px;align-content:start;font-size:14px}
+.card h3{font-size:1rem}
+.card ul{margin:0;padding-left:18px}
+.big{font:700 2.3rem/1 var(--display);color:var(--bak)}
+
+pre{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;overflow-x:auto;font:13px/1.55 var(--mono)}
+pre .cm{color:var(--muted)}
+
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin-top:8px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend svg{min-width:0;width:14px;height:14px}
+
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:4px 24px}
+.gloss div{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.gloss dt{font:600 13px var(--mono)}
+.gloss dd{margin:2px 0 0;color:var(--muted)}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (max-width:520px){ h2{font-size:1.45rem} }
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+<header class="top">
+  <span class="stamp">Exercice · Non classifié · Scénario fictif</span>
+  <h1>Zone 67 — Serveur sécurisé &amp; plan de sauvegarde</h1>
+  <p class="lede">Le ministère de la Défense a chargé notre équipe de sécuriser le réseau, l'infrastructure et les outils de la Zone 67. Cette page explique comment nous installons, configurons et protégeons le serveur d'entreprise, et comment un plan de sauvegarde automatisé garde les données en sécurité, même après un sinistre.</p>
+  <div class="meta">
+    <span><a href="index.html">🇬🇧 English version</a></span>
+    <span>Client <b>Ministère de la Défense</b></span>
+    <span>Site <b>Zone 67</b></span>
+    <span>Domaine <b>zone67.lan</b></span>
+    <span>Plage IP <b>10.67.0.0/16</b></span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sommaire">
+  <a href="#mission">Mission</a><a href="#overview">Vue d'ensemble</a><a href="#server">Serveur</a><a href="#network">Réseau</a><a href="#security">Sécurité</a><a href="#backup">Sauvegarde</a><a href="#recovery">Reprise (PRA)</a><a href="#team">Qui présente</a><a href="#glossary">Glossaire</a>
+</nav>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="sec-head">
+    <span class="who c-lead">Présenté par · Cheffe d'équipe</span>
+    <h2>La mission en une minute</h2>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>Le problème</h3><p>La Zone 67 tourne sur des machines éparpillées, sans comptes centralisés, sans séparation réseau et sans sauvegardes testées. Un incendie, un rançongiciel ou un mot de passe volé suffirait à arrêter le site.</p></div>
+    <div class="card"><h3>Ce que nous livrons</h3><ul><li>Un serveur d'entreprise durci</li><li>Un réseau segmenté et filtré</li><li>Un accès distant sécurisé pour les admins</li><li>Un plan de sauvegarde et de reprise automatisé</li></ul></div>
+    <div class="card"><h3>Nos règles</h3><ul><li>Tout est interdit par défaut, on n'ouvre que le nécessaire</li><li>Aucun point unique de défaillance pour les données</li><li>Tout est journalisé, tout est documenté</li><li>Guides de durcissement ANSSI et CIS</li></ul></div>
+  </div>
+  <div class="callouts">
+    <div class="plain"><span class="lbl">En clair</span><p>Imaginez la Zone 67 comme une base militaire. Le <b>pare-feu</b> est le poste de garde à l'entrée, les <b>VLAN</b> sont des bâtiments séparés avec des portes à badge, le <b>bastion</b> est l'accueil où les visiteurs sont escortés, et les <b>sauvegardes</b> sont des copies des plans rangées dans plusieurs coffres, dont un très loin.</p></div>
+    <div class="say c-lead"><span class="lbl">À dire à l'oral</span><p>« Notre objectif est simple : si quelque chose casse, la Zone 67 continue de fonctionner ou redémarre vite, et personne n'entre sans autorisation. »</p></div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="sec-head">
+    <span class="who c-lead">Présenté par · Cheffe d'équipe</span>
+    <h2>Vue d'ensemble</h2>
+    <p>Tout passe par le pare-feu. Derrière lui, le switch cœur découpe le site en quatre zones isolées (VLAN). Les sauvegardes ont leur propre zone, inaccessible depuis le côté utilisateurs.</p>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 920 510" role="img" aria-label="Architecture Zone 67 : les admins distants et Internet arrivent sur le pare-feu pfSense, relié à un switch cœur qui découpe le site en VLAN administration, utilisateurs, serveurs et sauvegarde ; les sauvegardes sont copiées hors site et sur bande hors ligne.">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
+      </defs>
+      <!-- outside -->
+      <rect class="box" x="20" y="40" width="150" height="56" rx="6"/>
+      <text class="t" x="95" y="64" text-anchor="middle">Admin à distance</text>
+      <text class="s" x="95" y="82" text-anchor="middle">PC portable + client VPN</text>
+
+      <rect class="z-mute" x="20" y="232" width="150" height="56" rx="28"/>
+      <text class="t" x="95" y="256" text-anchor="middle">Internet</text>
+      <text class="s" x="95" y="274" text-anchor="middle">non fiable</text>
+
+      <rect class="z-bak" x="20" y="420" width="150" height="64" rx="6"/>
+      <text class="t" x="95" y="446" text-anchor="middle">Site de secours</text>
+      <text class="s" x="95" y="464" text-anchor="middle">copie de sauvegarde n°2</text>
+
+      <!-- firewall -->
+      <rect class="z-sec" x="240" y="200" width="120" height="120" rx="6"/>
+      <text class="t" x="300" y="238" text-anchor="middle">pfSense</text>
+      <text class="s" x="300" y="258" text-anchor="middle">pare-feu + VPN</text>
+      <text class="m" x="300" y="290" text-anchor="middle" fill="var(--sec)" style="fill:var(--sec)">tout REFUSÉ</text>
+
+      <!-- switch -->
+      <rect class="z-net" x="430" y="200" width="120" height="120" rx="6"/>
+      <text class="t" x="490" y="238" text-anchor="middle">Switch cœur</text>
+      <text class="s" x="490" y="258" text-anchor="middle">trunk 802.1Q</text>
+      <text class="m" x="490" y="290" text-anchor="middle">VLAN 10–40</text>
+
+      <!-- wires outside -> firewall -->
+      <path class="wire dash" d="M170 68 H300 V198" marker-end="url(#ar)"/>
+      <text class="lab" x="178" y="60">OpenVPN + MFA</text>
+      <line class="wire" x1="170" y1="260" x2="238" y2="260" marker-end="url(#ar)"/>
+      <text class="lab" x="204" y="252" text-anchor="middle">WAN</text>
+      <path class="wire dash" d="M172 452 H300 V322" marker-end="url(#ar)" marker-start="url(#ar)"/>
+      <text class="lab" x="236" y="444" text-anchor="middle">synchro IPsec</text>
+      <line class="wire" x1="360" y1="260" x2="428" y2="260" marker-end="url(#ar)"/>
+      <text class="lab" x="394" y="252" text-anchor="middle">LAN</text>
+
+      <!-- bus -->
+      <path class="wire" d="M550 260 H580"/>
+      <line class="wire" x1="580" y1="60" x2="580" y2="430"/>
+      <line class="wire" x1="580" y1="60" x2="608" y2="60" marker-end="url(#ar)"/>
+      <line class="wire" x1="580" y1="144" x2="608" y2="144" marker-end="url(#ar)"/>
+      <line class="wire" x1="580" y1="268" x2="608" y2="268" marker-end="url(#ar)"/>
+      <line class="wire" x1="580" y1="430" x2="608" y2="430" marker-end="url(#ar)"/>
+
+      <!-- VLAN 10 -->
+      <rect class="z-sec" x="610" y="20" width="290" height="80" rx="6" style="fill:color-mix(in srgb,var(--sec) 6%,var(--surface))"/>
+      <text class="t" x="624" y="46">VLAN 10 · Administration</text>
+      <text class="s" x="624" y="68">iDRAC · interface web Proxmox</text>
+      <text class="s" x="624" y="86">bastion BAST01 (seule porte admin)</text>
+
+      <!-- VLAN 30 -->
+      <rect class="z-lead" x="610" y="112" width="290" height="64" rx="6"/>
+      <text class="t" x="624" y="138">VLAN 30 · Utilisateurs</text>
+      <text class="s" x="624" y="160">postes de travail · imprimantes</text>
+
+      <!-- VLAN 20 -->
+      <rect class="z-sys" x="610" y="188" width="290" height="160" rx="6" style="fill:color-mix(in srgb,var(--sys) 7%,var(--surface))"/>
+      <text class="t" x="624" y="210">VLAN 20 · Serveurs</text>
+      <rect class="box" x="624" y="220" width="262" height="116" rx="5"/>
+      <text class="m" x="636" y="240">hôte Proxmox VE</text>
+      <rect class="chip" x="636" y="252" width="76" height="30" rx="4"/><text class="m" x="674" y="271" text-anchor="middle">DC01</text>
+      <rect class="chip" x="717" y="252" width="76" height="30" rx="4"/><text class="m" x="755" y="271" text-anchor="middle">DC02</text>
+      <rect class="chip" x="798" y="252" width="76" height="30" rx="4"/><text class="m" x="836" y="271" text-anchor="middle">FS01</text>
+      <rect class="chip" x="676" y="292" width="76" height="30" rx="4"/><text class="m" x="714" y="311" text-anchor="middle">WEB01</text>
+      <rect class="chip" x="757" y="292" width="76" height="30" rx="4"/><text class="m" x="795" y="311" text-anchor="middle">SIEM01</text>
+
+      <!-- backup arrow -->
+      <line class="wire st-bak" x1="700" y1="338" x2="700" y2="390" marker-end="url(#ar)" style="stroke:var(--bak)"/>
+      <text class="lab" x="708" y="372">sauvegarde · TCP 8007 seul</text>
+
+      <!-- VLAN 40 -->
+      <rect class="z-bak" x="610" y="360" width="290" height="140" rx="6" style="fill:color-mix(in srgb,var(--bak) 7%,var(--surface))"/>
+      <text class="t" x="624" y="382" style="font-size:12px">VLAN 40 · Sauvegarde (isolé)</text>
+      <rect class="box" x="624" y="392" width="126" height="94" rx="5" style="stroke:var(--bak)"/>
+      <text class="t" x="687" y="422" text-anchor="middle">PBS #1</text>
+      <text class="s" x="687" y="442" text-anchor="middle">sur site</text>
+      <text class="s" x="687" y="460" text-anchor="middle">autre salle</text>
+      <rect class="box dash" x="762" y="392" width="126" height="94" rx="5" style="stroke:var(--bak);stroke-dasharray:5 4"/>
+      <text class="t" x="825" y="422" text-anchor="middle">Bande LTO</text>
+      <text class="s" x="825" y="442" text-anchor="middle">coffre fermé</text>
+      <text class="s" x="825" y="460" text-anchor="middle">air gap, aucun câble</text>
+    </svg>
+    </div>
+    <figcaption>Flèches pleines : trafic normal. Flèches pointillées : tunnels chiffrés. La seule flèche qui entre dans la zone de sauvegarde est la sauvegarde elle-même, sur un seul port. La bande n'a aucun câble : aucun attaquant ne peut l'atteindre par le réseau.</figcaption>
+  </figure>
+  <div class="callouts">
+    <div class="plain"><span class="lbl">Pourquoi quatre zones ?</span><p>Si le PC d'un utilisateur est infecté, le virus reste dans le bâtiment des utilisateurs. Il ne peut pas entrer dans la salle d'administration ni dans la chambre forte des sauvegardes, car le pare-feu n'ouvre pas ces portes.</p></div>
+    <div class="say c-lead"><span class="lbl">À dire à l'oral</span><p>« Chaque paquet passe par le pare-feu. Chaque zone ne parle qu'aux zones dont elle a vraiment besoin. »</p></div>
+  </div>
+</section>
+
+<!-- SERVER -->
+<section id="server">
+  <div class="sec-head">
+    <span class="who c-sys">Présenté par · Ingénieur système</span>
+    <h2>Le serveur : matériel, OS et services</h2>
+    <p>Un serveur physique en rack fait tourner un hyperviseur, qui lui-même fait tourner plusieurs machines virtuelles. Chaque VM a un seul rôle : une panne sur un service ne fait pas tomber les autres.</p>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 392" role="img" aria-label="Pile serveur en trois couches : le matériel en bas, l'hyperviseur Proxmox VE au milieu, et six machines virtuelles en haut, chacune avec son OS et son rôle.">
+      <!-- VMs band -->
+      <rect class="z-sys" x="20" y="20" width="860" height="150" rx="6" style="fill:color-mix(in srgb,var(--sys) 6%,var(--surface))"/>
+      <text class="lab" x="34" y="40">COUCHE 3 · MACHINES VIRTUELLES (un rôle chacune)</text>
+      <g>
+        <rect class="box" x="34" y="50" width="128" height="108" rx="5"/>
+        <text class="m" x="46" y="72" style="font-weight:500">DC01</text>
+        <text class="s" x="46" y="94">Win Server 2022</text>
+        <text class="s" x="46" y="112">AD · DNS · DHCP</text>
+        <text class="lab" x="46" y="142">2 vCPU · 8 Go</text>
+      </g>
+      <g>
+        <rect class="box" x="175" y="50" width="128" height="108" rx="5"/>
+        <text class="m" x="187" y="72" style="font-weight:500">DC02</text>
+        <text class="s" x="187" y="94">Win Server 2022</text>
+        <text class="s" x="187" y="112">réplique AD + DNS</text>
+        <text class="lab" x="187" y="142">2 vCPU · 8 Go</text>
+      </g>
+      <g>
+        <rect class="box" x="316" y="50" width="128" height="108" rx="5"/>
+        <text class="m" x="328" y="72" style="font-weight:500">FS01</text>
+        <text class="s" x="328" y="94">Win Server 2022</text>
+        <text class="s" x="328" y="112">partages SMB</text>
+        <text class="lab" x="328" y="142">4 vCPU · 16 Go</text>
+      </g>
+      <g>
+        <rect class="box" x="457" y="50" width="128" height="108" rx="5"/>
+        <text class="m" x="469" y="72" style="font-weight:500">WEB01</text>
+        <text class="s" x="469" y="94">Debian 13</text>
+        <text class="s" x="469" y="112">Intranet · Nginx</text>
+        <text class="lab" x="469" y="142">2 vCPU · 4 Go</text>
+      </g>
+      <g>
+        <rect class="box" x="598" y="50" width="128" height="108" rx="5"/>
+        <text class="m" x="610" y="72" style="font-weight:500">SIEM01</text>
+        <text class="s" x="610" y="94">Debian 13</text>
+        <text class="s" x="610" y="112">Wazuh (logs, alertes)</text>
+        <text class="lab" x="610" y="142">8 vCPU · 32 Go</text>
+      </g>
+      <g>
+        <rect class="box" x="739" y="50" width="128" height="108" rx="5"/>
+        <text class="m" x="751" y="72" style="font-weight:500">BAST01</text>
+        <text class="s" x="751" y="94">Debian 13</text>
+        <text class="s" x="751" y="112">bastion Guacamole</text>
+        <text class="lab" x="751" y="142">2 vCPU · 4 Go</text>
+      </g>
+
+      <!-- hypervisor -->
+      <rect class="z-net" x="20" y="186" width="860" height="56" rx="6"/>
+      <text class="lab" x="34" y="206">COUCHE 2 · HYPERVISEUR</text>
+      <text class="t" x="34" y="228">Proxmox VE 9</text>
+      <text class="s" x="150" y="228">partage le matériel entre les VM · snapshots · pont vmbr0 compatible VLAN · pare-feu par VM</text>
+
+      <!-- hardware -->
+      <rect class="z-mute" x="20" y="258" width="860" height="120" rx="6"/>
+      <text class="lab" x="34" y="278">COUCHE 1 · MATÉRIEL (serveur rack 2U)</text>
+      <g class="s">
+        <rect class="box" x="34" y="288" width="128" height="76" rx="5"/>
+        <text x="46" y="312" class="t" style="font-size:12px">CPU</text><text x="46" y="332">2× Intel Xeon</text><text x="46" y="350">32 cœurs au total</text>
+        <rect class="box" x="175" y="288" width="128" height="76" rx="5"/>
+        <text x="187" y="312" class="t" style="font-size:12px">Mémoire</text><text x="187" y="332">256 Go ECC</text><text x="187" y="350">corrige les erreurs</text>
+        <rect class="box" x="316" y="288" width="128" height="76" rx="5"/>
+        <text x="328" y="312" class="t" style="font-size:12px">Disques système</text><text x="328" y="332">RAID 1</text><text x="328" y="350">2× SSD 480 Go</text>
+        <rect class="box" x="457" y="288" width="128" height="76" rx="5"/>
+        <text x="469" y="312" class="t" style="font-size:12px">Disques données</text><text x="469" y="332">RAID 10</text><text x="469" y="350">4× SSD 3,84 To</text>
+        <rect class="box" x="598" y="288" width="128" height="76" rx="5"/>
+        <text x="610" y="312" class="t" style="font-size:12px">Réseau</text><text x="610" y="332">2× 10 Gb/s</text><text x="610" y="350">agrégés (LACP)</text>
+        <rect class="box" x="739" y="288" width="128" height="76" rx="5"/>
+        <text x="751" y="312" class="t" style="font-size:12px">Résilience</text><text x="751" y="332">2 alims sur onduleur</text><text x="751" y="350">iDRAC · TPM 2.0</text>
+      </g>
+    </svg>
+    </div>
+    <figcaption>À lire de bas en haut. Les VM utilisent 20 vCPU et 72 Go de RAM : l'hôte garde de la marge pour évoluer et pour restaurer une VM rapidement après un incident. Exemples de modèles : Dell PowerEdge R760 ou HPE ProLiant DL380 Gen11.</figcaption>
+  </figure>
+
+  <div class="callouts">
+    <div class="plain"><span class="lbl">En clair</span><p>Le serveur est un grand immeuble découpé en appartements (les VM). L'hyperviseur est le gestionnaire de l'immeuble : il donne à chaque appartement ses murs, son eau et son électricité. Le <b>RAID 1</b>, ce sont deux disques qui écrivent la même chose : si l'un meurt, l'autre continue.</p></div>
+    <div class="say c-sys"><span class="lbl">À dire à l'oral</span><p>« Nous avons choisi la virtualisation, car une VM par rôle est plus facile à sécuriser, à sauvegarder et à restaurer. »</p></div>
+  </div>
+
+  <h3>Pourquoi ces choix</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Choix</th><th>Pourquoi</th><th>Alternative étudiée</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Proxmox VE</td><td>Gratuit, open source, snapshots intégrés et lien natif avec Proxmox Backup Server.</td><td>VMware ESXi (coût des licences), Hyper-V</td></tr>
+      <tr><td class="k">Windows Server 2022</td><td>Active Directory est le standard pour les comptes, les stratégies de groupe (GPO) et les partages.</td><td>Samba AD sous Linux</td></tr>
+      <tr><td class="k">Debian 13</td><td>Stable, léger, support long ; idéal pour le web, le bastion et le SIEM.</td><td>Rocky Linux, Ubuntu Server</td></tr>
+      <tr><td class="k">Deux contrôleurs de domaine</td><td>Si DC01 s'arrête, les utilisateurs se connectent via DC02.</td><td>Un seul DC (point unique de défaillance)</td></tr>
+      <tr><td class="k">ECC RAM + RAID</td><td>Les erreurs matérielles sont détectées et un disque mort ne provoque aucune coupure.</td><td>Composants grand public</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>L'installation, étape par étape</h3>
+  <ol class="steps c-sys">
+    <li><b>Racker et câbler</b>Monter le serveur, brancher les deux alimentations sur l'onduleur, raccorder les deux liens 10 Gb/s.</li>
+    <li><b>Sécuriser le firmware</b>Mettre à jour BIOS et iDRAC, mot de passe BIOS, activer Secure Boot et TPM.</li>
+    <li><b>Créer le RAID</b>RAID 1 pour le système, RAID 10 pour les données des VM.</li>
+    <li><b>Installer Proxmox VE</b>IP fixe dans le VLAN 10, dépôts, mises à jour, compte admin avec MFA.</li>
+    <li><b>Configurer le réseau</b>Agrégat LACP, pont compatible VLAN, un tag VLAN par VM.</li>
+    <li><b>Créer les VM</b>À partir de modèles durcis, avec les ressources indiquées plus haut.</li>
+    <li><b>Déployer Active Directory</b>Créer le domaine zone67.lan, le DNS et le DHCP, puis ajouter DC02.</li>
+    <li><b>Déployer les services</b>Partages avec droits par groupe, intranet, SIEM, bastion.</li>
+    <li><b>Tout durcir</b>Appliquer les réglages ANSSI / CIS (voir la partie Sécurité).</li>
+    <li><b>Superviser et sauvegarder</b>Installer les agents Wazuh, planifier les sauvegardes, tester une restauration.</li>
+  </ol>
+
+  <h3>Détails techniques</h3>
+  <div class="cards">
+    <div class="card"><h3>Créer le domaine (PowerShell sur DC01)</h3>
+<pre><span class="cm"># installer le rôle AD</span>
+Install-WindowsFeature AD-Domain-Services `
+  -IncludeManagementTools
+<span class="cm"># créer la forêt + le DNS</span>
+Install-ADDSForest -DomainName "zone67.lan" `
+  -InstallDns</pre></div>
+    <div class="card"><h3>Durcir SSH (VM Debian)</h3>
+<pre><span class="cm"># /etc/ssh/sshd_config</span>
+PermitRootLogin no
+PasswordAuthentication no
+AllowGroups ssh-admins
+
+<span class="cm"># mises à jour de sécurité automatiques</span>
+sudo apt install unattended-upgrades fail2ban</pre></div>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section id="network">
+  <div class="sec-head">
+    <span class="who c-net">Présenté par · Technicien réseau</span>
+    <h2>Réseau et accès distant</h2>
+    <p>Le réseau est découpé en VLAN, et le pare-feu décide qui a le droit de parler à qui. Les admins qui travaillent de l'extérieur ne touchent jamais un serveur directement : ils passent par un VPN, puis par le bastion.</p>
+  </div>
+
+  <h3>Plan d'adressage</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>VLAN</th><th>Nom</th><th>Sous-réseau</th><th>Passerelle</th><th>Qui s'y trouve</th></tr></thead>
+    <tbody>
+      <tr><td class="k"><span class="tag c-sec">10</span></td><td>Administration</td><td class="k">10.67.10.0/24</td><td class="k">10.67.10.1</td><td>iDRAC, interface Proxmox, bastion</td></tr>
+      <tr><td class="k"><span class="tag c-sys">20</span></td><td>Serveurs</td><td class="k">10.67.20.0/24</td><td class="k">10.67.20.1</td><td>DC01, DC02, FS01, WEB01, SIEM01</td></tr>
+      <tr><td class="k"><span class="tag c-lead">30</span></td><td>Utilisateurs</td><td class="k">10.67.30.0/24</td><td class="k">10.67.30.1</td><td>Postes, imprimantes (DHCP)</td></tr>
+      <tr><td class="k"><span class="tag c-bak">40</span></td><td>Sauvegarde</td><td class="k">10.67.40.0/24</td><td class="k">10.67.40.1</td><td>PBS n°1 uniquement</td></tr>
+      <tr><td class="k"><span class="tag">99</span></td><td>Clients VPN</td><td class="k">10.67.99.0/24</td><td class="k">—</td><td>Admins à distance, une fois connectés</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Matrice de flux : qui peut parler à qui</h3>
+  <div class="tbl"><table class="matrix">
+    <thead><tr><th>De ↓ &nbsp; Vers →</th><th>Administration</th><th>Serveurs</th><th>Utilisateurs</th><th>Sauvegarde</th><th>Internet</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Administration</td><td class="cell-yes"><span class="yes">✓</span></td><td class="cell-yes"><span class="yes">✓</span> SSH, RDP, 8006</td><td class="cell-yes"><span class="yes">✓</span> support</td><td class="cell-yes"><span class="yes">✓</span> 8007 interface</td><td class="cell-yes"><span class="yes">✓</span> mises à jour</td></tr>
+      <tr><td class="k">Serveurs</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> réplication AD</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> 8007 (hôte seul)</td><td class="cell-yes"><span class="yes">✓</span> mises à jour</td></tr>
+      <tr><td class="k">Utilisateurs</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> 53, 88, 389/636, 445, 443</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> web via proxy</td></tr>
+      <tr><td class="k">Sauvegarde</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span></td><td class="cell-no"><span class="no">✗</span> IPsec vers secours</td></tr>
+      <tr><td class="k">Clients VPN</td><td class="cell-yes"><span class="yes">✓</span> 443 bastion seul</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td></tr>
+      <tr><td class="k">Internet</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:13px;color:var(--muted)">Depuis Internet, le seul port ouvert est OpenVPN (1194/udp), sur le pare-feu lui-même. Tout ce qui n'est pas marqué ✓ est bloqué et journalisé. Les postes utilisateurs ne peuvent pas se parler directement, ce qui freine un virus qui tente de se propager.</p>
+
+  <h3>Accès distant : quatre points de contrôle</h3>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 200" role="img" aria-label="Chemin de l'admin à distance : le PC portable ouvre un tunnel OpenVPN avec certificat et MFA vers pfSense, qui ne le laisse joindre que le bastion en 443 ; le bastion demande une seconde MFA et enregistre la session avant d'ouvrir RDP ou SSH vers le serveur cible.">
+      <defs>
+        <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
+      </defs>
+      <rect class="box" x="20" y="60" width="170" height="96" rx="6"/>
+      <text class="lab" x="34" y="82">1</text>
+      <text class="t" x="105" y="102" text-anchor="middle">PC portable admin</text>
+      <text class="s" x="105" y="122" text-anchor="middle">géré, disque chiffré</text>
+      <text class="s" x="105" y="140" text-anchor="middle">certificat VPN</text>
+
+      <rect class="z-sec" x="250" y="60" width="170" height="96" rx="6"/>
+      <text class="lab" x="264" y="82">2</text>
+      <text class="t" x="335" y="102" text-anchor="middle">pfSense</text>
+      <text class="s" x="335" y="122" text-anchor="middle">vérifie certificat + MDP</text>
+      <text class="s" x="335" y="140" text-anchor="middle">+ code TOTP (MFA)</text>
+
+      <rect class="z-sec" x="480" y="60" width="170" height="96" rx="6" style="fill:color-mix(in srgb,var(--sec) 6%,var(--surface))"/>
+      <text class="lab" x="494" y="82">3</text>
+      <text class="t" x="565" y="102" text-anchor="middle">Bastion BAST01</text>
+      <text class="s" x="565" y="122" text-anchor="middle">seconde connexion MFA</text>
+      <text class="s" x="565" y="140" text-anchor="middle">sessions enregistrées</text>
+
+      <rect class="z-sys" x="710" y="60" width="170" height="96" rx="6"/>
+      <text class="lab" x="724" y="82">4</text>
+      <text class="t" x="795" y="102" text-anchor="middle">Serveur cible</text>
+      <text class="s" x="795" y="122" text-anchor="middle">jamais exposé</text>
+      <text class="s" x="795" y="140" text-anchor="middle">à l'extérieur</text>
+
+      <line class="wire dash" x1="190" y1="108" x2="248" y2="108" marker-end="url(#ar2)"/>
+      <text class="lab" x="219" y="46" text-anchor="middle">OpenVPN</text>
+      <text class="lab" x="219" y="34" text-anchor="middle">tunnel</text>
+      <line class="wire" x1="420" y1="108" x2="478" y2="108" marker-end="url(#ar2)"/>
+      <text class="lab" x="449" y="34" text-anchor="middle">port 443</text>
+      <text class="lab" x="449" y="46" text-anchor="middle">uniquement</text>
+      <line class="wire" x1="650" y1="108" x2="708" y2="108" marker-end="url(#ar2)"/>
+      <text class="lab" x="679" y="34" text-anchor="middle">RDP / SSH</text>
+      <text class="lab" x="679" y="46" text-anchor="middle">dans le navigateur</text>
+
+      <text class="s" x="450" y="188" text-anchor="middle">Un mot de passe volé ne suffit pas : il faudrait aussi le certificat et deux codes MFA.</text>
+    </svg>
+    </div>
+    <figcaption>Le bastion est la seule porte vers les serveurs. Il enregistre chaque session admin comme une vidéo : on sait toujours qui a fait quoi.</figcaption>
+  </figure>
+
+  <div class="callouts">
+    <div class="plain"><span class="lbl">En clair</span><p>Un <b>VLAN</b>, c'est un couloir séparé dans le même bâtiment. Le <b>VPN</b> est un tunnel privé à travers l'Internet public. Le <b>bastion</b> est le poste de sécurité : on signe le registre, on est escorté, et la caméra enregistre.</p></div>
+    <div class="say c-net"><span class="lbl">À dire à l'oral</span><p>« Les admins ne se connectent jamais directement à un serveur. Ils passent quatre points de contrôle, et chaque session est enregistrée. »</p></div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section id="security">
+  <div class="sec-head">
+    <span class="who c-sec">Présenté par · Expert cybersécurité</span>
+    <h2>Sécurité : la défense en profondeur</h2>
+    <p>Aucune protection n'est parfaite, alors on les empile. Un attaquant doit franchir chaque couche pour atteindre les données, et chaque couche déclenche une alerte.</p>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 350" role="img" aria-label="Six couches de sécurité imbriquées autour des données : physique, périmètre, réseau, machine, identité, et les données au centre.">
+      <rect x="20" y="20" width="860" height="310" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 4%,var(--surface))"/>
+      <text class="lab" x="36" y="40"><tspan style="font-weight:600;fill:var(--sec)">1 PHYSIQUE</tspan> · salle serveur fermée, badge, vidéosurveillance, onduleur</text>
+      <rect x="70" y="50" width="760" height="260" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 7%,var(--surface))"/>
+      <text class="lab" x="86" y="70"><tspan style="font-weight:600;fill:var(--sec)">2 PÉRIMÈTRE</tspan> · pfSense tout refusé par défaut, IDS Suricata, un seul port ouvert (VPN)</text>
+      <rect x="120" y="80" width="660" height="210" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 10%,var(--surface))"/>
+      <text class="lab" x="136" y="100"><tspan style="font-weight:600;fill:var(--sec)">3 RÉSEAU</tspan> · VLAN, matrice de flux, pas de trafic entre postes</text>
+      <rect x="170" y="110" width="560" height="160" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 13%,var(--surface))"/>
+      <text class="lab" x="186" y="130"><tspan style="font-weight:600;fill:var(--sec)">4 MACHINE</tspan> · durcissement, correctifs, agent Wazuh, chiffrement</text>
+      <rect x="220" y="140" width="460" height="110" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 16%,var(--surface))"/>
+      <text class="lab" x="236" y="160"><tspan style="font-weight:600;fill:var(--sec)">5 IDENTITÉ</tspan> · MFA, comptes admin par tiers, moindre privilège</text>
+      <rect x="290" y="176" width="320" height="56" rx="8" class="box" style="stroke:var(--sec);stroke-width:1.6"/>
+      <text class="t" x="450" y="200" text-anchor="middle">6 DONNÉES</text>
+      <text class="s" x="450" y="219" text-anchor="middle">chiffrées · sauvegardées · accès tracés</text>
+    </svg>
+    </div>
+    <figcaption>Comme un oignon : pour atteindre les données au centre, un attaquant doit traverser chaque anneau, et chaque anneau envoie ce qu'il voit au SIEM.</figcaption>
+  </figure>
+
+  <div class="cards">
+    <div class="card"><h3>Comptes &amp; identité</h3><ul><li>Comptes nominatifs uniquement, pas d'« admin » partagé</li><li>Compte admin séparé du compte du quotidien</li><li>MFA sur le VPN, le bastion et Proxmox</li><li>LAPS : un mot de passe admin local unique par machine</li><li>Mots de passe de 14 caractères minimum</li></ul></div>
+    <div class="card"><h3>Durcissement</h3><ul><li>Réglages des guides ANSSI et CIS</li><li>Services et ports inutiles désactivés</li><li>SSH par clés uniquement, pas de connexion root</li><li>GPO : clés USB bloquées, verrouillage de l'écran</li><li>Fenêtre de mises à jour mensuelle</li></ul></div>
+    <div class="card"><h3>Détection</h3><ul><li>Agent Wazuh sur chaque VM</li><li>Tous les logs centralisés dans SIEM01</li><li>Alertes : échecs de connexion, nouvel admin, sauvegarde ratée</li><li>IDS Suricata sur le pare-feu</li><li>Logs conservés 1 an</li></ul></div>
+  </div>
+
+  <div class="callouts">
+    <div class="plain"><span class="lbl">En clair</span><p>Le <b>SIEM</b>, c'est la salle de contrôle avec tous les écrans des caméras. Il récupère les logs de toutes les machines et sonne l'alarme quand quelque chose cloche, par exemple 50 mauvais mots de passe en une minute.</p></div>
+    <div class="say c-sec"><span class="lbl">À dire à l'oral</span><p>« On part du principe qu'une couche finira par céder. C'est pour ça qu'il y en a six, et qu'elles sont toutes surveillées. »</p></div>
+  </div>
+</section>
+
+<!-- BACKUP -->
+<section id="backup">
+  <div class="sec-head">
+    <span class="who c-bak">Présenté par · Responsable des sauvegardes</span>
+    <h2>La stratégie de sauvegarde</h2>
+    <p>Nous appliquons la règle 3-2-1-1-0, la référence actuelle contre les rançongiciels. Toutes les sauvegardes tournent seules ; les humains se contentent de lire les rapports et de tester les restaurations.</p>
+  </div>
+
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
+    <div class="card"><span class="big">3</span><b>copies des données</b><span style="color:var(--muted)">les données en production + 2 sauvegardes (nous en gardons 4)</span></div>
+    <div class="card"><span class="big">2</span><b>types de supports</b><span style="color:var(--muted)">disques (PBS) et bande LTO</span></div>
+    <div class="card"><span class="big">1</span><b>copie hors site</b><span style="color:var(--muted)">PBS n°2 sur un autre site du ministère</span></div>
+    <div class="card"><span class="big">1</span><b>copie hors ligne</b><span style="color:var(--muted)">bande dans un coffre, sans réseau</span></div>
+    <div class="card"><span class="big">0</span><b>erreur</b><span style="color:var(--muted)">vérification chaque semaine, restauration testée chaque mois</span></div>
+  </div>
+
+  <h3>Architecture de sauvegarde</h3>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 310" role="img" aria-label="Flux de sauvegarde : l'hôte Proxmox sauvegarde les VM sur le PBS n°1 sur site ; le PBS 1 se synchronise chaque nuit avec le PBS 2 hors site et exporte sur bande LTO chaque vendredi ; le PBS 2 sert au test de restauration mensuel.">
+      <defs>
+        <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
+      </defs>
+      <!-- source -->
+      <rect class="z-sys" x="20" y="112" width="160" height="86" rx="6"/>
+      <text class="t" x="100" y="140" text-anchor="middle">Hôte Proxmox</text>
+      <text class="s" x="100" y="160" text-anchor="middle">6 VM en production</text>
+      <text class="lab" x="100" y="184" text-anchor="middle">copie 1</text>
+
+      <!-- pbs1 -->
+      <rect class="z-bak" x="270" y="112" width="170" height="86" rx="6"/>
+      <text class="t" x="355" y="140" text-anchor="middle">PBS n°1 · sur site</text>
+      <text class="s" x="355" y="160" text-anchor="middle">dédup + AES-256</text>
+      <text class="lab" x="355" y="184" text-anchor="middle">copie 2 · disque</text>
+
+      <!-- pbs2 -->
+      <rect class="z-bak" x="530" y="20" width="170" height="86" rx="6"/>
+      <text class="t" x="615" y="48" text-anchor="middle">PBS n°2 · hors site</text>
+      <text class="s" x="615" y="68" text-anchor="middle">autre site du ministère</text>
+      <text class="lab" x="615" y="92" text-anchor="middle">copie 3 · à distance</text>
+
+      <!-- tape -->
+      <rect class="z-bak" x="530" y="204" width="170" height="86" rx="6" style="stroke-dasharray:5 4"/>
+      <text class="t" x="615" y="232" text-anchor="middle">Bande LTO-9</text>
+      <text class="s" x="615" y="252" text-anchor="middle">coffre fermé</text>
+      <text class="lab" x="615" y="276" text-anchor="middle">copie 4 · hors ligne</text>
+
+      <!-- restore test -->
+      <rect class="box" x="760" y="20" width="120" height="86" rx="6" style="stroke:var(--ok)"/>
+      <text class="t" x="820" y="48" text-anchor="middle">Test de restau.</text>
+      <text class="s" x="820" y="68" text-anchor="middle">VM isolée</text>
+      <text class="lab" x="820" y="92" text-anchor="middle" style="fill:var(--ok)">0 erreur ✓</text>
+
+      <!-- arrows -->
+      <line class="wire" x1="180" y1="155" x2="268" y2="155" marker-end="url(#ar3)"/>
+      <text class="lab" x="224" y="140" text-anchor="middle">nuit</text>
+      <text class="lab" x="224" y="128" text-anchor="middle">+ toutes 4 h</text>
+      <path class="wire dash" d="M440 135 H485 V63 H528" marker-end="url(#ar3)"/>
+      <text class="lab" x="478" y="100" text-anchor="end">synchro 03:00</text>
+      <path class="wire" d="M440 175 H485 V247 H528" marker-end="url(#ar3)"/>
+      <text class="lab" x="478" y="222" text-anchor="end">export vendredi</text>
+      <line class="wire" x1="700" y1="63" x2="758" y2="63" marker-end="url(#ar3)"/>
+      <text class="lab" x="729" y="54" text-anchor="middle">mensuel</text>
+      <text class="lab" x="820" y="150" text-anchor="middle">PBS relit aussi</text>
+      <text class="lab" x="820" y="164" text-anchor="middle">chaque bloc / semaine</text>
+      <text class="lab" x="820" y="178" text-anchor="middle">(tâche verify)</text>
+    </svg>
+    </div>
+    <figcaption>Quatre copies, sur deux types de supports, à deux endroits, dont une débranchée. Les sauvegardes sont chiffrées avant de quitter l'hôte : une bande ou un disque volé est illisible.</figcaption>
+  </figure>
+
+  <h3>À quelle fréquence, et combien de temps</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Niveau</th><th>Machines</th><th>Fréquence</th><th>RPO (perte max)</th><th>RTO (coupure max)</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag c-sec">Niveau 1 · critique</span></td><td class="k">DC01 · DC02 · FS01</td><td>toutes les 4 h + chaque nuit</td><td>4 h</td><td>4 h</td></tr>
+      <tr><td><span class="tag c-bak">Niveau 2 · important</span></td><td class="k">WEB01 · SIEM01 · BAST01</td><td>chaque nuit</td><td>24 h</td><td>8 h</td></tr>
+    </tbody>
+  </table></div>
+
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 262" role="img" aria-label="Planning hebdomadaire : sauvegarde de nuit à 01:00, synchro hors site à 03:00, niveau 1 toutes les quatre heures, export bande le vendredi à 18:00 et vérification le dimanche à 06:00.">
+      <!-- grid -->
+      <g class="lab">
+        <text x="20" y="44">Lun</text><text x="20" y="72">Mar</text><text x="20" y="100">Mer</text><text x="20" y="128">Jeu</text><text x="20" y="156">Ven</text><text x="20" y="184">Sam</text><text x="20" y="212">Dim</text>
+      </g>
+      <g>
+        <line class="grid" x1="70" y1="26" x2="70" y2="222"/><line class="grid" x1="200" y1="26" x2="200" y2="222"/><line class="grid" x1="330" y1="26" x2="330" y2="222"/><line class="grid" x1="460" y1="26" x2="460" y2="222"/><line class="grid" x1="590" y1="26" x2="590" y2="222"/><line class="grid" x1="720" y1="26" x2="720" y2="222"/><line class="grid" x1="850" y1="26" x2="850" y2="222"/>
+      </g>
+      <g class="lab" text-anchor="middle">
+        <text x="70" y="240">00:00</text><text x="200" y="240">04:00</text><text x="330" y="240">08:00</text><text x="460" y="240">12:00</text><text x="590" y="240">16:00</text><text x="720" y="240">20:00</text><text x="850" y="240">24:00</text>
+      </g>
+      <!-- x(h)=70+h*32.5 ; rows y=40+i*28 -->
+      <g class="f-bak">
+        <circle cx="102.5" cy="40" r="6"/><circle cx="102.5" cy="68" r="6"/><circle cx="102.5" cy="96" r="6"/><circle cx="102.5" cy="124" r="6"/><circle cx="102.5" cy="152" r="6"/><circle cx="102.5" cy="180" r="6"/><circle cx="102.5" cy="208" r="6"/>
+      </g>
+      <g class="f-net">
+        <rect x="161.5" y="34" width="12" height="12" transform="rotate(45 167.5 40)"/><rect x="161.5" y="62" width="12" height="12" transform="rotate(45 167.5 68)"/><rect x="161.5" y="90" width="12" height="12" transform="rotate(45 167.5 96)"/><rect x="161.5" y="118" width="12" height="12" transform="rotate(45 167.5 124)"/><rect x="161.5" y="146" width="12" height="12" transform="rotate(45 167.5 152)"/><rect x="161.5" y="174" width="12" height="12" transform="rotate(45 167.5 180)"/><rect x="161.5" y="202" width="12" height="12" transform="rotate(45 167.5 208)"/>
+      </g>
+      <!-- tier1 every 4h at 05,09,13,17,21 : x=232.5,362.5,492.5,622.5,752.5 -->
+      <g class="f-sec">
+        <rect x="228" y="36" width="9" height="9"/><rect x="358" y="36" width="9" height="9"/><rect x="488" y="36" width="9" height="9"/><rect x="618" y="36" width="9" height="9"/><rect x="748" y="36" width="9" height="9"/>
+        <rect x="228" y="64" width="9" height="9"/><rect x="358" y="64" width="9" height="9"/><rect x="488" y="64" width="9" height="9"/><rect x="618" y="64" width="9" height="9"/><rect x="748" y="64" width="9" height="9"/>
+        <rect x="228" y="92" width="9" height="9"/><rect x="358" y="92" width="9" height="9"/><rect x="488" y="92" width="9" height="9"/><rect x="618" y="92" width="9" height="9"/><rect x="748" y="92" width="9" height="9"/>
+        <rect x="228" y="120" width="9" height="9"/><rect x="358" y="120" width="9" height="9"/><rect x="488" y="120" width="9" height="9"/><rect x="618" y="120" width="9" height="9"/><rect x="748" y="120" width="9" height="9"/>
+        <rect x="228" y="148" width="9" height="9"/><rect x="358" y="148" width="9" height="9"/><rect x="488" y="148" width="9" height="9"/><rect x="618" y="148" width="9" height="9"/><rect x="748" y="148" width="9" height="9"/>
+        <rect x="228" y="176" width="9" height="9"/><rect x="358" y="176" width="9" height="9"/><rect x="488" y="176" width="9" height="9"/><rect x="618" y="176" width="9" height="9"/><rect x="748" y="176" width="9" height="9"/>
+        <rect x="228" y="204" width="9" height="9"/><rect x="358" y="204" width="9" height="9"/><rect x="488" y="204" width="9" height="9"/><rect x="618" y="204" width="9" height="9"/><rect x="748" y="204" width="9" height="9"/>
+      </g>
+      <!-- Friday tape 18:00 x=655 ; Sunday verify 06:00 x=265 -->
+      <polygon class="f-lead" points="655,144 663,160 647,160"/>
+      <text class="lab" x="668" y="157">bande</text>
+      <polygon class="f-sys" points="265,200 273,216 257,216"/>
+      <text class="lab" x="278" y="212">vérif.</text>
+    </svg>
+    </div>
+    <div class="legend">
+      <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" class="f-bak" style="fill:var(--bak)"/></svg>01:00 sauvegarde de nuit, toutes les VM</span>
+      <span><svg viewBox="0 0 14 14"><rect x="3" y="3" width="8" height="8" transform="rotate(45 7 7)" style="fill:var(--net)"/></svg>03:00 synchro hors site</span>
+      <span><svg viewBox="0 0 14 14"><rect x="2.5" y="2.5" width="9" height="9" style="fill:var(--sec)"/></svg>toutes les 4 h, niveau 1 seulement</span>
+      <span><svg viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" style="fill:var(--lead)"/></svg>vendredi 18:00 bande</span>
+      <span><svg viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" style="fill:var(--sys)"/></svg>dimanche 06:00 vérification</span>
+    </div>
+    <figcaption>Les grosses tâches tournent la nuit, quand personne ne travaille ; les sauvegardes de jour du niveau 1 sont incrémentales et prennent quelques minutes.</figcaption>
+  </figure>
+
+  <div class="cards">
+    <div class="card"><h3>Rétention (durée de conservation)</h3><ul><li><b>PBS n°1 :</b> 7 journalières, 4 hebdo, 6 mensuelles</li><li><b>PBS n°2 :</b> 7 journalières, 4 hebdo, 12 mensuelles</li><li><b>Bande :</b> 12 bandes mensuelles + 5 annuelles</li></ul></div>
+    <div class="card"><h3>Outils</h3><ul><li><b>Proxmox Backup Server</b> : incrémental, dédupliqué, chiffré</li><li><b>Lecteur de bandes LTO-9</b>, piloté par les tâches bande de PBS</li><li><b>Clichés instantanés Windows</b> sur FS01 pour récupérer vite un fichier</li></ul></div>
+    <div class="card"><h3>Entièrement automatisé</h3><ul><li>Tâches planifiées, purge (prune) et nettoyage (garbage collection)</li><li>Vérification hebdomadaire de chaque bloc</li><li>Alerte mail + Wazuh si une tâche échoue</li><li>Seules tâches manuelles : test de restauration mensuel et changement de bande</li></ul></div>
+  </div>
+
+  <div class="callouts">
+    <div class="plain"><span class="lbl">En clair</span><p>Gardez les clés de votre maison à trois endroits : dans votre poche, dans un tiroir chez vous, et chez un ami dans une autre ville. Puis enfermez un double dans un coffre qui n'a aucune porte sur la rue. Même un cambrioleur qui a trouvé toutes les clés chez vous ne peut pas atteindre celui-là.</p></div>
+    <div class="say c-bak"><span class="lbl">À dire à l'oral</span><p>« Une sauvegarde jamais restaurée, ce n'est qu'un espoir. Nous testons une vraie restauration chaque mois. »</p></div>
+  </div>
+</section>
+
+<!-- RECOVERY -->
+<section id="recovery">
+  <div class="sec-head">
+    <span class="who c-bak">Présenté par · Responsable des sauvegardes</span>
+    <h2>Plan de reprise d'activité (PRA)</h2>
+    <p>Deux chiffres pilotent tout le plan. Le RPO, c'est la quantité de travail récent qu'on accepte de perdre. Le RTO, c'est la durée pendant laquelle le service peut rester coupé.</p>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 900 180" role="img" aria-label="Frise : dernière bonne sauvegarde à 09:00, incident à 11:30, service rétabli à 13:30. L'écart avant l'incident est le RPO, les données perdues ; l'écart après est le RTO, la durée de coupure.">
+      <defs>
+        <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
+      </defs>
+      <line class="wire" x1="40" y1="96" x2="860" y2="96" marker-end="url(#ar4)"/>
+      <text class="lab" x="860" y="120" text-anchor="end">temps →</text>
+      <!-- RPO -->
+      <rect x="220" y="80" width="230" height="32" class="z-bak"/>
+      <text class="t" x="335" y="60" text-anchor="middle" style="fill:var(--bak)">RPO · 2 h 30 de données perdues</text>
+      <text class="s" x="335" y="76" text-anchor="middle">objectif : moins de 4 h</text>
+      <!-- RTO -->
+      <rect x="450" y="80" width="240" height="32" class="z-sys"/>
+      <text class="t" x="570" y="60" text-anchor="middle" style="fill:var(--sys)">RTO · 2 h de coupure</text>
+      <text class="s" x="570" y="76" text-anchor="middle">objectif : moins de 4 h</text>
+      <!-- points -->
+      <circle cx="220" cy="96" r="7" class="f-bak"/>
+      <text class="t" x="220" y="140" text-anchor="middle">09:00</text><text class="s" x="220" y="158" text-anchor="middle">dernière bonne sauvegarde</text>
+      <circle cx="450" cy="96" r="8" class="f-sec"/>
+      <text class="t" x="450" y="140" text-anchor="middle">11:30</text><text class="s" x="450" y="158" text-anchor="middle">incident</text>
+      <circle cx="690" cy="96" r="7" class="f-sys"/>
+      <text class="t" x="690" y="140" text-anchor="middle">13:30</text><text class="s" x="690" y="158" text-anchor="middle">service rétabli</text>
+    </svg>
+    </div>
+    <figcaption>Exemple pour un serveur de niveau 1. Des sauvegardes plus fréquentes réduisent la partie orange ; une restauration rapide et répétée réduit la partie bleue.</figcaption>
+  </figure>
+
+  <h3>Cinq scénarios, cinq réponses</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Scénario</th><th>Ce que nous faisons</th><th>RTO</th><th>RPO</th></tr></thead>
+    <tbody>
+      <tr><td><b>Un disque lâche</b></td><td>Le RAID continue de tourner. On change le disque à chaud, la grappe se reconstruit seule.</td><td class="k">0</td><td class="k">0</td></tr>
+      <tr><td><b>Quelqu'un supprime un fichier</b></td><td>On restaure le fichier depuis les clichés instantanés ou via la restauration fichier de PBS.</td><td class="k">15 min</td><td class="k">≤ 4 h</td></tr>
+      <tr><td><b>Le serveur tombe en panne</b></td><td>On restaure les VM depuis le PBS n°1 sur l'hôte de secours, niveau 1 en premier.</td><td class="k">4 h</td><td class="k">≤ 4 h</td></tr>
+      <tr><td><b>Rançongiciel</b></td><td>On isole le réseau, on trouve le dernier point de restauration sain, on reconstruit depuis PBS. Si PBS est touché, on restaure depuis la bande.</td><td class="k">24 h</td><td class="k">≤ 4 h (PBS) · ≤ 7 jours (bande)</td></tr>
+      <tr><td><b>Incendie ou inondation</b></td><td>On redémarre les VM critiques sur le site de secours à partir du PBS n°2.</td><td class="k">48 h</td><td class="k">≤ 24 h</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Quand le sinistre arrive</h3>
+  <ol class="steps c-bak">
+    <li><b>Détecter</b>Une alerte Wazuh, PBS ou un signalement utilisateur.</li>
+    <li><b>Évaluer</b>Qu'est-ce qui est touché, depuis quand, est-ce que ça se propage ?</li>
+    <li><b>Déclarer</b>La cheffe d'équipe déclenche le plan et prévient le ministère.</li>
+    <li><b>Contenir</b>Isoler la zone infectée avant de restaurer quoi que ce soit.</li>
+    <li><b>Restaurer</b>Le niveau 1 d'abord (AD, fichiers), puis le niveau 2.</li>
+    <li><b>Vérifier &amp; analyser</b>Les utilisateurs testent, puis on rédige un rapport et on améliore le plan.</li>
+  </ol>
+
+  <div class="callouts">
+    <div class="plain"><span class="lbl">En clair</span><p>Un PRA, c'est un exercice d'évacuation incendie pour l'informatique. Chacun connaît son rôle avant le feu, donc personne ne panique pendant. Nous le répétons deux fois par an.</p></div>
+    <div class="say c-bak"><span class="lbl">À dire à l'oral</span><p>« Pour chaque scénario, nous savons quoi faire, qui le fait, et combien de temps ça prend. »</p></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="sec-head">
+    <span class="who c-lead">Organisation</span>
+    <h2>Qui présente quoi</h2>
+    <p>Le sujet prévoit trois rôles. Nous sommes cinq : la cheffe d'équipe ouvre et conclut, et l'expert cyber a sa propre partie sécurité. Ordre de passage proposé :</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Ordre</th><th>Rôle du sujet</th><th>Membre de l'équipe</th><th>Contenu</th></tr></thead>
+    <tbody>
+      <tr><td class="k">1</td><td><span class="tag c-lead">Introduction</span></td><td>Cheffe d'équipe</td><td>Mission, schéma d'ensemble</td></tr>
+      <tr><td class="k">2</td><td><span class="tag c-sys">Ingénieur système</span></td><td>DevOps</td><td>Matériel, OS, services, étapes d'installation</td></tr>
+      <tr><td class="k">3</td><td><span class="tag c-net">Technicien réseau</span></td><td>DevOps ou expert cyber <span style="color:var(--muted)">(à confirmer)</span></td><td>VLAN, matrice de flux, accès distant</td></tr>
+      <tr><td class="k">4</td><td><span class="tag c-sec">Sécurité</span></td><td>Expert cyber</td><td>Défense en profondeur, durcissement, SIEM</td></tr>
+      <tr><td class="k">5</td><td><span class="tag c-bak">Responsable sauvegardes</span></td><td>Développeurs 1 &amp; 2</td><td>3-2-1-1-0, planning, PRA</td></tr>
+      <tr><td class="k">6</td><td><span class="tag c-lead">Conclusion</span></td><td>Cheffe d'équipe</td><td>Synthèse, budget ou suites, questions</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- GLOSSARY -->
+<section id="glossary">
+  <div class="sec-head">
+    <h2>Glossaire</h2>
+    <p>Utile pour le public, et pour les questions à la fin.</p>
+  </div>
+  <dl class="gloss">
+    <div><dt>Hyperviseur</dt><dd>Logiciel qui fait tourner plusieurs machines virtuelles sur un seul serveur physique.</dd></div>
+    <div><dt>VM (machine virtuelle)</dt><dd>Un ordinateur complet simulé par logiciel.</dd></div>
+    <div><dt>Active Directory (AD)</dt><dd>L'annuaire central de Microsoft : utilisateurs, ordinateurs et droits.</dd></div>
+    <div><dt>RAID</dt><dd>Plusieurs disques qui travaillent comme un seul : la panne d'un disque ne fait rien perdre.</dd></div>
+    <div><dt>VLAN</dt><dd>Un réseau virtuel qui isole des groupes de machines sur un même switch.</dd></div>
+    <div><dt>Pare-feu</dt><dd>L'équipement qui autorise ou bloque le trafic entre les réseaux.</dd></div>
+    <div><dt>VPN</dt><dd>Un tunnel chiffré à travers Internet.</dd></div>
+    <div><dt>MFA</dt><dd>Authentification multifacteur : un mot de passe plus une seconde preuve, comme un code sur le téléphone.</dd></div>
+    <div><dt>Bastion</dt><dd>Le point d'entrée unique et surveillé des administrateurs.</dd></div>
+    <div><dt>SIEM</dt><dd>Un système qui centralise tous les logs et lève les alertes de sécurité.</dd></div>
+    <div><dt>Durcissement</dt><dd>Supprimer tout l'inutile et verrouiller les réglages.</dd></div>
+    <div><dt>PBS</dt><dd>Proxmox Backup Server : le logiciel et le stockage de sauvegarde.</dd></div>
+    <div><dt>Déduplication</dt><dd>Ne stocker qu'une fois les blocs de données identiques, pour gagner de la place.</dd></div>
+    <div><dt>Air gap</dt><dd>Une copie sans aucune connexion réseau.</dd></div>
+    <div><dt>RPO</dt><dd>Recovery Point Objective (perte de données maximale admissible) : la quantité maximale de données qu'on accepte de perdre.</dd></div>
+    <div><dt>RTO</dt><dd>Recovery Time Objective (durée maximale d'interruption admissible) : le temps maximal pendant lequel le service peut être coupé.</dd></div>
+  </dl>
+</section>
+
+<footer>Scénario fictif pour un projet d'anglais (BTS SIO). La Zone 67, les adresses et le dimensionnement sont inventés pour l'exercice. Version anglaise disponible séparément.</footer>
+</div>
+
+</body>
+</html>
