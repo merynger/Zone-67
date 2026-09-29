@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Planches RECORDER-451</title>
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+.sitetabs,.sitetabs *{box-sizing:border-box}
+.sitetabs{position:relative;z-index:900;background:#101215;border-bottom:3px solid #b3262c;font:600 13px/1 "IBM Plex Mono",ui-monospace,Menlo,monospace;letter-spacing:1.4px;text-transform:uppercase}
+.sitetabs .in{max-width:1180px;margin:0 auto;padding-inline:16px;display:flex;align-items:stretch;gap:4px;flex-wrap:wrap}
+.sitetabs .brand{color:#e9e7e1;padding:14px 14px 14px 0;margin-right:6px;border-right:1px solid #2b2f36;display:flex;align-items:center;gap:8px}
+.sitetabs .brand i{width:9px;height:9px;background:#b3262c;display:inline-block}
+.sitetabs a{color:#a7aab1;text-decoration:none;padding:14px 12px;border-bottom:3px solid transparent;margin-bottom:-3px}
+.sitetabs a:hover,.sitetabs a:focus-visible{color:#fff;outline:none;background:#1b1e23}
+.sitetabs a[aria-current=page]{color:#fff;border-bottom-color:#e9e7e1}
+.sitetabs .lang{margin-left:auto;display:flex}
+.sitetabs .lang a{padding-inline:10px}
+@media (max-width:560px){.sitetabs .brand{display:none}.sitetabs a{padding:12px 9px}}
+</style>
+</head>
+<body>
+<nav class="sitetabs" aria-label="Site"><div class="in"><span class="brand"><i></i>Zone 67</span><a href="fr.html">Dossier</a><a href="bd.html">BD</a><a href="atelier.html" aria-current=page>Atelier</a><span class="lang"><a href="index.html" lang="en">EN</a></span></div></nav>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#ECEFEC; --surface:#F8FAF8; --ink:#17201B; --muted:#56625B; --line:#C6CFC9;
+  --sys:#2B5E8C; --net:#1B7568; --sec:#A3322C; --bak:#A8620E; --lead:#5A4C8A;
+  --ok:#2E7D3A; --no:#A3322C;
+  --display:"Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#101512; --surface:#181F1B; --ink:#E2E8E4; --muted:#9BA69F; --line:#2F3A34;
+    --sys:#72A8DC; --net:#4FC1AE; --sec:#E5746C; --bak:#E3A14B; --lead:#A89AD9;
+    --ok:#6CC77A; --no:#E5746C;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#101512; --surface:#181F1B; --ink:#E2E8E4; --muted:#9BA69F; --line:#2F3A34;
+  --sys:#72A8DC; --net:#4FC1AE; --sec:#E5746C; --bak:#E3A14B; --lead:#A89AD9;
+  --ok:#6CC77A; --no:#E5746C;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:700;letter-spacing:.01em}
+h2{font-size:1.75rem;font-weight:700}
+h3{font-size:1.1rem;font-weight:600}
+p{margin:0;max-width:68ch}
+code,.mono{font-family:var(--mono);font-size:.88em}
+a{color:inherit}
+
+/* header */
+header.top{padding-block:40px 28px;display:grid;gap:16px}
+.stamp{display:inline-flex;gap:10px;align-items:center;font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sec);border:1.5px solid var(--sec);padding:6px 10px;width:max-content;max-width:100%;transform:rotate(-1.2deg)}
+.lede{font-size:1.08rem;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font:500 13px var(--mono);color:var(--muted)}
+.meta b{color:var(--ink);font-weight:500}
+
+/* nav */
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-20px;padding:10px 20px;overflow-x:auto;white-space:nowrap}
+nav.toc a{display:inline-block;text-decoration:none;font:500 13px var(--mono);padding:5px 10px;border-radius:4px;color:var(--muted)}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--ink);background:var(--surface);outline:none}
+
+section{padding-block:48px 8px;display:grid;gap:22px;scroll-margin-top:56px}
+.sec-head{display:grid;gap:8px}
+.who{display:inline-flex;align-items:center;gap:8px;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c,var(--muted))}
+.who::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--c,var(--muted))}
+.c-sys{--c:var(--sys)} .c-net{--c:var(--net)} .c-sec{--c:var(--sec)} .c-bak{--c:var(--bak)} .c-lead{--c:var(--lead)}
+
+/* plain-words and say-it callouts */
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.plain,.say{padding:14px 16px;border-radius:6px}
+.plain{background:var(--surface);border:1px solid var(--line)}
+.say{border:1px dashed var(--c,var(--line))}
+.plain .lbl,.say .lbl{display:block;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.say p{font-style:italic}
+
+/* figures */
+figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px}
+figure .scroll{overflow-x:auto}
+figure svg{display:block;width:100%;height:auto;min-width:640px;color:var(--ink)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px;max-width:none}
+svg text{font-family:var(--body);fill:currentColor}
+svg .t{font-size:13px;font-weight:600}
+svg .s{font-size:11.5px;fill:var(--muted)}
+svg .m{font-family:var(--mono);font-size:11.5px}
+svg .lab{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+svg .box{fill:var(--surface);stroke:var(--line);stroke-width:1.2}
+svg .wire{stroke:currentColor;stroke-width:1.4;fill:none}
+svg .dash{stroke-dasharray:5 4}
+svg .z-sys{fill:color-mix(in srgb,var(--sys) 12%,var(--surface));stroke:var(--sys);stroke-width:1.3}
+svg .z-net{fill:color-mix(in srgb,var(--net) 12%,var(--surface));stroke:var(--net);stroke-width:1.3}
+svg .z-sec{fill:color-mix(in srgb,var(--sec) 12%,var(--surface));stroke:var(--sec);stroke-width:1.3}
+svg .z-bak{fill:color-mix(in srgb,var(--bak) 13%,var(--surface));stroke:var(--bak);stroke-width:1.3}
+svg .z-lead{fill:color-mix(in srgb,var(--lead) 12%,var(--surface));stroke:var(--lead);stroke-width:1.3}
+svg .z-mute{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+svg .f-sys{fill:var(--sys)} svg .f-net{fill:var(--net)} svg .f-sec{fill:var(--sec)} svg .f-bak{fill:var(--bak)} svg .f-lead{fill:var(--lead)}
+svg .st-sec{stroke:var(--sec)} svg .st-bak{stroke:var(--bak)} svg .st-sys{stroke:var(--sys)} svg .st-net{stroke:var(--net)}
+svg .grid{stroke:var(--line);stroke-width:1}
+svg .chip{fill:var(--surface);stroke:var(--sys);stroke-width:1}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:none}
+th{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+td.k{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.matrix td{text-align:center;font-size:12.5px;min-width:110px}
+.matrix td.k,.matrix th:first-child{text-align:left}
+.yes{color:var(--ok);font-weight:600}
+.no{color:var(--no);font-weight:600}
+.cell-yes{background:color-mix(in srgb,var(--ok) 9%,var(--surface))}
+.cell-no{background:color-mix(in srgb,var(--no) 7%,var(--surface))}
+.tag{display:inline-block;font:500 11.5px var(--mono);padding:2px 7px;border-radius:3px;border:1px solid var(--c,var(--line));color:var(--c,var(--ink));white-space:nowrap}
+
+/* steps */
+ol.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;counter-reset:s}
+ol.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px 12px 50px;position:relative;font-size:14px}
+ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:11px;font:700 15px var(--display);color:var(--c,var(--muted))}
+ol.steps b{display:block;font-weight:600}
+
+/* grids of small cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:6px;align-content:start;font-size:14px}
+.card h3{font-size:1rem}
+.card ul{margin:0;padding-left:18px}
+.big{font:700 2.3rem/1 var(--display);color:var(--bak)}
+
+pre{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;overflow-x:auto;font:13px/1.55 var(--mono)}
+pre .cm{color:var(--muted)}
+
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin-top:8px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend svg{min-width:0;width:14px;height:14px}
+
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:4px 24px}
+.gloss div{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.gloss dt{font:600 13px var(--mono)}
+.gloss dd{margin:2px 0 0;color:var(--muted)}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (max-width:520px){ h2{font-size:1.45rem} }
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+html{scroll-behavior:smooth}
+
+.src-list{display:grid;gap:14px}
+.src{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px}
+.src-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
+.src-n{font:700 1.3rem/1 var(--display);color:var(--c,var(--muted))}
+.src h3{font-size:1.05rem}
+.src .cite{font:13px/1.5 var(--mono);color:var(--muted);word-break:break-word}
+.src blockquote{margin:0;padding:8px 14px;border-left:3px solid var(--c,var(--line));font-style:italic;background:var(--bg)}
+.src dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;font-size:14px}
+.src dt{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.src dd{margin:0}
+@media (max-width:560px){.src dl{grid-template-columns:1fr}.src dt{padding-top:6px}}
+.ref{display:inline-block;font:600 11px var(--mono);text-decoration:none;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted);vertical-align:1px}
+.ref:hover,.ref:focus-visible{color:var(--ink);border-color:var(--ink)}
+.star{font:600 11px var(--mono);color:var(--ok);letter-spacing:.06em;text-transform:uppercase}
+
+.sub{font:600 clamp(1.05rem,2.4vw,1.35rem)/1.3 var(--display);color:var(--lead);margin-top:-6px}
+.pill{justify-self:start;font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c,var(--muted));border:1px solid var(--c,var(--line));padding:2px 8px;border-radius:3px}
+.muted{color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}
+.cards.five{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.epigraph{margin:0;padding:22px 24px;border:1px solid var(--line);border-radius:6px;background:var(--surface);font:600 clamp(1.3rem,3vw,1.8rem)/1.3 var(--display);color:var(--lead);display:grid;gap:8px}
+.epigraph cite{font:500 13px var(--mono);font-style:normal;color:var(--muted)}
+.cards.three,ol.steps.three{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+
+.classif{background:var(--sec);color:var(--bg);font:600 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:8px 16px}
+.cover{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start}
+.cover-side{display:grid;gap:14px;justify-items:center}
+.crest{width:150px;height:150px;color:var(--ink)}
+.file{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:12px 14px;margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font:12px/1.5 var(--mono);min-width:220px}
+.file dt{color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.file dd{margin:0}
+.file .hot{color:var(--sec);font-weight:500}
+.topsecret{justify-self:center;font:700 clamp(1.1rem,3vw,1.6rem)/1 var(--display);letter-spacing:.12em;color:var(--sec);border:3px double var(--sec);padding:6px 12px;transform:rotate(8deg);opacity:.85;pointer-events:none}
+.cover>div{min-width:0}
+@media (max-width:720px){.cover{grid-template-columns:1fr}.cover-side{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.crest{width:96px;height:96px}.file{min-width:0;flex:1 1 220px}}
+.redact{background:var(--ink);color:var(--ink);border-radius:2px;padding:0 3px;cursor:help;transition:color .2s,background .2s}
+.redact:hover,.redact:focus-visible{background:color-mix(in srgb,var(--sec) 18%,var(--surface));color:var(--sec);outline:none}
+.gl{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.16em;color:var(--lead)}
+h2 .emb{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.12em;margin-right:.3em}
+.emb.sh{color:var(--sec)} .emb.gk{color:var(--bak)}
+.head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 16px}
+.declass{font:600 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ok);border:1.5px solid var(--ok);padding:3px 8px;transform:rotate(-2deg)}
+@media (prefers-reduced-motion:reduce){.redact{transition:none}}
+section,header.top{grid-template-columns:minmax(0,1fr)}
+.cover{grid-template-columns:minmax(0,1fr) auto}
+@media (max-width:720px){.cover{grid-template-columns:minmax(0,1fr)}}
+.stamp{max-width:100%}
+@media (max-width:720px){.stamp{width:auto;white-space:normal;line-height:1.5}}
+
+.pl{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:grid;gap:14px}
+.pl-head{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;justify-content:space-between}
+.pl-n{font:700 1.5rem/1 var(--display);color:var(--lead);margin-right:8px}
+.panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:700px){.panels{grid-template-columns:minmax(0,1fr)}}
+.panel{border:2px solid var(--ink);background:var(--bg);padding:12px;display:grid;gap:8px;align-content:start;font-size:14px;aspect-ratio:auto}
+.panel .pn{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.panel .txt{font:600 12.5px/1.35 var(--mono);background:var(--surface);border:1px solid var(--ink);padding:6px 8px;text-transform:uppercase}
+.panel .txt small{display:block;font:500 10.5px var(--mono);color:var(--muted);margin-bottom:2px}
+details.prompt summary{cursor:pointer;font:600 13px var(--mono);color:var(--muted)}
+details.prompt[open] summary{margin-bottom:8px}
+.pbox{position:relative}
+.pbox pre{white-space:pre-wrap;word-break:break-word;font-size:12.5px;max-height:none}
+.copy{font:600 12px var(--mono);border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:4px;padding:6px 12px;cursor:pointer}
+.copy:focus-visible{outline:2px solid var(--lead);outline-offset:2px}
+.copy.done{background:var(--ok);border-color:var(--ok)}
+.chars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.chars .card b{font-family:var(--mono)}
+.syms{display:flex;flex-wrap:wrap;gap:14px}
+.sym{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;display:grid;justify-items:center;gap:8px;width:160px;text-align:center;font-size:13px}
+.sym svg{width:88px;height:88px}
+.row-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+.refimg{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;align-items:center}
+.refimg img{width:100%;border-radius:4px;border:2px solid var(--ink);display:block}
+@media (max-width:700px){.refimg{grid-template-columns:minmax(0,1fr)}}
+.attach{font:600 12px var(--mono);color:var(--lead)}
+.portrait{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;border:2px solid var(--ink);display:block}
+.portraits .pl{align-content:start}
+.pending{aspect-ratio:1;border:2px dashed var(--line);border-radius:4px;display:grid;place-items:center;color:var(--muted);font:600 13px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.portraits{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="sym-r451" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="34 7 16 7" stroke-linecap="round"/>
+  <path d="M32 13 L49 32 L32 51 L15 32 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M22 32 Q32 21 42 32 Q32 43 22 32 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  <circle cx="32" cy="32" r="4.2" fill="currentColor"/>
+  <path d="M6 32 H14 M50 32 H58" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="32" cy="7.5" r="2" fill="currentColor"/>
+  <circle cx="32" cy="56.5" r="2" fill="currentColor"/>
+</symbol>
+<symbol id="sym-shield" viewBox="0 0 64 64">
+  <path d="M32 4 L56 12 V30 C56 46 45 56 32 60 C19 56 8 46 8 30 V12 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M32 13 L48 18.5 V30.5 C48 41 41 47.5 32 50.5 C23 47.5 16 41 16 30.5 V18.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M32 22 L40 25 V31 C40 36.5 36.5 40 32 41.5 C27.5 40 24 36.5 24 31 V25 Z" fill="currentColor"/>
+</symbol>
+<symbol id="sym-godkiller" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="3"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <g stroke="currentColor" stroke-width="3" stroke-linecap="round">
+    <path d="M32 2 V9"/><path d="M60.5 23 L54 25"/><path d="M49.6 56.3 L45.5 50.6"/><path d="M14.4 56.3 L18.5 50.6"/><path d="M3.5 23 L10 25"/>
+  </g>
+  <circle cx="32" cy="27" r="6.5" fill="currentColor"/>
+  <path d="M28.5 30 L25.5 44 H38.5 L35.5 30 Z" fill="currentColor"/>
+</symbol>
+<symbol id="sym-crest" viewBox="0 0 120 120">
+  <defs><path id="crest-ring" d="M60 60 m-45 0 a45 45 0 1 1 90 0 a45 45 0 1 1 -90 0"/></defs>
+  <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text font-family="IBM Plex Mono, monospace" font-size="8.6" font-weight="500" letter-spacing="1.4" fill="currentColor"><textPath href="#crest-ring" textLength="276" lengthAdjust="spacing">ZONE 67 · SITE RESTREINT · DÉFENSE ·</textPath></text>
+  <path d="M60 30 L86 45 V75 L60 90 L34 75 V45 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="60" y="71" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-weight="700" font-size="30" fill="currentColor">67</text>
+  <circle cx="60" cy="38.5" r="2" fill="currentColor"/>
+  <circle cx="60" cy="82" r="2" fill="currentColor"/>
+</symbol>
+</defs></svg>
+
+<div class="classif">Très secret // RECORDER-451 // Atelier graphique</div>
+<div class="wrap">
+<header class="top"><span class="stamp">Atelier graphique · Opération RECORDER-451</span>
+<h1>Planches RECORDER-451</h1><p class="sub">Style retenu : comics américain moderne, couleur peinte</p>
+<p class="lede">Quatre étapes : le style, vos portraits, la fiche d'équipe, puis la bande dessinée case par case. Chaque prompt se colle tel quel dans Shéhérazade (ou Gemini avec l'outil image actif), avec uniquement les images indiquées en pièce jointe. Aucune image ne contient de texte : les légendes, en anglais, sont ajoutées dans la présentation.</p></header>
+<section id="style"><div class="head-row"><span class="who c-ok" style="--c:var(--ok)">Étape 1 · validée</span></div><div class="sec-head"><h2>Le style retenu</h2></div>
+<div class="refimg"><img src="ref-s3.jpg" alt="Test de style retenu : Recorder 451 dans la chambre forte, éclairé par son cristal violet, espionné par un Gris derrière une porte."><div class="card"><h3>Image de référence</h3><p>Garde l'original en pleine résolution : il sert de référence pour Recorder 451 et le Gris dans les étapes 3 et 4.</p><ul><li>Encrage nerveux, épaisseur de trait variable</li><li>Couleur peinte, coups de pinceau visibles</li><li>Une lumière colorée dominante par case : violet dans la chambre forte, rouge pour les alarmes, bleu froid pour les écrans, vert pour les serveurs</li><li>Contre-plongées et diagonales fortes</li></ul></div></div></section>
+<section id="portraits"><div class="head-row"><span class="who c-lead">Étape 2 · vos visages</span></div><div class="sec-head"><h2>Un portrait par membre</h2><p>Chaque membre fournit une photo nette, de face, bien éclairée, et accepte qu'elle passe par Gemini. Une conversation par personne. Nouvelle conversation à chaque fois, avec uniquement la photo de la personne : le style est entièrement décrit dans le prompt. Ne joins jamais le portrait d'un autre membre, Gemini mélangerait les visages. Le prompt ne décrit que la tenue et la lumière ; le visage, les cheveux et les lunettes viennent uniquement de la photo. Chacun valide son portrait (2 ou 3 essais sont normaux).</p></div><div class="portraits"><article class="pl"><div class="pl-head"><h3>COMMANDE</h3><span class="who c-lead">Cheffe d&#x27;équipe</span></div><img class="portrait" src="portraits/command.jpg" alt="Portrait validé de COMMANDE"><span class="attach" style="color:var(--ok)">✓ Portrait validé</span><span class="attach">À joindre : uniquement la photo de la personne</span><details class="prompt"><summary>Voir le prompt</summary><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="ptCOMMAND">Copier le prompt COMMANDE</button></div><pre id="ptCOMMAND">Modern American comic book illustration in the look of a painted comic cover: bold black ink outlines with strong thick-to-thin variation and loose, confident hatching in the shadows; fully painted colour on top with visible brush strokes and textured strokes in the background; a deep, almost black background with a soft coloured haze and tiny floating dust specks catching the light; one strong coloured key light and a thin rim light outlining the silhouette; rich saturated colour and high contrast. Stylised comic features, clearly drawn and painted, not photorealistic: no photo texture, no plastic skin, no airbrushed shine, no 3D render look, no photographic background blur, no border or frame around the image. Half-body portrait in a three-quarter view, square format. The attached photo is the only identity reference: keep her real face exactly as in the photo, so that her classmates recognise her at first glance: a soft, rounded face with full cheeks and a gentle jawline, large almond-shaped eyes, thick arched eyebrows, a small nose and a closed-lip smile. Keep her real hairstyle: a deep side parting, the hair swept over to one side with volume on top, smooth at the roots and falling in loose voluminous waves from mid-length to just below the shoulders; no middle parting, no straight flat hair. The photo is black and white: render her in full colour with warm light olive skin, a high-contrast salon balayage: deep dark-brown roots melting from mid-length into warm caramel and golden honey-blonde lengths and ends, with bright blonde face-framing front strands (money piece), and dark brown eyes, with her signature winged eyeliner and well-groomed eyebrows. Do not beautify her, do not change her age, do not add glasses. Do not copy the photo&#x27;s clothes or background. She is COMMAND, the team leader of a secret defence team, of French-Egyptian origin: a born leader with a strong, fiery character, always ready to fight for her team, who loves fashion; underneath the armour she has a very tender heart. Outfit: a genuinely fashionable, runway-level military-chic look: a tailored double-breasted blazer in deep navy with gold buttons and strong structured shoulders, cinched at the waist with a thin black leather belt, over a fitted black turtleneck; a long camel wool coat draped over her shoulders like a cape; layered fine gold necklaces, bold gold hoop earrings, deep red manicured nails; a discreet radio earpiece. She looks like she stepped out of a fashion magazine cover, not a uniform. Pose and attitude: standing tall and confident, one hand on her hip, the other hand holding a rugged tactical tablet with a glowing mission display, chin slightly raised, a determined, ready-to-fight gaze softened by a slight warm smile. She has exactly two arms and two hands; anatomy must be correct. Setting and light: a dark command room behind her, painted and mostly lost in shadow; the crimson glow of a tactical display table lights her from below and from the side, with a thin red rim light on her shoulder and hair, and tiny dust specks floating in the light. No text, no letters and no numbers anywhere in the image. No emojis, no logos, no watermark, no signature.</pre></div></details><div class="row-actions"><button class="copy" type="button" data-target="ptCOMMAND">Copier le prompt COMMANDE</button></div></article><article class="pl"><div class="pl-head"><h3>FORGE</h3><span class="who c-lead">DevOps</span></div><img class="portrait" src="portraits/forge.jpg" alt="Portrait validé de FORGE"><span class="attach" style="color:var(--ok)">✓ Portrait validé</span><span class="attach">À joindre : uniquement la photo de la personne</span><details class="prompt"><summary>Voir le prompt</summary><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="ptFORGE">Copier le prompt FORGE</button></div><pre id="ptFORGE">Modern American comic book illustration in the look of a painted comic cover: bold black ink outlines with strong thick-to-thin variation and loose, confident hatching in the shadows; fully painted colour on top with visible brush strokes and textured strokes in the background; a deep, almost black background with a soft coloured haze and tiny floating dust specks catching the light; one strong coloured key light and a thin rim light outlining the silhouette; rich saturated colour and high contrast. Stylised comic features, clearly drawn and painted, not photorealistic: no photo texture, no plastic skin, no airbrushed shine, no 3D render look, no photographic background blur, no border or frame around the image. Half-body portrait in a three-quarter view, square format, deep dark background with a soft coloured glow, rich saturated painted colour and strong contrast. Use the attached photo only as the identity reference for this person: keep their real facial features, face shape, skin tone, hairstyle, facial hair and glasses exactly as in the photo, so that their classmates recognise them instantly. Do not beautify, do not change their body type, do not copy the photo&#x27;s clothes or background. Age him only slightly, about five years: he must still look like a young man in his mid-twenties, with smooth young skin and no wrinkles, no crow&#x27;s feet and no forehead lines and no hollow cheeks; just a slightly more defined jawline and a faint, sparse fuzz of a beginning goatee and moustache, barely there. Keep his round thin metal-framed glasses exactly as in the photo, and his messy hair and face clearly recognisable; his hair is dark blond and his eyes are green. They are FORGE of a secret defence team, wearing an olive work shirt with rolled-up sleeves and a small plain olive shoulder patch, a tool belt with coiled network cables over one shoulder. Lighting: green status lights of a server rack reflecting from the side; relaxed, sociable posture, a wry, joking half-grin, proudly holding a brand-new network switch like a trophy. No text, no letters and no numbers anywhere in the image. No emojis, no logos, no watermark, no signature.</pre></div></details><div class="row-actions"><button class="copy" type="button" data-target="ptFORGE">Copier le prompt FORGE</button></div></article><article class="pl"><div class="pl-head"><h3>SENTINELLE</h3><span class="who c-lead">Expert cyber</span></div><img class="portrait" src="portraits/sentinel.jpg" alt="Portrait validé de SENTINELLE"><span class="attach" style="color:var(--ok)">✓ Portrait validé</span><span class="attach">À joindre : uniquement la photo de la personne</span><details class="prompt"><summary>Voir le prompt</summary><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="ptSENTINEL">Copier le prompt SENTINELLE</button></div><pre id="ptSENTINEL">Modern American comic book illustration in the look of a painted comic cover: bold black ink outlines with strong thick-to-thin variation and loose, confident hatching in the shadows; fully painted colour on top with visible brush strokes and textured strokes in the background; a deep, almost black background with a soft coloured haze and tiny floating dust specks catching the light; one strong coloured key light and a thin rim light outlining the silhouette; rich saturated colour and high contrast. Stylised comic features, clearly drawn and painted, not photorealistic: no photo texture, no plastic skin, no airbrushed shine, no 3D render look, no photographic background blur, no border or frame around the image. Half-body portrait in a three-quarter view, square format. The attached photo is the only identity reference: keep his real face shape, eyes, eyebrows, nose, mouth, short dark beard and moustache, and short dark hair exactly as in the photo, so that his classmates recognise him at first glance. Do not beautify him, do not change his age, do not add glasses. Do not copy the photo&#x27;s checked shirt or its background. He is SENTINEL, the cyber security expert of a secret defence team: an introvert who dislikes crowds and hates being photographed. Outfit: civilian clothes, an open dark charcoal overshirt over a plain black crew-neck t-shirt, and a slim access badge without lettering clipped to his belt. No vest, no gloves, no military gear, no hood. Pose and attitude: arms crossed, body turned slightly away from the viewer as if avoiding the camera, head turned back towards us, a serious, closed and watchful look, absolutely no smile. Setting and light: behind him, a dark security operations room with a wall of monitors out of focus; their cold blue glow lights his face from below and from the side, with a thin blue rim light on his shoulder, while the rest of the room falls into deep blue-black shadow. No text, no letters and no numbers anywhere in the image. No emojis, no logos, no watermark, no signature.</pre></div></details><div class="row-actions"><button class="copy" type="button" data-target="ptSENTINEL">Copier le prompt SENTINELLE</button></div></article><article class="pl"><div class="pl-head"><h3>CHIFFRE</h3><span class="who c-lead">Développeur</span></div><img class="portrait" src="portraits/cipher.jpg" alt="Portrait validé de CHIFFRE"><span class="attach" style="color:var(--ok)">✓ Portrait validé</span><span class="attach">À joindre : uniquement la photo de la personne</span><details class="prompt"><summary>Voir le prompt</summary><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="ptCIPHER">Copier le prompt CHIFFRE</button></div><pre id="ptCIPHER">Modern American comic book illustration in the look of a painted comic cover: bold black ink outlines with strong thick-to-thin variation and loose, confident hatching in the shadows; fully painted colour on top with visible brush strokes and textured strokes in the background; a deep, almost black background with a soft coloured haze and tiny floating dust specks catching the light; one strong coloured key light and a thin rim light outlining the silhouette; rich saturated colour and high contrast. Stylised comic features, clearly drawn and painted, not photorealistic: no photo texture, no plastic skin, no airbrushed shine, no 3D render look, no photographic background blur, no border or frame around the image. Half-body portrait in a three-quarter view, square format. The attached photo is the only identity reference: keep his real face shape, eyes, eyebrows, nose, mouth, light facial hair and short brown hair exactly as in the photo, so that his classmates recognise him at first glance. Do not beautify him, do not change his age, do not add glasses. Do not copy the photo&#x27;s clothes or background. He is CIPHER, the developer of a secret defence team: a little genius with a bad-boy attitude, who looks like he doesn&#x27;t care about anything until a project grabs his interest. Outfit: a worn black leather jacket over a plain black t-shirt, and large black over-ear headphones resting around his neck. Pose and attitude: relaxed and nonchalant, leaning back against the wall, one hand casually in his jacket pocket, the other hand holding a smartphone loosely, its screen showing lines of code drawn as short indented coloured strokes on a dark editor background, glowing faintly, a confident, cocky half-smirk and a sharp, mischievous look. He has exactly two arms and two hands; anatomy must be correct. Setting and light: behind him, a wall completely covered with dozens of yellow sticky notes, pinned sheets, arrows and scribbled diagrams going in every direction, the chaotic mind map of a genius, painted and partly lost in shadow; a warm amber desk lamp lights his face from the side, with a thin orange rim light on his shoulder and tiny dust specks floating in the light. No text, no letters and no numbers anywhere in the image. No emojis, no logos, no watermark, no signature.</pre></div></details><div class="row-actions"><button class="copy" type="button" data-target="ptCIPHER">Copier le prompt CHIFFRE</button></div></article><article class="pl"><div class="pl-head"><h3>RELAIS</h3><span class="who c-lead">Alternante développeuse</span></div><img class="portrait" src="portraits/relay.jpg" alt="Portrait validé de RELAIS"><span class="attach" style="color:var(--ok)">✓ Portrait validé</span><span class="attach">Aucune image à joindre</span><details class="prompt"><summary>Voir le prompt</summary><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="ptRELAY">Copier le prompt RELAIS</button></div><pre id="ptRELAY">Modern American comic book illustration in the look of a painted comic cover: bold black ink outlines with strong thick-to-thin variation and loose, confident hatching in the shadows; fully painted colour on top with visible brush strokes and textured strokes in the background; a deep, almost black background with a soft coloured haze and tiny floating dust specks catching the light; one strong coloured key light and a thin rim light outlining the silhouette; rich saturated colour and high contrast. Stylised comic features, clearly drawn and painted, not photorealistic: no photo texture, no plastic skin, no airbrushed shine, no 3D render look, no photographic background blur, no border or frame around the image. Half-body portrait in a three-quarter view, square format. RELAY, the apprentice developer of a secret defence team: a young Black woman of Cameroonian descent, the youngest of the team, who lives in her own world and is hard to reach once she is focused. Her face must stay completely hidden: under a deep hood pulled low, there is only darkness, no eyes, no nose, no mouth visible; this makes her mysterious. Outfit: a light-blue denim jacket over a dark hoodie, the inside of the hood lined with a colourful African wax-print fabric in orange, green and yellow, long dark box braids falling out of the hood onto her shoulders, large headphones worn over the hood, a small plain orange patch on the shoulder. Pose and attitude: sitting cross-legged on a desk chair, hunched towards an open laptop resting on her knees, both of her dark brown hands on the keyboard, completely absorbed, ignoring the world around her; a few playful stickers on the laptop lid. She has exactly two arms and two hands; anatomy must be correct. Setting and light: a dark corner of the operations room behind her, painted and mostly lost in shadow; the green glow of a monitoring dashboard on the laptop screen lights her hands, the edge of the hood and the wax-print lining from below, with a thin green rim light on her shoulder and tiny dust specks floating in the light. No text, no letters and no numbers anywhere in the image. No emojis, no logos, no watermark, no signature.</pre></div></details><div class="row-actions"><button class="copy" type="button" data-target="ptRELAY">Copier le prompt RELAIS</button></div></article></div></section>
+<section id="sheet"><div class="head-row"><span class="who" style="--c:var(--ok)">Étape 3 · validée</span></div><div class="sec-head"><h2>La fiche d'équipe</h2><p>Elle rassemble les cinq portraits validés et les deux extraterrestres dans une seule image, qui servira ensuite de référence pour les planches.</p></div><figure><img src="portraits/team-sheet.jpg" alt="Fiche d'équipe validée : FORGE, SENTINELLE, COMMANDE, CHIFFRE et RELAIS du plus grand au plus petit, puis Recorder 451 et le Gris." style="width:100%;border-radius:4px;display:block"><figcaption>Fiche validée : c'est elle qu'on joint aux planches où plusieurs membres apparaissent.</figcaption></figure><article class="pl"><span class="attach">À joindre, dans cet ordre : 1-COMMANDE, 2-FORGE, 3-SENTINELLE, 4-CHIFFRE, 5-RELAIS, 6-RECORDER451-reference</span><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="sheet">Copier le prompt de la fiche</button></div><pre id="sheet">Modern American comic book illustration in the look of a painted comic cover: bold black ink outlines with strong thick-to-thin variation and loose, confident hatching in the shadows; fully painted colour on top with visible brush strokes and textured strokes in the background; a deep, almost black background with a soft coloured haze and tiny floating dust specks catching the light; one strong coloured key light and a thin rim light outlining the silhouette; rich saturated colour and high contrast. Stylised comic features, clearly drawn and painted, not photorealistic: no photo texture, no plastic skin, no airbrushed shine, no 3D render look, no photographic background blur, no border or frame around the image. A team line-up illustration, landscape 16:9, deep dark background with a soft violet glow behind Recorder 451. Six images are attached. Images 1 to 5 are the validated portraits of the five team members, in this order: 1 COMMAND, 2 FORGE, 3 SENTINEL, 4 CIPHER, 5 RELAY. Image 6 shows Recorder 451 and a Grey alien. Draw seven full-body figures standing side by side, from left to right: COMMAND, FORGE, SENTINEL, CIPHER, RELAY, Recorder 451, the Grey. Each human must keep exactly the face, hair, hair colour, glasses or beard, outfit, accessories and attitude of their own portrait, and nothing from any other portrait: COMMAND with her long wavy balayage hair, camel coat over the shoulders, navy double-breasted blazer and tablet; FORGE with his dark blond hair, round glasses, olive work shirt, tool belt and network switch; SENTINEL with his short dark hair and beard, dark overshirt, arms crossed and closed look; CIPHER with his black leather jacket, headphones around his neck and phone; RELAY with her denim jacket, hood up lined with wax-print fabric, box braids, headphones over the hood and laptop, her face completely hidden in the shadow of the hood. Complete their lower bodies naturally in the same style (trousers and shoes that match each outfit). Recorder 451 and the Grey look exactly as in image 6. Respect the real heights of the team, all standing on the same ground line: FORGE is the tallest human (1.88 m), SENTINEL is slightly shorter (1.83 m), COMMAND is clearly shorter (1.70 m), CIPHER is a little shorter than COMMAND (1.67 m) and RELAY is the shortest human (1.65 m). Recorder 451 towers over everyone at about 2.30 m, and the Grey alien is small, about 1.20 m. Each figure has a small name label under their feet. Render only the following texts, exactly as written in English, letter for letter, and no other lettering anywhere in the image: &quot;COMMAND&quot;; &quot;FORGE&quot;; &quot;SENTINEL&quot;; &quot;CIPHER&quot;; &quot;RELAY&quot;; &quot;RECORDER 451&quot;; &quot;THE GREYS&quot;. Patches and badges carry no lettering. No emojis, no logos, no watermark, no signature.</pre></div><h3 style="margin-top:10px">Correction des tailles</h3><span class="attach">À joindre : uniquement la fiche avec les étiquettes corrigées</span><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="sheetfix">Copier le prompt de correction</button></div><pre id="sheetfix">Modern American comic book illustration in the look of a painted comic cover: bold black ink outlines with strong thick-to-thin variation and loose, confident hatching in the shadows; fully painted colour on top with visible brush strokes and textured strokes in the background; a deep, almost black background with a soft coloured haze and tiny floating dust specks catching the light; one strong coloured key light and a thin rim light outlining the silhouette; rich saturated colour and high contrast. Stylised comic features, clearly drawn and painted, not photorealistic: no photo texture, no plastic skin, no airbrushed shine, no 3D render look, no photographic background blur, no border or frame around the image. Redraw the attached team line-up as a new image in exactly the same style, keeping every character exactly as in the attached image: same faces, hair, outfits, accessories, attitudes and name labels. Change only the arrangement and the heights, like a police identification line-up: behind them, a dark wall with a height chart of thin horizontal lines marked 1.60, 1.70, 1.80, 1.90, 2.00, 2.10, 2.20 and 2.30, all feet on the same floor line. From left to right, the humans stand in descending order of height: FORGE (the man in the olive work shirt with round glasses and a tool belt) with the top of his head at the 1.88 level, the tallest human; SENTINEL (short dark hair and beard, dark overshirt, arms crossed) at 1.83; COMMAND (long wavy balayage hair, camel coat) at 1.70; CIPHER (black leather jacket, headphones around his neck, phone) at 1.67; RELAY (hooded, face hidden) at 1.65, the shortest human. Then Recorder 451, whose head reaches the 2.30 line, towering over everyone, and finally the small Grey alien, about 1.20. Each figure keeps its small name label under its feet. Render only the following texts, exactly as written, and no other lettering anywhere in the image: &quot;FORGE&quot;; &quot;SENTINEL&quot;; &quot;COMMAND&quot;; &quot;CIPHER&quot;; &quot;RELAY&quot;; &quot;RECORDER 451&quot;; &quot;THE GREYS&quot;; &quot;1.60&quot;; &quot;1.70&quot;; &quot;1.80&quot;; &quot;1.90&quot;; &quot;2.00&quot;; &quot;2.10&quot;; &quot;2.20&quot;; &quot;2.30&quot;. No emojis, no logos, no watermark, no signature.</pre></div><p class="note">Si Gemini refuse six images d'un coup, fais la fiche en deux temps : les trois premiers portraits, puis ajoute les deux autres et Recorder 451 par retouche.</p></article></section>
+<section id="acte1"><div class="head-row"><span class="who c-lead">Étape 4 · la bande dessinée</span></div><div class="sec-head"><h2>Acte 1 · L'arrivée</h2><p>Une case = une image 16:9, sans aucun texte : les légendes et répliques sont ajoutées dans la présentation. On génère case par case, dans l'ordre. Partie A : COMMANDE traverse les sécurités, révélée petit à petit. Partie B : le QG, chaque membre dans son univers. Partie C : le briefing autour de la table-touret, raconté par COMMANDE.</p></div>
+<h3>Partie A · La descente</h3>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">1</span>La façade</h3></div><p>Le bâtiment la nuit, banal et inquiétant, avec la lueur violette sous la grille.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-01.jpg" alt="Case 1 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">2</span>Un pas dans la flaque</h3></div><p>Caméra posée au sol : un talon aiguille frappe une flaque en direction du portail ; derrière, le portail et le bâtiment dominent le cadre.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-02.jpg" alt="Case 2 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">3</span>Le badge</h3></div><p>Gros plan : les ongles rouges posent un badge sur un vieux lecteur rouillé ; le voyant passe au vert.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-03.jpg" alt="Case 3 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">4</span>La fausse porte</h3></div><p>De dos, le manteau camel passe une vieille porte de service qui grince ; derrière, un sas ultramoderne.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-04.jpg" alt="Case 4 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">5</span>Le digicode caché</h3></div><p>Dans le sas ultramoderne, un boîtier technique en acier s&#x27;ouvre sur un digicode lumineux ; les ongles rouges tapent le code.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-05.jpg" alt="Case 5 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">6</span>Le portique</h3></div><p>De profil, elle traverse un portique détecteur ; sa tablette passe aux rayons X (tête hors cadre).</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-06.jpg" alt="Case 6 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">7</span>L&#x27;œil</h3></div><p>Très gros plan sur son œil (eye-liner) face au scanner rétinien ; une ligne rouge le balaie.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-07.jpg" alt="Case 7 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">8</span>Le sas</h3></div><p>Plongée : un sas en acier, porte d&#x27;entrée qui se referme à gauche, porte de sortie encore verrouillée à droite ; elle est seule au milieu.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-08.jpg" alt="Case 8 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">9</span>Quelqu&#x27;un regarde</h3></div><p>Une caméra au plafond pivote pour la suivre ; petite lumière bleue.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-09.jpg" alt="Case 9 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">10</span>La descente</h3></div><p>Dans l&#x27;ascenseur, vue de dos : elle fait face aux portes fermées ; l&#x27;indicateur d&#x27;étage arrive tout en bas.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-10.jpg" alt="Case 10 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">11</span>Révélation</h3></div><p>Les portes s&#x27;ouvrent : premier vrai plan de son visage, de trois quarts, éclairée par la lumière chaude qui entre depuis le QG ; elle regarde le QG, pas nous.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-11.jpg" alt="Case 11 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<h3>Partie B · Le QG</h3><p class="note">Pas de vue d'ensemble : on passe directement de l'ascenseur aux coins de chacun, le lecteur reconstitue le lieu.</p>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">13</span>RELAIS</h3></div><p>Vue de trois quarts arrière : RELAIS vautrée dans le canapé face à la télé, jambes sur l&#x27;accoudoir, absorbée par un animé de ninjas ; affiches, figurines, mangas autour.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-13.jpg" alt="Case 13 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">14</span>FORGE</h3></div><p>Son atelier : mur de baies réseau, la 4L restaurée sur son estrade, la caisse à outils de son père ; il lève le pouce vers COMMANDE qui arrive. Pas de plafond : le fond se perd dans un flou blanc.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-14.jpg" alt="Case 14 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">15</span>SENTINELLE</h3></div><p>Son coin café-jazz : bois, ampoules à filament, vinyle qui tourne, vieux mangas, ballon et mini-panier de basket, petite télé qui passe un match, fausse fenêtre sous la pluie ; il lève la main sans se retourner.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-15.jpg" alt="Case 15 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">16</span>CHIFFRE</h3></div><p>Vu de dos, face à son écran courbé : il marque un but, bras en l&#x27;air ; autour, son coin gaming en bazar et ses idées sur des couvercles de pizza punaisés.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-16.jpg" alt="Case 16 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">17</span>Le bureau de COMMANDE</h3></div><p>Bureau vitré en mezzanine : portant de vestes par couleur, mannequin, moodboard mode + cartes tactiques, plante, plaid, photo d&#x27;équipe où SENTINELLE est flou ; elle pose le dossier rouge scellé.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-17.jpg" alt="Case 17 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">18</span>L&#x27;appel</h3></div><p>Contre-plongée : COMMANDE sur la mezzanine, le dossier à la main ; en bas, les quatre lèvent la tête et lâchent tout.</p><p class="note">Légende (présentation) : <i>Everyone, table. Now.</i></p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-18.jpg" alt="Case 18 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<h3>Partie C · Le briefing</h3><article class="pl"><div class="pl-head"><h3>La table-touret</h3></div><p>Un grand touret de câble recyclé, plateau découpé en cinq secteurs par des filets de laiton. Chaque secteur a une icône gravée et un voyant rouge qui passera au vert à la fin de chaque acte technique. Au centre, un dôme de verre avec la carte de la Zone 67. La table sert de sommaire à la présentation. Aucun texte dans l'image : les objectifs sont nommés dans les légendes.</p><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px"><thead><tr><th style="text-align:left">Icône</th><th style="text-align:left">Objectif</th><th style="text-align:left">Agent</th><th style="text-align:left">Siège</th></tr></thead><tbody><tr><td>Baie serveur</td><td>Le serveur (Proxmox, VMs)</td><td>FORGE</td><td>siège de voiture ancienne</td></tr><tr><td>Bouclier</td><td>Réseau et accès sécurisés</td><td>SENTINELLE</td><td>fauteuil club en cuir</td></tr><tr><td>Bande + cadenas</td><td>Protocole Godkiller (sauvegardes)</td><td>CHIFFRE</td><td>fauteuil gaming</td></tr><tr><td>Horloge + flèche circulaire</td><td>Reprise et tests de restauration</td><td>RELAIS</td><td>gros pouf coloré</td></tr><tr><td>Porte de coffre</td><td>Protéger l'archive</td><td>COMMANDE</td><td>chaise haute en velours marine</td></tr></tbody></table></div></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">20</span>Le dossier</h3></div><p>Gros plan : les ongles rouges posent le dossier scellé sur le dôme de verre ; le moyeu s&#x27;allume et une onde rouge part dans le bois.</p><p class="note">Légende (présentation) : <i>Sub-level 5. What we never talk about.</i></p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-20.jpg" alt="Case 20 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">21</span>Cinq objectifs</h3></div><p>Vue du dessus : les cinq secteurs allumés en rouge, chacun avec son icône ; au centre, la carte de la Zone 67. C&#x27;est le sommaire de la présentation.</p><p class="note">Légende (présentation) : <i>Five objectives. Five of us.</i></p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-21.jpg" alt="Case 21 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">22</span>Souvenir · l&#x27;archiviste</h3></div><p>Flashback raconté par COMMANDE : Recorder 451 seul dans la chambre forte, immobile parmi les cristaux violets.</p><p class="note">Légende (présentation) : <i>Below us sleeps the memory of an entire civilisation.</i></p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-22.jpg" alt="Case 22 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">23</span>Souvenir · les couloirs</h3></div><p>Flashback : dans un couloir du ministère, parmi des fonctionnaires pressés, des silhouettes grises en costume passent inaperçues.</p><p class="note">Légende (présentation) : <i>The Greys are already inside the government.</i></p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-23.jpg" alt="Case 23 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">24</span>Souvenir · la main</h3></div><p>Flashback : une longue main grise se tend vers un cristal violet dans le noir.</p><p class="note">Légende (présentation) : <i>If they take the archive, or destroy it, the truth dies with it.</i></p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-24.jpg" alt="Case 24 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">25</span>COMMANDE</h3></div><p>Retour au présent : COMMANDE penchée sur la table-touret, éclairée en rouge par le disque central ; vue depuis la place d&#x27;un membre de l&#x27;équipe.</p><p class="note">Légende (présentation) : <i>Not on our watch.</i></p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-25.jpg" alt="Case 25 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">26</span>Réaction · SENTINELLE</h3></div><p>Gros plan : SENTINELLE, bras croisés dans son fauteuil, le regard dur, éclairé en rouge par son secteur (bouclier).</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-26.jpg" alt="Case 26 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">27</span>Réaction · FORGE</h3></div><p>Gros plan : FORGE, sur son siège de voiture ancienne, lunettes qui reflètent le rouge, déjà un petit sourire de défi.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-27.jpg" alt="Case 27 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">28</span>Réaction · CHIFFRE</h3></div><p>Gros plan : CHIFFRE, qui ne s&#x27;intéressait à rien, retire son casque ; pour une fois, il écoute vraiment.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-28.jpg" alt="Case 28 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+<article class="pl"><div class="pl-head"><h3><span class="pl-n">29</span>Réaction · RELAIS</h3></div><p>Gros plan : RELAIS dans son pouf, capuche baissée, visage caché ; elle referme son ordinateur. Elle est là.</p><img class="portrait" style="aspect-ratio:16/9" src="scenes/case-29.jpg" alt="Case 29 validée"><span class="attach" style="color:var(--ok)">✓ Case validée</span></article>
+</section>
+<section id="cover"><div class="sec-head"><h2>Bonus : visuel de couverture</h2><p>Pour la page de garde ou la première slide. À joindre : l'image de référence du style.</p></div><div class="pl"><div class="pbox"><div class="row-actions"><button class="copy" type="button" data-target="pc">Copier le prompt couverture</button></div><pre id="pc">MODERN AMERICAN COMIC BOOK ART. Energetic hand inks with strong thick-to-thin line variation, fully painted colour with visible brush strokes on top. Dramatic lighting from one strong coloured light source, deep blue-black shadows, dust floating in the air, cinematic depth, dynamic camera angles with strong diagonals. Avoid plastic skin, airbrushed shine and a 3D render look. A single landscape 16:9 cover illustration. Extreme low angle in a vast underground vault lined with tall shelves of glowing violet crystal archives: Recorder 451, the tall slender alien archivist from the attached reference image: pale blue-grey engraved skin, elongated smooth head, large calm violet eyes, no mouth, long layered robes with metal plates like the pages of a book, a violet crystal glowing in his chest, calm and solemn, lit from below by his own crystal. In the foreground, on a metal desk, lies a closed buff government dossier stamped in red. The upper left third stays a calm dark wall for a title. Render only the following texts, exactly as written in English, letter for letter and with the same punctuation, and no other lettering anywhere in the image: &quot;TOP SECRET&quot;; &quot;OPERATION RECORDER-451&quot;. Captions sit in off-white rectangular boxes with black uppercase lettering; speech sits in white hand-lettered speech bubbles. Patches and badges carry no lettering. No emojis, no logos, no watermark, no signature.</pre></div></div></section>
+<section id="symbols"><div class="sec-head"><h2>Les symboles</h2><p>Dessinés en vectoriel, déjà utilisés dans les deux pages ; les fichiers SVG sont fournis à part pour les slides.</p></div><div class="syms"><div class="sym"><svg style="color:var(--ink)" aria-hidden="true"><use href="#sym-crest"/></svg><b>Écusson Zone 67</b><span class="muted">Page de garde, en-tête des slides</span></div><div class="sym"><svg style="color:var(--lead)" aria-hidden="true"><use href="#sym-r451"/></svg><b>Sigle de Recorder 451</b><span class="muted">Tout ce qui touche aux archives</span></div><div class="sym"><svg style="color:var(--sec)" aria-hidden="true"><use href="#sym-shield"/></svg><b>Emblème du Bouclier</b><span class="muted">Partie sécurité</span></div><div class="sym"><svg style="color:var(--bak)" aria-hidden="true"><use href="#sym-godkiller"/></svg><b>Emblème Godkiller</b><span class="muted">Partie sauvegarde</span></div></div></section>
+<footer>Scénario fictif pour un projet d'anglais (BTS SIO). Personnages, symboles et lieux inventés pour l'exercice.</footer></div><div class="classif">Très secret // RECORDER-451 // Atelier graphique</div>
+<script>
+document.addEventListener('click',async ev=>{const b=ev.target.closest('.copy');if(!b)return;const pre=document.getElementById(b.dataset.target);if(!pre)return;
+const txt=pre.textContent;const old=b.textContent;
+try{await navigator.clipboard.writeText(txt);b.textContent='Copié ✓';b.classList.add('done');}
+catch(e){const d=pre.closest('details');if(d)d.open=true;const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Sélectionné : Ctrl+C';}
+setTimeout(()=>{b.textContent=old;b.classList.remove('done')},2200);});
+</script>
+</body>
+</html>
