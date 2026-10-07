@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zone 67 Server Plan</title>
+<title>Technical file · Zone 67</title>
 <style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
@@ -24,191 +24,175 @@
 <body>
 <nav class="sitetabs" aria-label="Site"><div class="in"><span class="brand"><i></i>Zone 67</span><a href="index.html">Home</a><a href="#briefing" class="brief" data-open-deck>▶ Briefing</a><a href="bd.html">Comic</a><a href="dossier.html" aria-current=page>Technical file</a><a href="atelier.html">Art studio</a><span class="lang"><a href="dossier-fr.html" lang="fr">FR</a></span></div></nav>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
-:root{
-  --bg:#ECEFEC; --surface:#F8FAF8; --ink:#17201B; --muted:#56625B; --line:#C6CFC9;
-  --sys:#2B5E8C; --net:#1B7568; --sec:#A3322C; --bak:#A8620E; --lead:#5A4C8A;
-  --ok:#2E7D3A; --no:#A3322C;
-  --display:"Chakra Petch", "Segoe UI", system-ui, sans-serif;
-  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#101512; --surface:#181F1B; --ink:#E2E8E4; --muted:#9BA69F; --line:#2F3A34;
-    --sys:#72A8DC; --net:#4FC1AE; --sec:#E5746C; --bak:#E3A14B; --lead:#A89AD9;
-    --ok:#6CC77A; --no:#E5746C;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#101512; --surface:#181F1B; --ink:#E2E8E4; --muted:#9BA69F; --line:#2F3A34;
-  --sys:#72A8DC; --net:#4FC1AE; --sec:#E5746C; --bak:#E3A14B; --lead:#A89AD9;
-  --ok:#6CC77A; --no:#E5746C;
-}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--body);margin:0}
-.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
-h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:700;letter-spacing:.01em}
-h2{font-size:1.75rem;font-weight:700}
-h3{font-size:1.1rem;font-weight:600}
-p{margin:0;max-width:68ch}
-code,.mono{font-family:var(--mono);font-size:.88em}
-a{color:inherit}
+:root{--bg:#ECEFEC;--surface:#F8FAF8;--ink:#17201B;--muted:#56625B;--line:#C6CFC9;--sys:#2B5E8C;--net:#1B7568;--sec:#A3322C;--bak:#A8620E;--lead:#5A4C8A;--ok:#2E7D3A;--no:#A3322C;
+--display:"Chakra Petch","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#101512;--surface:#181F1B;--ink:#E2E8E4;--muted:#9BA69F;--line:#2F3A34;--sys:#72A8DC;--net:#4FC1AE;--sec:#E5746C;--bak:#E3A14B;--lead:#A89AD9;--ok:#6CC77A;--no:#E5746C}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#101512;--surface:#181F1B;--ink:#E2E8E4;--muted:#9BA69F;--line:#2F3A34;--sys:#72A8DC;--net:#4FC1AE;--sec:#E5746C;--bak:#E3A14B;--lead:#A89AD9;--ok:#6CC77A;--no:#E5746C}
 
-/* header */
-header.top{padding-block:40px 28px;display:grid;gap:16px}
-.stamp{display:inline-flex;gap:10px;align-items:center;font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--sec);border:1.5px solid var(--sec);padding:6px 10px;width:max-content;max-width:100%;transform:rotate(-1.2deg)}
-.lede{font-size:1.08rem;color:var(--muted)}
-.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font:500 13px var(--mono);color:var(--muted)}
-.meta b{color:var(--ink);font-weight:500}
+@font-face{font-family:SE;src:url(fonts/SpecialElite-Regular.ttf);font-display:swap}
+body{background:#1f1d1a;font-family:var(--body)}
+.hm,.hm *{box-sizing:border-box}
+.hm{max-width:1344px;margin:44px auto 48px;padding:0 16px}
+.folder{background:#EFE8D6;color:#1d1b18;border-radius:4px 18px 4px 4px;padding:56px 64px 60px;position:relative;box-shadow:0 20px 50px #0008}
+.folder:before{content:"Z67-R451";position:absolute;top:-30px;left:0;background:#EFE8D6;padding:8px 26px;border-radius:10px 10px 0 0;font:600 14px var(--mono);letter-spacing:.15em;color:#6b6252}
+.hm-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.kick{display:block;font:600 15px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:#A3322C;margin-bottom:14px}
+.hm h1{font:700 clamp(40px,5.6vw,84px)/1 var(--display);letter-spacing:.01em;margin:0;color:#1d1b18}
+.lead{font:400 clamp(17px,1.6vw,21px)/1.6 var(--body);color:#3a352c;max-width:640px;margin:26px 0 34px}
+.acts{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;gap:12px;align-items:center;background:#A3322C;color:#fff;font:700 19px var(--display);letter-spacing:.12em;text-transform:uppercase;padding:17px 30px;border:0;cursor:pointer;text-decoration:none}
+.btn:hover{background:#86241f}.btn .tri{width:0;height:0;border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.btn2{display:inline-flex;align-items:center;border:2px solid #1d1b18;color:#1d1b18;font:700 17px var(--display);letter-spacing:.1em;text-transform:uppercase;padding:15px 26px;text-decoration:none}
+.btn2:hover{background:#1d1b18;color:#EFE8D6}
+.btn:focus-visible,.btn2:focus-visible,.card:focus-visible{outline:3px solid #2B5E8C;outline-offset:3px}
+.photo{background:#fff;padding:12px 12px 44px;transform:rotate(2deg);box-shadow:0 10px 24px #0004;position:relative;margin:0}
+.photo img{width:100%;display:block}
+.photo figcaption{position:absolute;bottom:12px;left:16px;font:16px SE,var(--mono);color:#444}
+.clip{position:absolute;top:-18px;left:12%;width:22px;height:60px;border:4px solid #888;border-radius:10px}
+.stamp{position:absolute;right:-14px;top:-26px;z-index:3;transform:rotate(-6deg);border:5px solid #A3322C;color:#A3322C;background:#EFE8D6cc;font:700 clamp(22px,2.6vw,34px) var(--display);padding:4px 18px;letter-spacing:.08em;pointer-events:none}
+.hm h2{font:600 14px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:#6b6252;margin:60px 0 18px;border-bottom:1px dashed #b9ae95;padding-bottom:8px}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;list-style:none;margin:0;padding:0}
+.agent{background:#fff;padding:10px;box-shadow:0 4px 10px #0002;transition:transform .2s}
+.agent:hover{transform:translateY(-4px) rotate(-.6deg)}
+.agent img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.agent b{display:block;font:700 18px var(--display);margin-top:10px;letter-spacing:.03em}
+.agent span{font:400 14px var(--body);color:#6b6252}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{display:block;border:2px solid #1d1b18;padding:22px;background:#F7F2E4;color:inherit;text-decoration:none;transition:background .2s,transform .2s}
+.card:hover{background:#fff;transform:translateY(-3px)}
+.card b{font:700 22px var(--display)}.card p{color:#544c3e;margin:8px 0 0;line-height:1.5}
+.card em{display:block;margin-top:14px;font:600 13px var(--mono);color:#A3322C;letter-spacing:.15em;font-style:normal;text-transform:uppercase}
+.foot{margin-top:46px;font:13px var(--mono);color:#7d745f;letter-spacing:.06em}
+@media (max-width:900px){.folder{padding:40px 24px 40px}.hm-grid{grid-template-columns:1fr;gap:44px}.photo{max-width:420px;margin:0 auto;transform:rotate(1.5deg)}
+.team{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:1fr}}
+@media (max-width:520px){.kick{letter-spacing:.18em;font-size:13px}.team{grid-template-columns:repeat(2,1fr);gap:12px}.stamp{right:-6px}.btn,.btn2{width:100%;justify-content:center}}
 
-/* nav */
-nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-20px;padding:10px 20px;overflow-x:auto;white-space:nowrap}
-nav.toc a{display:inline-block;text-decoration:none;font:500 13px var(--mono);padding:5px 10px;border-radius:4px;color:var(--muted)}
-nav.toc a:hover,nav.toc a:focus-visible{color:var(--ink);background:var(--surface);outline:none}
+.tk,.tk *{box-sizing:border-box}
+.tk{max-width:1344px;margin:40px auto 56px;padding:0 16px;color:#1d1b18}
+.tk-head{color:#EFE8D6;margin:0 0 26px;padding:0 8px}
+.tk-head .kick{color:#e5746c}
+.tk-head h1{font:700 clamp(32px,4.4vw,60px)/1.05 var(--display);margin:0;color:#F4EEDF}
+.tk-head p{font:400 18px/1.55 var(--body);color:#c9c1ad;max-width:760px;margin:14px 0 0}
+.ftabs{display:flex;gap:6px;padding-left:8px;overflow-x:auto;scrollbar-width:none}
+.ftabs::-webkit-scrollbar{display:none}
+.ftab{flex:0 0 auto;display:flex;align-items:center;gap:10px;background:#cfc6b0;color:#4a4436;border:0;border-radius:10px 10px 0 0;padding:11px 20px 10px;font:600 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;text-decoration:none;border-top:5px solid var(--c)}
+.ftab img{width:26px;height:26px;border-radius:50%;object-fit:cover}
+.ftab:hover{background:#dcd4c0}
+.ftab[aria-selected=true]{background:#EFE8D6;color:#1d1b18}
+.ftab:focus-visible{outline:3px solid #2B5E8C;outline-offset:2px}
+.dos{background:#EFE8D6;border-radius:0 18px 4px 4px;padding:48px 56px 56px;box-shadow:0 20px 50px #0008;position:relative;border-top:6px solid var(--c)}
+.js .dos[hidden]{display:none}
+.idc{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.pols{display:flex}
+.pol{background:#fff;padding:9px 9px 52px;box-shadow:0 8px 18px #0003;transform:rotate(-2.5deg);width:200px;position:relative}
+.pol+.pol{transform:rotate(3deg);margin-left:-26px;margin-top:22px}
+.pol img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.pol b{position:absolute;left:10px;bottom:26px;font:700 15px var(--display);letter-spacing:.05em}
+.pol i{position:absolute;left:10px;bottom:9px;font:12px var(--body);font-style:normal;color:#6b6252}
+.code{display:inline-block;font:700 13px var(--mono);letter-spacing:.25em;color:#fff;background:var(--c);padding:6px 12px}
+.idc h2{font:700 clamp(30px,3.6vw,50px)/1.05 var(--display);margin:14px 0 12px}
+.mis{font:500 clamp(18px,1.7vw,23px)/1.45 var(--body);color:#2f2a22;max-width:720px;margin:0;border-left:5px solid var(--c);padding-left:16px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chip{font:600 13px var(--mono);letter-spacing:.06em;border:1.5px solid #1d1b18;padding:7px 12px;background:#F7F2E4;color:#1d1b18;text-decoration:none}
+a.chip:hover{background:#fff}
+.lab{font:600 13px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:#6b6252;margin:52px 0 16px;border-bottom:1px dashed #b9ae95;padding-bottom:8px}
+.ess{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.es{background:#fff;padding:22px 22px 24px;box-shadow:0 4px 10px #0002;border-top:5px solid var(--c)}
+.es .big{display:block;font:700 44px/1 var(--display);color:var(--c);margin-bottom:12px;letter-spacing:.01em}
+.es>b{display:block;font:700 19px/1.25 var(--display)}
+.es p{margin:8px 0 0;font:400 16px/1.5 var(--body);color:#4a4436}
+.fig{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:start;margin-bottom:26px}
+.paper{background:#fff;padding:18px;box-shadow:0 6px 16px #0003;position:relative;margin:0;
+  --bg:#F2F4F2;--surface:#fff;--ink:#17201B;--muted:#56625B;--line:#C6CFC9;--sys:#2B5E8C;--net:#1B7568;--sec:#A3322C;--bak:#A8620E;--lead:#5A4C8A;--ok:#2E7D3A;--no:#A3322C;color:#17201B}
+.paper h3{font:700 17px var(--display);margin:0 0 10px;letter-spacing:.02em}
+.paper svg{display:block;width:100%;height:auto;color:var(--ink)}
+.paper svg text{font-family:var(--body);fill:currentColor}
+.paper svg .t{font-size:13px;font-weight:600}.paper svg .s{font-size:11.5px;fill:var(--muted)}
+.paper svg .box{fill:var(--surface);stroke:var(--line);stroke-width:1.2}
+.paper svg .z-sys{fill:color-mix(in srgb,var(--sys) 12%,#fff);stroke:var(--sys);stroke-width:1.3}
+.paper svg .z-net{fill:color-mix(in srgb,var(--net) 12%,#fff);stroke:var(--net);stroke-width:1.3}
+.paper svg .z-sec{fill:color-mix(in srgb,var(--sec) 12%,#fff);stroke:var(--sec);stroke-width:1.3}
+.paper svg .z-bak{fill:color-mix(in srgb,var(--bak) 13%,#fff);stroke:var(--bak);stroke-width:1.3}
+.paper svg .z-lead{fill:color-mix(in srgb,var(--lead) 12%,#fff);stroke:var(--lead);stroke-width:1.3}
+.paper svg .z-mute{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+.paper svg .t{font-size:13px;font-weight:600}
+.paper svg .s{font-size:11.5px;fill:var(--muted)}
+.paper svg .m{font-family:var(--mono);font-size:11.5px}
+.paper svg .lab{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.paper svg .box{fill:#fff;stroke:var(--line);stroke-width:1.2}
+.paper svg .wire{stroke:currentColor;stroke-width:1.4;fill:none}
+.paper svg .dash{stroke-dasharray:5 4}
+.paper svg .z-sys{fill:color-mix(in srgb,var(--sys) 12%,#fff);stroke:var(--sys);stroke-width:1.3}
+.paper svg .z-net{fill:color-mix(in srgb,var(--net) 12%,#fff);stroke:var(--net);stroke-width:1.3}
+.paper svg .z-sec{fill:color-mix(in srgb,var(--sec) 12%,#fff);stroke:var(--sec);stroke-width:1.3}
+.paper svg .z-bak{fill:color-mix(in srgb,var(--bak) 13%,#fff);stroke:var(--bak);stroke-width:1.3}
+.paper svg .z-lead{fill:color-mix(in srgb,var(--lead) 12%,#fff);stroke:var(--lead);stroke-width:1.3}
+.paper svg .z-mute{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+.paper svg .f-sys{fill:var(--sys)}
+.paper svg .f-net{fill:var(--net)}
+.paper svg .f-sec{fill:var(--sec)}
+.paper svg .f-bak{fill:var(--bak)}
+.paper svg .f-lead{fill:var(--lead)}
+.paper svg .st-sec{stroke:var(--sec)}
+.paper svg .st-bak{stroke:var(--bak)}
+.paper svg .st-sys{stroke:var(--sys)}
+.paper svg .st-net{stroke:var(--net)}
+.paper svg .grid{stroke:var(--line);stroke-width:1}
+.paper svg .chip{fill:#fff;stroke:var(--sys);stroke-width:1}
+.paper .dk-anim svg .an-dash{animation:andash 1.2s linear infinite}
+.paper .dk-anim svg .an-dash{animation:none}
+.paper svg [data-s]{opacity:1!important}
+@media (max-width:640px){.paper{overflow-x:auto}.paper svg{min-width:600px}}
+.paper svg .an-dash{animation:tkdash 1.2s linear infinite}
+@keyframes tkdash{to{stroke-dashoffset:-30}}
+@media (prefers-reduced-motion:reduce){.paper svg .an-dash{animation:none}}
+.stp{list-style:none;margin:0;padding:0;counter-reset:s}
+.stp li{counter-increment:s;position:relative;padding:0 0 14px 44px;font:400 15.5px/1.5 var(--body);color:#3a352c}
+.stp li:before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;font:700 15px/30px var(--display);text-align:center}
+.zones{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.zn{border:2px solid var(--z);background:color-mix(in srgb,var(--z) 9%,#fff);padding:14px 12px;min-height:150px}
+.zn b{display:block;font:700 26px var(--display);color:var(--z)}
+.zn strong{display:block;font:700 15px var(--display);margin:4px 0 6px}
+.zn span{font:13px/1.4 var(--body);color:#4a4436}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.note{background:#FFF6C9;padding:24px 26px;box-shadow:0 6px 14px #0002;transform:rotate(-.8deg);font:400 17px/1.55 var(--body);color:#3a352c}
+.note h3,.quote h3{font:600 12px var(--mono);letter-spacing:.25em;text-transform:uppercase;margin:0 0 10px;color:#6b6252}
+.quote{background:#1d1b18;color:#F4EEDF;padding:24px 26px;border-left:8px solid var(--c);font:500 19px/1.5 var(--body)}
+.quote h3{color:#c9c1ad}
+.srcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.src{border:2px solid #1d1b18;background:#F7F2E4;padding:20px 22px}
+.src .n{font:700 13px var(--mono);color:var(--c);letter-spacing:.1em}
+.src b{display:block;font:700 18px/1.3 var(--display);margin:6px 0 2px}
+.src small{font:12.5px var(--mono);color:#6b6252}
+.src q{display:block;quotes:none;font:italic 15.5px/1.5 var(--body);color:#3a352c;margin:12px 0}
+.src a{font:600 13px var(--mono);color:#A3322C;letter-spacing:.1em;text-transform:uppercase}
+.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px 26px;margin:0}
+.words div{padding:10px 0;border-bottom:1px solid #d9cfb7}
+.words dt{font:700 16px var(--display)}.words dd{margin:2px 0 0;font:14.5px/1.45 var(--body);color:#4a4436}
+details{background:#F7F2E4;border:1.5px solid #cbbf9f;margin-bottom:10px}
+summary{cursor:pointer;padding:14px 18px;font:700 16px var(--display);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font:700 20px/1 var(--mono);color:var(--c)}
+details[open] summary:after{content:"−"}
+summary:focus-visible{outline:3px solid #2B5E8C}
+.db{padding:2px 18px 18px;font:15px/1.55 var(--body);color:#2f2a22}
+.tw{overflow-x:auto}
+.db table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px;background:#fff}
+.db th{text-align:left;font:600 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:#1d1b18;color:#EFE8D6;padding:9px 12px}
+.db td{padding:9px 12px;border-bottom:1px solid #e3dac6;vertical-align:top}
+.dl{margin:0;padding-left:20px}.dl li{margin:5px 0}
+.steps{margin:0;padding-left:24px}.steps li{margin:6px 0}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:0}
+.kv dt{font:700 15px var(--display);color:var(--c)}.kv dd{margin:0}
+.db pre{background:#1d1b18;color:#e9e4d6;padding:16px;overflow-x:auto;font:13.5px/1.5 var(--mono);margin:0}
+.nxt{display:flex;justify-content:flex-end;margin-top:36px}
+.nxt a{font:700 16px var(--display);letter-spacing:.08em;text-transform:uppercase;color:#1d1b18;border:2px solid #1d1b18;padding:13px 22px;text-decoration:none}
+.nxt a:hover{background:#1d1b18;color:#EFE8D6}
+@media (max-width:980px){.fig{grid-template-columns:1fr}.zones{grid-template-columns:repeat(2,1fr)}.zn:last-child{grid-column:span 2}}
+@media (max-width:820px){.dos{padding:30px 20px 36px}.idc{grid-template-columns:1fr;gap:26px}.pols{justify-content:center}.pol{width:160px}.duo{grid-template-columns:1fr}}
 
-section{padding-block:48px 8px;display:grid;gap:22px;scroll-margin-top:56px}
-.sec-head{display:grid;gap:8px}
-.who{display:inline-flex;align-items:center;gap:8px;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c,var(--muted))}
-.who::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--c,var(--muted))}
-.c-sys{--c:var(--sys)} .c-net{--c:var(--net)} .c-sec{--c:var(--sec)} .c-bak{--c:var(--bak)} .c-lead{--c:var(--lead)}
-
-/* plain-words and say-it callouts */
-.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-.plain,.say{padding:14px 16px;border-radius:6px}
-.plain{background:var(--surface);border:1px solid var(--line)}
-.say{border:1px dashed var(--c,var(--line))}
-.plain .lbl,.say .lbl{display:block;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.say p{font-style:italic}
-
-/* figures */
-figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px}
-figure .scroll{overflow-x:auto}
-figure svg{display:block;width:100%;height:auto;min-width:640px;color:var(--ink)}
-figcaption{font-size:13px;color:var(--muted);margin-top:10px;max-width:none}
-svg text{font-family:var(--body);fill:currentColor}
-svg .t{font-size:13px;font-weight:600}
-svg .s{font-size:11.5px;fill:var(--muted)}
-svg .m{font-family:var(--mono);font-size:11.5px}
-svg .lab{font-family:var(--mono);font-size:11px;fill:var(--muted)}
-svg .box{fill:var(--surface);stroke:var(--line);stroke-width:1.2}
-svg .wire{stroke:currentColor;stroke-width:1.4;fill:none}
-svg .dash{stroke-dasharray:5 4}
-svg .z-sys{fill:color-mix(in srgb,var(--sys) 12%,var(--surface));stroke:var(--sys);stroke-width:1.3}
-svg .z-net{fill:color-mix(in srgb,var(--net) 12%,var(--surface));stroke:var(--net);stroke-width:1.3}
-svg .z-sec{fill:color-mix(in srgb,var(--sec) 12%,var(--surface));stroke:var(--sec);stroke-width:1.3}
-svg .z-bak{fill:color-mix(in srgb,var(--bak) 13%,var(--surface));stroke:var(--bak);stroke-width:1.3}
-svg .z-lead{fill:color-mix(in srgb,var(--lead) 12%,var(--surface));stroke:var(--lead);stroke-width:1.3}
-svg .z-mute{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
-svg .f-sys{fill:var(--sys)} svg .f-net{fill:var(--net)} svg .f-sec{fill:var(--sec)} svg .f-bak{fill:var(--bak)} svg .f-lead{fill:var(--lead)}
-svg .st-sec{stroke:var(--sec)} svg .st-bak{stroke:var(--bak)} svg .st-sys{stroke:var(--sys)} svg .st-net{stroke:var(--net)}
-svg .grid{stroke:var(--line);stroke-width:1}
-svg .chip{fill:var(--surface);stroke:var(--sys);stroke-width:1}
-
-/* tables */
-.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
-table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
-th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-tr:last-child td{border-bottom:none}
-th{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
-td.k{font-family:var(--mono);font-size:13px;white-space:nowrap}
-.matrix td{text-align:center;font-size:12.5px;min-width:110px}
-.matrix td.k,.matrix th:first-child{text-align:left}
-.yes{color:var(--ok);font-weight:600}
-.no{color:var(--no);font-weight:600}
-.cell-yes{background:color-mix(in srgb,var(--ok) 9%,var(--surface))}
-.cell-no{background:color-mix(in srgb,var(--no) 7%,var(--surface))}
-.tag{display:inline-block;font:500 11.5px var(--mono);padding:2px 7px;border-radius:3px;border:1px solid var(--c,var(--line));color:var(--c,var(--ink));white-space:nowrap}
-
-/* steps */
-ol.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;counter-reset:s}
-ol.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px 12px 50px;position:relative;font-size:14px}
-ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:11px;font:700 15px var(--display);color:var(--c,var(--muted))}
-ol.steps b{display:block;font-weight:600}
-
-/* grids of small cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:6px;align-content:start;font-size:14px}
-.card h3{font-size:1rem}
-.card ul{margin:0;padding-left:18px}
-.big{font:700 2.3rem/1 var(--display);color:var(--bak)}
-
-pre{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;overflow-x:auto;font:13px/1.55 var(--mono)}
-pre .cm{color:var(--muted)}
-
-.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin-top:8px}
-.legend span{display:inline-flex;align-items:center;gap:6px}
-.legend svg{min-width:0;width:14px;height:14px}
-
-.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:4px 24px}
-.gloss div{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.gloss dt{font:600 13px var(--mono)}
-.gloss dd{margin:2px 0 0;color:var(--muted)}
-footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-@media (max-width:520px){ h2{font-size:1.45rem} }
-@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
-html{scroll-behavior:smooth}
-
-.src-list{display:grid;gap:14px}
-.src{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:10px}
-.src-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
-.src-n{font:700 1.3rem/1 var(--display);color:var(--c,var(--muted))}
-.src h3{font-size:1.05rem}
-.src .cite{font:13px/1.5 var(--mono);color:var(--muted);word-break:break-word}
-.src blockquote{margin:0;padding:8px 14px;border-left:3px solid var(--c,var(--line));font-style:italic;background:var(--bg)}
-.src dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;font-size:14px}
-.src dt{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.src dd{margin:0}
-@media (max-width:560px){.src dl{grid-template-columns:1fr}.src dt{padding-top:6px}}
-.ref{display:inline-block;font:600 11px var(--mono);text-decoration:none;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted);vertical-align:1px}
-.ref:hover,.ref:focus-visible{color:var(--ink);border-color:var(--ink)}
-.star{font:600 11px var(--mono);color:var(--ok);letter-spacing:.06em;text-transform:uppercase}
-
-.sub{font:600 clamp(1.05rem,2.4vw,1.35rem)/1.3 var(--display);color:var(--lead);margin-top:-6px}
-.pill{justify-self:start;font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c,var(--muted));border:1px solid var(--c,var(--line));padding:2px 8px;border-radius:3px}
-.muted{color:var(--muted)}
-.note{font-size:13px;color:var(--muted)}
-.cards.five{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
-.epigraph{margin:0;padding:22px 24px;border:1px solid var(--line);border-radius:6px;background:var(--surface);font:600 clamp(1.3rem,3vw,1.8rem)/1.3 var(--display);color:var(--lead);display:grid;gap:8px}
-.epigraph cite{font:500 13px var(--mono);font-style:normal;color:var(--muted)}
-.cards.three,ol.steps.three{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-
-.classif{background:var(--sec);color:var(--bg);font:600 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:8px 16px}
-.cover{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start}
-.cover-side{display:grid;gap:14px;justify-items:center}
-.crest{width:150px;height:150px;color:var(--ink)}
-.file{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:12px 14px;margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font:12px/1.5 var(--mono);min-width:220px}
-.file dt{color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.file dd{margin:0}
-.file .hot{color:var(--sec);font-weight:500}
-.topsecret{justify-self:center;font:700 clamp(1.1rem,3vw,1.6rem)/1 var(--display);letter-spacing:.12em;color:var(--sec);border:3px double var(--sec);padding:6px 12px;transform:rotate(8deg);opacity:.85;pointer-events:none}
-.cover>div{min-width:0}
-@media (max-width:720px){.cover{grid-template-columns:1fr}.cover-side{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.crest{width:96px;height:96px}.file{min-width:0;flex:1 1 220px}}
-.redact{background:var(--ink);color:var(--ink);border-radius:2px;padding:0 3px;cursor:help;transition:color .2s,background .2s}
-.redact:hover,.redact:focus-visible{background:color-mix(in srgb,var(--sec) 18%,var(--surface));color:var(--sec);outline:none}
-.gl{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.16em;color:var(--lead)}
-h2 .emb{display:inline-block;width:1.05em;height:1.05em;vertical-align:-.12em;margin-right:.3em}
-.emb.sh{color:var(--sec)} .emb.gk{color:var(--bak)}
-.head-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 16px}
-.declass{font:600 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ok);border:1.5px solid var(--ok);padding:3px 8px;transform:rotate(-2deg)}
-@media (prefers-reduced-motion:reduce){.redact{transition:none}}
-section,header.top{grid-template-columns:minmax(0,1fr)}
-.cover{grid-template-columns:minmax(0,1fr) auto}
-@media (max-width:720px){.cover{grid-template-columns:minmax(0,1fr)}}
-.stamp{max-width:100%}
-@media (max-width:720px){.stamp{width:auto;white-space:normal;line-height:1.5}}
-.agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-.agent{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--c,var(--line));border-radius:6px;padding:14px 16px;display:grid;gap:8px;align-content:start;font-size:14px}
-.agent .cn{font:700 1.25rem/1 var(--display);color:var(--c,var(--ink));letter-spacing:.04em}
-.agent .rl{font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.agent .tr{display:flex;flex-wrap:wrap;gap:6px}
-/*DECK-CSS*/
 .deck-open{display:inline-flex;align-items:center;gap:10px;font:700 14px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--sec);background:transparent;border:3px double var(--sec);padding:12px 16px;cursor:pointer;transform:rotate(-2deg);transition:transform .15s,background .15s}
 .deck-open:hover,.deck-open:focus-visible{transform:rotate(0deg) scale(1.03);background:color-mix(in srgb,var(--sec) 10%,transparent);outline:none}
 .deck-open .tri{width:0;height:0;border-left:11px solid currentColor;border-top:7px solid transparent;border-bottom:7px solid transparent}
@@ -294,847 +278,96 @@ section,header.top{grid-template-columns:minmax(0,1fr)}
 .dk-ref{font:600 12px var(--mono);color:var(--muted);border:1px solid var(--line);padding:2px 6px;border-radius:3px}
 @media (max-width:760px){.dk-agent,.dk-duo{grid-template-columns:1fr}.dk-team{grid-template-columns:repeat(3,1fr)}.dk-cap{max-width:90%}}
 @media (prefers-reduced-motion:reduce){.dk-slide,.dk-stampbig{animation:none}}
-/*DECK-CSS-END*/</style>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
-<symbol id="sym-r451" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="34 7 16 7" stroke-linecap="round"/>
-  <path d="M32 13 L49 32 L32 51 L15 32 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
-  <path d="M22 32 Q32 21 42 32 Q32 43 22 32 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
-  <circle cx="32" cy="32" r="4.2" fill="currentColor"/>
-  <path d="M6 32 H14 M50 32 H58" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="32" cy="7.5" r="2" fill="currentColor"/>
-  <circle cx="32" cy="56.5" r="2" fill="currentColor"/>
-</symbol>
-<symbol id="sym-shield" viewBox="0 0 64 64">
-  <path d="M32 4 L56 12 V30 C56 46 45 56 32 60 C19 56 8 46 8 30 V12 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
-  <path d="M32 13 L48 18.5 V30.5 C48 41 41 47.5 32 50.5 C23 47.5 16 41 16 30.5 V18.5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M32 22 L40 25 V31 C40 36.5 36.5 40 32 41.5 C27.5 40 24 36.5 24 31 V25 Z" fill="currentColor"/>
-</symbol>
-<symbol id="sym-godkiller" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="3"/>
-  <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <g stroke="currentColor" stroke-width="3" stroke-linecap="round">
-    <path d="M32 2 V9"/><path d="M60.5 23 L54 25"/><path d="M49.6 56.3 L45.5 50.6"/><path d="M14.4 56.3 L18.5 50.6"/><path d="M3.5 23 L10 25"/>
-  </g>
-  <circle cx="32" cy="27" r="6.5" fill="currentColor"/>
-  <path d="M28.5 30 L25.5 44 H38.5 L35.5 30 Z" fill="currentColor"/>
-</symbol>
-<symbol id="sym-crest" viewBox="0 0 120 120">
-  <defs><path id="crest-ring" d="M60 60 m-45 0 a45 45 0 1 1 90 0 a45 45 0 1 1 -90 0"/></defs>
-  <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="2.5"/>
-  <circle cx="60" cy="60" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <text font-family="IBM Plex Mono, monospace" font-size="8.6" font-weight="500" letter-spacing="1.4" fill="currentColor"><textPath href="#crest-ring" textLength="276" lengthAdjust="spacing">ZONE 67 · RESTRICTED SITE · DEFENCE ·</textPath></text>
-  <path d="M60 30 L86 45 V75 L60 90 L34 75 V45 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-  <text x="60" y="71" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-weight="700" font-size="30" fill="currentColor">67</text>
-  <circle cx="60" cy="38.5" r="2" fill="currentColor"/>
-  <circle cx="60" cy="82" r="2" fill="currentColor"/>
-</symbol>
-</defs></svg>
-<div class="classif">Top secret // RECORDER-451 // Eyes only</div>
-<div class="wrap">
+</style>
+<main class="tk"><header class="tk-head"><span class="kick">Technical file · Z67-R451</span><h1>Four services, four files</h1><p>Each service has its own sheet. The essentials take two minutes to read; the details are tucked away at the bottom.</p></header>
+<nav class="ftabs" role="tablist" aria-label="Technical file · Z67-R451"><a class="ftab" role="tab" id="tab-chef" href="#chef" aria-controls="chef" aria-selected="true" style="--c:#5A4C8A"><img src="portraits/command.jpg" alt="">PROJECT LEAD</a><a class="ftab" role="tab" id="tab-infra" href="#infra" aria-controls="infra" aria-selected="false" style="--c:#2F7D5B"><img src="portraits/forge.jpg" alt="">INFRA</a><a class="ftab" role="tab" id="tab-secu" href="#secu" aria-controls="secu" aria-selected="false" style="--c:#A3322C"><img src="portraits/sentinel.jpg" alt="">SECURITY</a><a class="ftab" role="tab" id="tab-dev" href="#dev" aria-controls="dev" aria-selected="false" style="--c:#A8620E"><img src="portraits/relay.jpg" alt="">DEV</a></nav><section class="dos" id="chef" role="tabpanel" aria-labelledby="tab-chef" style="--c:#5A4C8A">
+<div class="idc"><div class="pols"><div class="pol"><img src="portraits/command.jpg" alt=""><b>COMMAND</b><i>Team lead</i></div></div><div><span class="code">PROJECT LEAD</span><h2>Mission & organisation</h2><p class="mis">Set the course: what we protect, against whom, and who does what.</p><div class="chips"><span class="chip">▶ Briefing: slides 1–9 and 25–26</span></div></div></div>
+<h3 class="lab">Key points</h3><div class="ess"><div class="es"><span class="big">DIC</span><b>Three goals</b><p>Keep the archive <b>available</b>, <b>intact</b> and <b>confidential</b> (the CIA triad).</p></div><div class="es"><span class="big">0</span><b>Zero trust</b><p>The Greys are already inside. Nobody is trusted by default, not even colleagues.</p></div><div class="es"><span class="big">5</span><b>Five agents, four services</b><p>Infra, security, dev and project lead. Each one owns a part of the plan.</p></div></div>
+<h3 class="lab">The diagram</h3><div class="fig"><figure class="paper"><h3>The big picture</h3><svg viewBox="0 0 1000 540" role="img" aria-label="Zone 67 network, built step by step">
+<defs><marker id="an-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="currentColor"/></marker>
+<marker id="an-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sec)"/></marker>
+<marker id="an-arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ok)"/></marker>
+<marker id="an-arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--bak)"/></marker></defs>
+<g data-s="0">
+ <rect class="z-mute" x="30" y="248" width="170" height="64" rx="32"/><text class="t" x="115" y="276" text-anchor="middle" style="font-size:17px">Internet</text><text class="s" x="115" y="298" text-anchor="middle" style="font-size:13px">untrusted</text>
+ <path class="wire" d="M200 280 H258" marker-end="url(#an-ar)"/>
+ <rect class="z-sec" x="260" y="210" width="160" height="140" rx="8" style="stroke-width:2.5"/>
+ <text class="t" x="340" y="248" text-anchor="middle" style="font-size:19px">Firewall</text><text class="s" x="340" y="272" text-anchor="middle" style="font-size:14px">pfSense</text>
+ <text class="m" x="340" y="322" text-anchor="middle" style="fill:var(--sec);font-size:15px;font-weight:600">DEFAULT: DENY</text>
+</g>
+<g data-s="1"><path class="wire" d="M420 280 H498" marker-end="url(#an-ar)"/>
+ <rect class="z-net" x="500" y="235" width="120" height="90" rx="8"/><text class="t" x="560" y="272" text-anchor="middle" style="font-size:16px">Switch</text><text class="s" x="560" y="296" text-anchor="middle" style="font-size:13px">core</text></g>
+<g data-s="1"><rect class="z-sec" x="680" y="40" width="290" height="70" rx="8"/><text class="t" x="698" y="70" style="font-size:16px">VLAN 10 · Management</text><text class="s" x="698" y="94" style="font-size:14px">bastion · Proxmox UI</text><path class="wire" d="M620 280 H650 V75 H678" marker-end="url(#an-ar)"/></g><g data-s="1"><rect class="z-lead" x="680" y="128" width="290" height="70" rx="8"/><text class="t" x="698" y="158" style="font-size:16px">VLAN 50 · Archive vault</text><text class="s" x="698" y="182" style="font-size:14px">ARCH01 · Recorder 451</text><path class="wire" d="M620 280 H650 V163 H678" marker-end="url(#an-ar)"/></g><g data-s="1"><rect class="z-sys" x="680" y="216" width="290" height="70" rx="8"/><text class="t" x="698" y="246" style="font-size:16px">VLAN 20 · Servers</text><text class="s" x="698" y="270" style="font-size:14px">accounts · files · intranet</text><path class="wire" d="M620 280 H650 V251 H678" marker-end="url(#an-ar)"/></g><g data-s="1"><rect class="z-mute" x="680" y="304" width="290" height="70" rx="8"/><text class="t" x="698" y="334" style="font-size:16px">VLAN 30 · Users</text><text class="s" x="698" y="358" style="font-size:14px">everyday PCs</text><path class="wire" d="M620 280 H650 V339 H678" marker-end="url(#an-ar)"/></g><g data-s="1"><rect class="z-bak" x="680" y="392" width="290" height="70" rx="8"/><text class="t" x="698" y="422" style="font-size:16px">VLAN 40 · Backup</text><text class="s" x="698" y="446" style="font-size:14px">isolated · one way out</text><path class="wire" d="M620 280 H650 V427 H678" marker-end="url(#an-ar)"/></g>
+<g data-s="2" class="an-glow"><rect x="672" y="120" width="306" height="86" rx="12" fill="none" stroke="var(--lead)" stroke-width="4"/>
+ <use href="#sym-r451" x="934" y="145" width="30" height="30" style="color:var(--lead)"/></g>
+<g data-s="3">
+ <circle cx="962" cy="312" r="14" fill="var(--sec)"/><text x="962" y="318" text-anchor="middle" style="fill:#fff;font:700 16px var(--mono)">!</text>
+ <path class="an-dash" d="M678 339 H640 V300 H486" fill="none" stroke="var(--sec)" stroke-width="3.5" stroke-dasharray="10 7" marker-end="url(#an-arr)"/>
+ <g transform="translate(462 300)"><circle r="19" fill="var(--sec)"/><path d="M-9 -9 L9 9 M9 -9 L-9 9" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/></g>
+ <text class="m" x="462" y="345" text-anchor="middle" style="fill:var(--sec);font-size:14px;font-weight:600">BLOCKED</text>
+</g>
+<g data-s="4">
+ <rect class="box" x="30" y="40" width="170" height="64" rx="8"/><text class="t" x="115" y="68" text-anchor="middle" style="font-size:16px">Remote admin</text><text class="s" x="115" y="90" text-anchor="middle" style="font-size:13px">laptop</text>
+ <path d="M200 72 H340 V208" fill="none" stroke="var(--ok)" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#an-arg)"/>
+ <text class="m" x="212" y="62" style="fill:var(--ok);font-size:14px">VPN + phone code</text>
+ <path d="M420 230 C520 150 560 75 678 75" fill="none" stroke="var(--ok)" stroke-width="3" marker-end="url(#an-arg)"/>
+ <text class="m" x="470" y="120" style="fill:var(--ok);font-size:14px">bastion only</text>
+</g>
+<g data-s="5">
+ <path d="M680 440 H640 V402 H230" fill="none" stroke="var(--bak)" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#an-arb)"/>
+ <path d="M640 402 V490 H230" fill="none" stroke="var(--bak)" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#an-arb)"/>
+ <rect class="z-bak" x="30" y="458" width="198" height="64" rx="8"/><text class="t" x="129" y="486" text-anchor="middle" style="font-size:16px">Off-site copy</text><text class="s" x="129" y="508" text-anchor="middle" style="font-size:13px">pulls the backups</text>
+ <rect class="box" x="30" y="370" width="198" height="64" rx="8" style="stroke:var(--bak);stroke-dasharray:6 5"/><text class="t" x="129" y="398" text-anchor="middle" style="font-size:16px">Tape in a safe</text><text class="s" x="129" y="420" text-anchor="middle" style="font-size:13px">no cable at all</text>
+</g>
+</svg></figure><ol class="stp"><li>Think of Zone 67 as a fortress. Everything from outside hits one guard post: the firewall. By default, it says no.</li><li>Inside, five separate buildings with badge doors. In IT, each building is called a VLAN.</li><li>The archive of Recorder 451 lives alone in its own vault: VLAN 50.</li><li>An infected PC in the users' zone tries to reach the vault. The firewall blocks it.</li><li>Admins working from home use a private tunnel (VPN) and a phone code, and may only enter by the escorted door: the bastion.</li><li>Backups leave the site: an off-site copy pulls them, and a tape with no cable keeps one more.</li></ol></div>
+<div class="duo"><div class="note"><h3>In plain words</h3>Zone 67 is a fortress. One guard post at the gate (the firewall), five separate buildings inside (the VLANs), and a vault for the archive.</div><div class="quote"><h3>Say it at the oral</h3>“Our mission: keep Recorder 451’s archive available, intact and out of the Greys’ reach.”</div></div>
 
-<header class="top">
-  <div class="cover"><div style="display:grid;gap:16px;grid-template-columns:minmax(0,1fr)"><span class="stamp">Operation RECORDER-451 · Eyes only · Fictional scenario</span>
-  <h1>Operation RECORDER-451</h1>
-  <p class="sub">Zone 67 — secure server, the Shield, and the Godkiller backup protocol</p>
-  <p class="lede">Officially, Zone 67 is a routine administrative site of the Ministry of Defence. Unofficially, it shelters Recorder 451, a rogue Rigellian archivist who carries the entire Rigellian database in his memory. Our team has been hired to install, secure and back up the server that protects his archives.</p>
-  <div class="meta">
-    <span>Client <b>Ministry of Defence</b></span>
-    <span>Site <b>Zone 67</b></span>
-    <span>Asset <b><svg class="gl" aria-hidden="true"><use href="#sym-r451"/></svg> Recorder 451 archive</b></span>
-    <span>Domain <b>zone67.lan</b></span>
-    <span>IP range <b>10.67.0.0/16</b></span>
-  </div>
-  </div><div class="cover-side"><!--DECKBTN--><button type="button" class="deck-open" data-open-deck><span class="tri"></span>Open the file</button><!--/DECKBTN--><span class="topsecret" aria-hidden="true">TOP SECRET</span><svg class="crest" role="img" aria-label="Zone 67 crest"><use href="#sym-crest"/></svg><dl class="file"><dt>File</dt><dd>Z67-R451-2026</dd><dt>Class.</dt><dd><span class="hot">Top secret</span></dd><dt>Handling</dt><dd>Do not copy</dd><dt>Distribution</dt><dd>COMMAND · FORGE · SENTINEL · CIPHER · RELAY</dd></dl></div></div>
-</header>
+<h3 class="lab">Words to know</h3><dl class="words"><div><dt>DIC / CIA</dt><dd>Availability, integrity, confidentiality: the three goals of security.</dd></div><div><dt>Zero trust</dt><dd>Check every user and every request, every time.</dd></div><div><dt>Firewall</dt><dd>The guard post that lets traffic through or blocks it.</dd></div><div><dt>VLAN</dt><dd>A separate network zone, like a building with its own badge door.</dd></div></dl>
+<h3 class="lab">Technical sheet — going further</h3><details><summary>The four threats and our answer</summary><div class="db"><div class="tw"><table><thead><tr><th>Threat</th><th>Our answer</th><th>Owner</th></tr></thead><tbody><tr><td>Insiders working for the Greys</td><td>Zero trust, least privilege, two-person rule, everything logged.</td><td>Security · Dev</td></tr><tr><td>State-backed attackers</td><td>Default-deny firewall, mandatory bastion, IDS, SIEM alerts.</td><td>Security</td></tr><tr><td>Destruction (failure, ransomware, wiping)</td><td>RAID and Godkiller: encrypted, immutable, offline copies.</td><td>Infra · Dev</td></tr><tr><td>Network eavesdropping</td><td>Everything is encrypted: VPN, IPsec, TLS 1.3, SSH.</td><td>Infra · Security</td></tr></tbody></table></div></div></details><details><summary>Who presents what</summary><div class="db"><div class="tw"><table><thead><tr><th>Slides</th><th>Agent</th><th>Topic</th></tr></thead><tbody><tr><td>1–9</td><td>COMMAND</td><td>Mission, threats, big picture</td></tr><tr><td>10–13</td><td>FORGE</td><td>Server and network zones</td></tr><tr><td>14–17</td><td>SENTINEL</td><td>Remote access and the Shield</td></tr><tr><td>18–21</td><td>RELAY</td><td>Godkiller: backups</td></tr><tr><td>22–24</td><td>CIPHER</td><td>Godkiller: safeguards and recovery</td></tr><tr><td>25–26</td><td>COMMAND</td><td>Conclusion and sources</td></tr></tbody></table></div></div></details><details><summary>Deliverables</summary><div class="db"><ul class="dl"><li><b>Install & configuration guide</b> (Infra): hardware, OS, VLAN plan, Ansible playbooks.</li><li><b>Security policy & incident response</b> (Security): roles, MFA, incident procedure.</li><li><b>Backup & recovery runbook</b> (Dev): schedule, step-by-step restores, RTO/RPO.</li><li>Every document exists twice: on the internal wiki and on paper in the vault.</li></ul></div></details><details><summary>Course requirements: checklist</summary><div class="db"><ul class="dl"><li>✓ Visual aid: the briefing deck and its animated diagrams.</li><li>✓ At least two English sources: CISA [1] and Veeam [2], plus ANSSI [3] and NIST [4] for questions.</li><li>✓ One idea explained: the 3-2-1-1-0 backup rule.</li><li>✓ Relevance: our client is the Ministry of Defence, so we follow official government guides.</li></ul></div></details><details id="sources"><summary>All four sources</summary><div class="db"><div class="srcs"><div class="src"><span class="n">[1]</span><b>#StopRansomware Guide</b><small>CISA, FBI, NSA & MS-ISAC · 2023</small><q>“Maintain offline, encrypted backups of critical data, and regularly test the availability and integrity of backups in a disaster recovery scenario.”</q><a href="https://www.cisa.gov/stopransomware/ransomware-guide" target="_blank" rel="noopener">Open the source ↗</a></div><div class="src"><span class="n">[2]</span><b>2023 Ransomware Trends Report</b><small>Veeam Software · 2023</small><q>“Attackers almost always (93%+) target backups during cyber-attacks.”</q><a href="https://www.businesswire.com/news/home/20230523005553/en" target="_blank" rel="noopener">Open the source ↗</a></div><div class="src"><span class="n">[3]</span><b>Recommendations to secure administration of IT systems</b><small>ANSSI · 2018</small><q>“Security objectives and the principles for developing a secure technical architecture for administration.”</q><a href="https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems" target="_blank" rel="noopener">Open the source ↗</a></div><div class="src"><span class="n">[4]</span><b>SP 800-34 Rev. 1 — Contingency Planning Guide</b><small>NIST · 2010</small><q>Defines the Recovery Time Objective (RTO) and the Recovery Point Objective (RPO).</q><a href="https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf" target="_blank" rel="noopener">Open the source ↗</a></div></div></div></details>
+<div class="nxt"><a href="#infra">Next file : INFRA →</a></div>
+</section><section class="dos" id="infra" role="tabpanel" aria-labelledby="tab-infra" style="--c:#2F7D5B" hidden>
+<div class="idc"><div class="pols"><div class="pol"><img src="portraits/forge.jpg" alt=""><b>FORGE</b><i>DevOps · network</i></div></div><div><span class="code">INFRA</span><h2>Server & network</h2><p class="mis">Build the foundation: one solid server, cut into small machines, on a network split into zones.</p><div class="chips"><span class="chip">▶ Briefing: slides 10–13</span></div></div></div>
+<h3 class="lab">Key points</h3><div class="ess"><div class="es"><span class="big">7</span><b>One server, seven VMs</b><p>One virtual machine per role. If one breaks, the others keep running.</p></div><div class="es"><span class="big">5</span><b>Five network zones</b><p>An infected PC stays stuck in its zone. The archive has its own.</p></div><div class="es"><span class="big">×2</span><b>Everything doubled</b><p>Two disks, two power supplies, two links, two domain controllers.</p></div></div>
+<h3 class="lab">The diagram</h3><div class="fig"><figure class="paper"><h3>One server, seven virtual machines</h3><svg viewBox="0 0 1000 540" role="img" aria-label="Server built layer by layer"><defs><marker id="an-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="currentColor"/></marker><marker id="an-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sec)"/></marker><marker id="an-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ok)"/></marker><marker id="an-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--bak)"/></marker><marker id="an-ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sys)"/></marker><marker id="an-av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--lead)"/></marker><marker id="an-an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--net)"/></marker></defs><g data-s="0"><rect class="z-mute" x="20" y="330" width="960" height="190" rx="10"/><text x="40" y="358" text-anchor="start" style="fill:var(--muted);font:600 13px var(--mono)">LAYER 1 · DEDICATED HARDWARE</text><rect class="box" x="35" y="378" width="145" height="120" rx="8"/><text class="t" x="107.5" y="436" text-anchor="middle" style="font-size:14px">Brain</text><text class="s" x="107.5" y="457" text-anchor="middle" style="font-size:13px">32 cores (CPU)</text><rect class="box" x="192" y="378" width="145" height="120" rx="8"/><text class="t" x="264.5" y="436" text-anchor="middle" style="font-size:14px">Memory</text><text class="s" x="264.5" y="457" text-anchor="middle" style="font-size:13px">256 GB</text><rect class="box" x="349" y="378" width="145" height="120" rx="8"/><text class="t" x="421.5" y="436" text-anchor="middle" style="font-size:14px">System disks</text><text class="s" x="421.5" y="457" text-anchor="middle" style="font-size:13px">×2, mirrored</text><rect class="box" x="506" y="378" width="145" height="120" rx="8"/><text class="t" x="578.5" y="436" text-anchor="middle" style="font-size:14px">Data disks</text><text class="s" x="578.5" y="457" text-anchor="middle" style="font-size:13px">×4, encrypted</text><rect class="box" x="663" y="378" width="145" height="120" rx="8"/><text class="t" x="735.5" y="436" text-anchor="middle" style="font-size:14px">Network</text><text class="s" x="735.5" y="457" text-anchor="middle" style="font-size:13px">2 cables</text><rect class="box" x="820" y="378" width="145" height="120" rx="8"/><text class="t" x="892.5" y="436" text-anchor="middle" style="font-size:14px">Power</text><text class="s" x="892.5" y="457" text-anchor="middle" style="font-size:13px">2 plugs + battery</text></g><g data-s="1"><rect class="z-net" x="20" y="240" width="960" height="72" rx="10"/><text x="40" y="266" text-anchor="start" style="fill:var(--muted);font:600 13px var(--mono)">LAYER 2 · HYPERVISOR</text><text x="40" y="294" text-anchor="start" style="fill:var(--ink);font:700 19px var(--body)">Proxmox VE</text><text x="210" y="294" text-anchor="start" style="fill:var(--muted);font:500 14px var(--body)">splits one real machine into several virtual ones</text></g><g data-s="2"><rect class="z-sys" x="20" y="20" width="960" height="200" rx="10" style="fill:color-mix(in srgb,var(--sys) 6%,var(--surface))"/><text x="40" y="46" text-anchor="start" style="fill:var(--muted);font:600 13px var(--mono)">LAYER 3 · ONE VIRTUAL MACHINE PER JOB</text><rect class="box" x="170" y="64" width="124" height="136" rx="8"/><text class="t" x="232.0" y="130" text-anchor="middle" style="font-size:15px">Accounts</text><text class="s" x="232.0" y="151" text-anchor="middle" style="font-size:13px">DC01</text><rect class="box" x="305" y="64" width="124" height="136" rx="8"/><text class="t" x="367.0" y="130" text-anchor="middle" style="font-size:15px">Accounts #2</text><text class="s" x="367.0" y="151" text-anchor="middle" style="font-size:13px">DC02</text><rect class="box" x="440" y="64" width="124" height="136" rx="8"/><text class="t" x="502.0" y="130" text-anchor="middle" style="font-size:15px">Files</text><text class="s" x="502.0" y="151" text-anchor="middle" style="font-size:13px">FS01</text><rect class="box" x="575" y="64" width="124" height="136" rx="8"/><text class="t" x="637.0" y="130" text-anchor="middle" style="font-size:15px">Intranet</text><text class="s" x="637.0" y="151" text-anchor="middle" style="font-size:13px">WEB01</text><rect class="box" x="710" y="64" width="124" height="136" rx="8"/><text class="t" x="772.0" y="130" text-anchor="middle" style="font-size:15px">Alarms</text><text class="s" x="772.0" y="151" text-anchor="middle" style="font-size:13px">SIEM01</text><rect class="box" x="845" y="64" width="124" height="136" rx="8"/><text class="t" x="907.0" y="130" text-anchor="middle" style="font-size:15px">Admin door</text><text class="s" x="907.0" y="151" text-anchor="middle" style="font-size:13px">BAST01</text></g><g data-s="3"><rect class="z-lead" x="34" y="64" width="124" height="136" rx="8" style="stroke-width:3"/><text class="t" x="96.0" y="130" text-anchor="middle" style="font-size:16px">Archive</text><text class="s" x="96.0" y="151" text-anchor="middle" style="font-size:13px">ARCH01</text><g transform="translate(96 176) scale(1)"><rect x="-11" y="-2" width="22" height="17" rx="3" fill="var(--lead)"/><path d="M-6 -2 V-8 A6 6 0 0 1 6 -8 V-2" fill="none" stroke="var(--lead)" stroke-width="3.5"/></g></g><g data-s="4"><g transform="translate(398 488)"><circle r="14" fill="var(--sec)"/><path d="M-6 -6 L6 6 M6 -6 L-6 6" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><g transform="translate(446 488)"><circle r="14" fill="var(--ok)"/><path d="M-6 0 L-1 6 L7 -6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g><rect x="170" y="64" width="124" height="136" rx="8" fill="var(--bg)" opacity=".55"/><g transform="translate(284 76)"><circle r="17" fill="var(--sec)"/><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><g transform="translate(419 76)"><circle r="15" fill="var(--ok)"/><path d="M-7 0 L-2 6 L8 -6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M290 170 H303" fill="none" stroke="var(--ok)" stroke-width="3" marker-end="url(#an-ag)"/></g></svg></figure><ol class="stp"><li>At the bottom, one real machine. Almost everything is doubled: disks, cables, power.</li><li>A software called Proxmox splits it into several virtual machines, like one building split into rooms.</li><li>One room per job: accounts, files, alarms… If one breaks, the others keep running.</li><li>The archive of Recorder 451 gets its own locked room: its own zone and an encrypted disk.</li><li>A disk dies? Its twin keeps going. The accounts server stops? Its copy takes over.</li></ol></div><div class="fig" style="grid-template-columns:1fr"><figure class="paper"><h3>The five network zones</h3><div class="zones"><div class="zn" style="--z:#5A4C8A"><b>VLAN 10</b><strong>Administration</strong><span>iDRAC, Proxmox, bastion</span></div><div class="zn" style="--z:#2B5E8C"><b>VLAN 20</b><strong>Servers</strong><span>Accounts, files, intranet, SIEM</span></div><div class="zn" style="--z:#1B7568"><b>VLAN 30</b><strong>Users</strong><span>Workstations and printers</span></div><div class="zn" style="--z:#A8620E"><b>VLAN 40</b><strong>Backup</strong><span>Backup server #1</span></div><div class="zn" style="--z:#A3322C"><b>VLAN 50</b><strong>Archive vault</strong><span>ARCH01 only: the archive</span></div></div></figure></div>
+<div class="duo"><div class="note"><h3>In plain words</h3>The server is a building split into rooms (the VMs). Proxmox is the caretaker: it gives each room its walls, water and power.</div><div class="quote"><h3>Say it at the oral</h3>“One VM per role and nothing extra on it: the less software, the fewer doors for the Greys.”</div></div>
 
-<nav class="toc" aria-label="Sections"><!--DECKBTN--><a href="#" data-open-deck onclick="return false" style="color:var(--sec);font-weight:600">▶ Briefing</a><!--/DECKBTN-->
-  <a href="#mission">Mission</a><a href="#threats">Threats</a><a href="#overview">Big picture</a><a href="#server">Server</a><a href="#network">Network</a><a href="#security">The Shield</a><a href="#backup">Godkiller</a><a href="#recovery">Recovery</a><a href="#docs">Documentation</a><a href="#team">Team</a><a href="#sources">Sources</a><a href="#glossary">Glossary</a>
-</nav>
+<h3 class="lab">Words to know</h3><dl class="words"><div><dt>Hypervisor</dt><dd>Software that runs several VMs on one physical server (here: Proxmox).</dd></div><div><dt>VM</dt><dd>A complete computer, simulated by software.</dd></div><div><dt>RAID 1</dt><dd>Two disks writing the same data: if one dies, the other takes over.</dd></div><div><dt>Active Directory</dt><dd>Microsoft’s central directory of users, computers and rights.</dd></div><div><dt>VLAN</dt><dd>A separate network zone on the same switch.</dd></div></dl>
+<h3 class="lab">Technical sheet — going further</h3><details><summary>The seven VMs</summary><div class="db"><div class="tw"><table><thead><tr><th>VM</th><th>Role</th><th>OS</th><th>VLAN</th></tr></thead><tbody><tr><td>DC01 · DC02</td><td>Accounts and rights (Active Directory, DNS, DHCP)</td><td>Windows Server 2022</td><td>20</td></tr><tr><td>FS01</td><td>File shares by role</td><td>Windows Server 2022</td><td>20</td></tr><tr><td>WEB01</td><td>Intranet</td><td>Debian 13</td><td>20</td></tr><tr><td>SIEM01</td><td>Logs and alerts (Wazuh)</td><td>Debian 13</td><td>20</td></tr><tr><td>BAST01</td><td>Bastion: the only admin entrance</td><td>Debian 13</td><td>10</td></tr><tr><td>ARCH01</td><td>Recorder 451’s archive, encrypted disk (LUKS)</td><td>Debian 13</td><td>50</td></tr></tbody></table></div></div></details><details><summary>Why these choices</summary><div class="db"><div class="tw"><table><thead><tr><th>Choice</th><th>Why</th><th>Alternative</th></tr></thead><tbody><tr><td>Proxmox VE</td><td>Free, open source, built-in snapshots and backup server.</td><td>VMware ESXi, Hyper-V</td></tr><tr><td>Windows Server 2022</td><td>Active Directory is the standard for accounts, roles and GPOs.</td><td>Samba AD</td></tr><tr><td>Minimal Debian 13</td><td>Light and stable, no GUI, SSH only: small attack surface.</td><td>Rocky Linux, Ubuntu</td></tr><tr><td>Two domain controllers</td><td>If DC01 fails, users log in on DC02.</td><td>One DC (single point of failure)</td></tr></tbody></table></div></div></details><details><summary>Hardware</summary><div class="db"><dl class="kv"><dt>Model</dt><dd>Dell PowerEdge R760 / HPE ProLiant DL380 Gen11</dd><dt>CPU / RAM</dt><dd>32 cores · 256 GB (VMs use 24 vCPU and 88 GB: room to spare)</dd><dt>Disks</dt><dd>RAID 1 for the system, encrypted RAID 10 for VM data</dd><dt>Network</dt><dd>2 × 10 Gb/s links aggregated (LACP)</dd><dt>Power</dt><dd>2 power supplies on the UPS</dd></dl></div></details><details><summary>Address plan</summary><div class="db"><div class="tw"><table><thead><tr><th>VLAN</th><th>Zone</th><th>Subnet</th><th>Who is inside</th></tr></thead><tbody><tr><td>10</td><td>Administration</td><td>10.67.10.0/24</td><td>iDRAC, Proxmox, bastion</td></tr><tr><td>20</td><td>Servers</td><td>10.67.20.0/24</td><td>DC01, DC02, FS01, WEB01, SIEM01</td></tr><tr><td>30</td><td>Users</td><td>10.67.30.0/24</td><td>Workstations, printers</td></tr><tr><td>40</td><td>Backup</td><td>10.67.40.0/24</td><td>Backup server #1 only</td></tr><tr><td>50</td><td>Archive vault</td><td>10.67.50.0/24</td><td>ARCH01 only</td></tr><tr><td>99</td><td>VPN clients</td><td>10.67.99.0/24</td><td>Remote admins</td></tr></tbody></table></div></div></details><details><summary>Flow matrix: who may talk to whom</summary><div class="db"><ul class="dl"><li>From the Internet, <b>one port only</b>: OpenVPN 1194/udp on the firewall.</li><li>Users reach the archive only over HTTPS, with the “archive” role and MFA.</li><li>The archive <b>never</b> talks to the Internet.</li><li>Admin traffic (SSH, RDP) only leaves the administration zone, through the bastion.</li><li>Everything else is blocked and logged.</li></ul></div></details><details><summary>Installation in ten steps</summary><div class="db"><ol class="steps"><li><b>Rack and cable</b> two power supplies, two 10 Gb/s links.</li><li><b>Lock the firmware</b> BIOS password, Secure Boot, TPM.</li><li><b>Build the RAID</b> RAID 1 system, encrypted RAID 10 data.</li><li><b>Install Proxmox</b> fixed IP in VLAN 10, admin with MFA.</li><li><b>Set up the network</b> LACP, VLAN-aware bridge, one tag per VM.</li><li><b>Create the VMs</b> from hardened templates, deployed with Ansible.</li><li><b>Deploy Active Directory</b> domain zone67.lan, DNS, DHCP, then DC02.</li><li><b>Deploy the services</b> archive, shares, intranet, SIEM, bastion.</li><li><b>Raise the Shield</b> ANSSI / CIS hardening (Security file).</li><li><b>Start Godkiller</b> schedule backups, first full restore test (Dev file).</li></ol></div></details><details><summary>Commands</summary><div class="db"><pre><code># create the domain (PowerShell on DC01)
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+Install-ADDSForest -DomainName "zone67.lan" -InstallDns
 
-<!-- MISSION -->
-<section id="mission">
-  <div class="sec-head">
-    <span class="who c-lead">Presented by · COMMAND (team lead)</span>
-    <h2>The mission</h2>
-    <p>Recorder 451 knows the cosmic history, the alien technology and the truth about the Greys, who have quietly infiltrated the highest levels of government. If the Greys get his archives, or if the archives are destroyed, humanity loses its only independent record of what is really happening.</p>
-    <p>Vault location: <span class="redact" tabindex="0" title="[REDACTED]">sub-level 4, sector C</span>. Confirmed Grey agents in the ministry: <span class="redact" tabindex="0" title="[REDACTED]">3, including an auditor</span>. Hover a black bar to declassify it.</p>
-  </div>
-  <div class="cards">
-    <div class="card c-sec"><span class="pill">Confidentiality</span><h3>Out of the Greys' reach</h3><p>Only authorised people can read the archive, and every access is logged.</p></div>
-    <div class="card c-sys"><span class="pill">Integrity</span><h3>Intact</h3><p>Nobody can change or wipe the archive without being detected, and we can prove it.</p></div>
-    <div class="card c-bak"><span class="pill">Availability</span><h3>Always available</h3><p>Even after a fire, a ransomware attack or sabotage, the archive comes back.</p></div>
-  </div>
-  <div class="callouts">
-    <div class="plain"><span class="lbl">In plain words</span><p>These three goals are the <b>CIA triad</b>, the base of all cybersecurity: keep the secret, keep it correct, keep it reachable. Every technical choice on this page serves at least one of them.</p></div>
-    <div class="say c-lead"><span class="lbl">Say it</span><p>"Our mission: the archives of Recorder 451 must stay available, intact, and out of the Greys' reach."</p></div>
-  </div>
-</section>
-
-<!-- THREATS -->
-<section id="threats">
-  <div class="sec-head">
-    <span class="who c-lead">Presented by · COMMAND (team lead)</span>
-    <h2>Threat model</h2>
-    <p>We cannot trust anyone by default, not even people inside the ministry. Each threat has a clear answer in our design.</p>
-  </div>
-  <div class="tbl"><table>
-    <thead><tr><th>Threat</th><th>What it looks like</th><th>Our answer</th><th>Owner</th></tr></thead>
-    <tbody>
-      <tr><td><span class="tag c-sec">Infiltrated insiders</span></td><td>Accounts or officials who secretly work for the Greys.</td><td>Zero trust, least privilege, RBAC, two-person rule on the archive, everything logged.</td><td class="k">SENTINEL · CIPHER</td></tr>
-      <tr><td><span class="tag c-sec">State-level attackers</span></td><td>Intrusions, malware and data theft disguised as official audits.</td><td>Default-deny firewall, bastion only, IDS, SIEM alerts, no access without a ticket.</td><td class="k">SENTINEL</td></tr>
-      <tr><td><span class="tag c-bak">Physical &amp; logical destruction</span></td><td>Hardware failure, ransomware, a deliberate wipe of the archive.</td><td>RAID, the Godkiller protocol: encrypted, immutable and offline copies, tested restores.</td><td class="k">FORGE · RELAY</td></tr>
-      <tr><td><span class="tag c-net">Shadow surveillance</span></td><td>Someone listening to the traffic between Zone 67 and the outside.</td><td>Everything encrypted in transit: OpenVPN, IPsec, TLS 1.3, SSH. No clear-text protocol.</td><td class="k">FORGE · SENTINEL</td></tr>
-    </tbody>
-  </table></div>
-  <div class="callouts">
-    <div class="plain"><span class="lbl">In plain words</span><p><b>Zero trust</b> means we check everyone, every time, even colleagues. A badge that worked yesterday does not open the door today without a new check.</p></div>
-    <div class="say c-lead"><span class="lbl">Say it</span><p>"We assume the enemy is already inside. So nobody gets more access than they need, and nobody acts alone on the archive."</p></div>
-  </div>
-</section>
-
-<!-- OVERVIEW -->
-<section id="overview">
-  <div class="sec-head">
-    <span class="who c-lead">Presented by · COMMAND (team lead)</span>
-    <h2>The big picture</h2>
-    <p>Everything goes through the firewall. Behind it, the core switch splits the site into five isolated zones (VLANs). The Recorder 451 archive has its own vault zone, and the backups have another one that nobody can reach from the users' side. <a class="ref" href="#src2">[2]</a></p>
-  </div>
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 920 580" role="img" aria-label="Zone 67 architecture: remote admins and the internet reach the pfSense firewall, which feeds a core switch splitting the site into management, users, archive, servers and backup VLANs; backups are pulled to an off-site copy and written to offline tape.">
-      <defs>
-        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
-      </defs>
-      <rect class="box" x="20" y="40" width="150" height="56" rx="6"/>
-      <text class="t" x="95" y="64" text-anchor="middle">Remote admin</text>
-      <text class="s" x="95" y="82" text-anchor="middle">laptop + VPN client</text>
-
-      <rect class="z-mute" x="20" y="272" width="150" height="56" rx="28"/>
-      <text class="t" x="95" y="296" text-anchor="middle">Internet</text>
-      <text class="s" x="95" y="314" text-anchor="middle">untrusted</text>
-
-      <rect class="z-bak" x="20" y="480" width="150" height="64" rx="6"/>
-      <text class="t" x="95" y="506" text-anchor="middle">Off-site DR site</text>
-      <text class="s" x="95" y="524" text-anchor="middle">backup copy #2</text>
-
-      <rect class="z-sec" x="240" y="240" width="120" height="120" rx="6"/>
-      <text class="t" x="300" y="278" text-anchor="middle">pfSense</text>
-      <text class="s" x="300" y="298" text-anchor="middle">firewall + VPN</text>
-      <text class="m" x="300" y="330" text-anchor="middle" style="fill:var(--sec)">default DENY</text>
-
-      <rect class="z-net" x="430" y="240" width="120" height="120" rx="6"/>
-      <text class="t" x="490" y="278" text-anchor="middle">Core switch</text>
-      <text class="s" x="490" y="298" text-anchor="middle">802.1Q trunk</text>
-      <text class="m" x="490" y="330" text-anchor="middle">VLAN 10–50</text>
-
-      <path class="wire dash" d="M170 68 H300 V238" marker-end="url(#ar)"/>
-      <text class="lab" x="178" y="60">OpenVPN + MFA</text>
-      <line class="wire" x1="170" y1="300" x2="238" y2="300" marker-end="url(#ar)"/>
-      <text class="lab" x="204" y="292" text-anchor="middle">WAN</text>
-      <path class="wire dash" d="M172 512 H300 V362" marker-end="url(#ar)" marker-start="url(#ar)"/>
-      <text class="lab" x="236" y="504" text-anchor="middle">IPsec pull</text>
-      <line class="wire" x1="360" y1="300" x2="428" y2="300" marker-end="url(#ar)"/>
-      <text class="lab" x="394" y="292" text-anchor="middle">LAN</text>
-
-      <path class="wire" d="M550 300 H580"/>
-      <line class="wire" x1="580" y1="56" x2="580" y2="492"/>
-      <line class="wire" x1="580" y1="56" x2="608" y2="56" marker-end="url(#ar)"/>
-      <line class="wire" x1="580" y1="134" x2="608" y2="134" marker-end="url(#ar)"/>
-      <line class="wire" x1="580" y1="212" x2="608" y2="212" marker-end="url(#ar)"/>
-      <line class="wire" x1="580" y1="335" x2="608" y2="335" marker-end="url(#ar)"/>
-      <line class="wire" x1="580" y1="492" x2="608" y2="492" marker-end="url(#ar)"/>
-
-      <rect class="z-sec" x="610" y="20" width="290" height="72" rx="6" style="fill:color-mix(in srgb,var(--sec) 6%,var(--surface))"/>
-      <text class="t" x="624" y="44">VLAN 10 · Management</text>
-      <text class="s" x="624" y="64">iDRAC · Proxmox web UI</text>
-      <text class="s" x="624" y="81">BAST01 bastion (the only admin door)</text>
-
-      <rect class="z-mute" x="610" y="104" width="290" height="60" rx="6"/>
-      <text class="t" x="624" y="128">VLAN 30 · Users</text>
-      <text class="s" x="624" y="150">workstations · printers</text>
-
-      <rect class="z-lead" x="610" y="176" width="290" height="72" rx="6" style="stroke-width:2"/>
-      <use href="#sym-r451" x="856" y="188" width="32" height="32" style="color:var(--lead)"/>
-      <text class="t" x="624" y="200" style="fill:var(--lead)">VLAN 50 · Archive vault</text>
-      <text class="s" x="624" y="220">ARCH01 · Recorder 451 archive</text>
-      <text class="s" x="624" y="237">encrypted · two-person rule</text>
-
-      <rect class="z-sys" x="610" y="260" width="290" height="150" rx="6" style="fill:color-mix(in srgb,var(--sys) 7%,var(--surface))"/>
-      <text class="t" x="624" y="282">VLAN 20 · Servers</text>
-      <rect class="box" x="624" y="292" width="262" height="108" rx="5"/>
-      <text class="m" x="636" y="310">Proxmox VE host</text>
-      <rect class="chip" x="636" y="320" width="76" height="30" rx="4"/><text class="m" x="674" y="339" text-anchor="middle">DC01</text>
-      <rect class="chip" x="717" y="320" width="76" height="30" rx="4"/><text class="m" x="755" y="339" text-anchor="middle">DC02</text>
-      <rect class="chip" x="798" y="320" width="76" height="30" rx="4"/><text class="m" x="836" y="339" text-anchor="middle">FS01</text>
-      <rect class="chip" x="676" y="360" width="76" height="30" rx="4"/><text class="m" x="714" y="379" text-anchor="middle">WEB01</text>
-      <rect class="chip" x="757" y="360" width="76" height="30" rx="4"/><text class="m" x="795" y="379" text-anchor="middle">SIEM01</text>
-
-      <line class="wire" x1="700" y1="402" x2="700" y2="452" marker-end="url(#ar)" style="stroke:var(--bak)"/>
-      <text class="lab" x="708" y="432">backup · TCP 8007 only</text>
-
-      <rect class="z-bak" x="610" y="422" width="290" height="140" rx="6" style="fill:color-mix(in srgb,var(--bak) 7%,var(--surface))"/>
-      <text class="t" x="624" y="444" style="font-size:12px">VLAN 40 · Backup (isolated)</text>
-      <rect class="box" x="624" y="454" width="126" height="96" rx="5" style="stroke:var(--bak)"/>
-      <text class="t" x="687" y="484" text-anchor="middle">PBS #1</text>
-      <text class="s" x="687" y="504" text-anchor="middle">on-site</text>
-      <text class="s" x="687" y="522" text-anchor="middle">other room</text>
-      <rect class="box" x="762" y="454" width="126" height="96" rx="5" style="stroke:var(--bak);stroke-dasharray:5 4"/>
-      <text class="t" x="825" y="484" text-anchor="middle">WORM tape</text>
-      <text class="s" x="825" y="504" text-anchor="middle">locked safe</text>
-      <text class="s" x="825" y="522" text-anchor="middle">air gap, no cable</text>
-    </svg>
-    </div>
-    <figcaption>Solid arrows are normal traffic; dashed arrows are encrypted tunnels. ARCH01 runs on the same Proxmox host but lives in its own VLAN, so a compromised server cannot talk to it. The off-site site pulls the backups itself, and the tape has no cable at all.</figcaption>
-  </figure>
-  <div class="callouts">
-    <div class="plain"><span class="lbl">Why five zones?</span><p>If a user's PC gets infected, the virus stays in the users' building. It cannot walk into the archive vault, the management room or the backup vault, because the firewall does not open those doors.</p></div>
-    <div class="say c-lead"><span class="lbl">Say it</span><p>"Every packet crosses the firewall. The archive lives in its own vault, and each zone only talks to the zones it really needs."</p></div>
-  </div>
-</section>
-
-<!-- SERVER -->
-<section id="server">
-  <div class="sec-head">
-    <div class="head-row"><span class="who c-sys">Presented by · FORGE (DevOps · system engineer)</span><span class="declass">Declassified for training</span></div>
-    <h2>The server: hardware, OS and services</h2>
-    <p>One dedicated rack server runs a hypervisor, and the hypervisor runs seven virtual machines. Each VM does one job with minimal packages only, so a problem in one service does not take down the others.</p>
-  </div>
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 900 392" role="img" aria-label="Server stack in three layers: hardware at the bottom, the Proxmox VE hypervisor in the middle, and seven virtual machines on top including the ARCH01 archive server.">
-      <rect class="z-sys" x="20" y="20" width="860" height="150" rx="6" style="fill:color-mix(in srgb,var(--sys) 6%,var(--surface))"/>
-      <text class="lab" x="34" y="40">LAYER 3 · VIRTUAL MACHINES (one job each, minimal packages)</text>
-      <g>
-        <rect class="box" x="34" y="50" width="112" height="108" rx="5" style="stroke:var(--lead);stroke-width:2"/>
-        <use href="#sym-r451" x="120" y="58" width="20" height="20" style="color:var(--lead)"/>
-        <text class="m" x="44" y="72" style="font-weight:500;fill:var(--lead)">ARCH01</text>
-        <text class="s" x="44" y="94">Debian 13</text>
-        <text class="s" x="44" y="112">R451 archive</text>
-        <text class="lab" x="44" y="142">4 vCPU · 16 GB</text>
-      </g>
-      <g>
-        <rect class="box" x="154" y="50" width="112" height="108" rx="5"/>
-        <text class="m" x="164" y="72" style="font-weight:500">DC01</text>
-        <text class="s" x="164" y="94">Win Server 2022</text>
-        <text class="s" x="164" y="112">AD · DNS · DHCP</text>
-        <text class="lab" x="164" y="142">2 vCPU · 8 GB</text>
-      </g>
-      <g>
-        <rect class="box" x="274" y="50" width="112" height="108" rx="5"/>
-        <text class="m" x="284" y="72" style="font-weight:500">DC02</text>
-        <text class="s" x="284" y="94">Win Server 2022</text>
-        <text class="s" x="284" y="112">AD + DNS replica</text>
-        <text class="lab" x="284" y="142">2 vCPU · 8 GB</text>
-      </g>
-      <g>
-        <rect class="box" x="394" y="50" width="112" height="108" rx="5"/>
-        <text class="m" x="404" y="72" style="font-weight:500">FS01</text>
-        <text class="s" x="404" y="94">Win Server 2022</text>
-        <text class="s" x="404" y="112">SMB file shares</text>
-        <text class="lab" x="404" y="142">4 vCPU · 16 GB</text>
-      </g>
-      <g>
-        <rect class="box" x="514" y="50" width="112" height="108" rx="5"/>
-        <text class="m" x="524" y="72" style="font-weight:500">WEB01</text>
-        <text class="s" x="524" y="94">Debian 13</text>
-        <text class="s" x="524" y="112">Intranet · Nginx</text>
-        <text class="lab" x="524" y="142">2 vCPU · 4 GB</text>
-      </g>
-      <g>
-        <rect class="box" x="634" y="50" width="112" height="108" rx="5"/>
-        <text class="m" x="644" y="72" style="font-weight:500">SIEM01</text>
-        <text class="s" x="644" y="94">Debian 13</text>
-        <text class="s" x="644" y="112">Wazuh SIEM</text>
-        <text class="lab" x="644" y="142">8 vCPU · 32 GB</text>
-      </g>
-      <g>
-        <rect class="box" x="754" y="50" width="112" height="108" rx="5"/>
-        <text class="m" x="764" y="72" style="font-weight:500">BAST01</text>
-        <text class="s" x="764" y="94">Debian 13</text>
-        <text class="s" x="764" y="112">Guacamole</text>
-        <text class="lab" x="764" y="142">2 vCPU · 4 GB</text>
-      </g>
-
-      <rect class="z-net" x="20" y="186" width="860" height="56" rx="6"/>
-      <text class="lab" x="34" y="206">LAYER 2 · HYPERVISOR</text>
-      <text class="t" x="34" y="228">Proxmox VE 9</text>
-      <text class="s" x="150" y="228">shares the hardware between VMs · snapshots · VLAN-aware bridge vmbr0 · firewall per VM</text>
-
-      <rect class="z-mute" x="20" y="258" width="860" height="120" rx="6"/>
-      <text class="lab" x="34" y="278">LAYER 1 · DEDICATED HARDWARE (2U rack server)</text>
-      <g class="s">
-        <rect class="box" x="34" y="288" width="128" height="76" rx="5"/>
-        <text x="46" y="312" class="t" style="font-size:12px">CPU</text><text x="46" y="332">2× Intel Xeon</text><text x="46" y="350">32 cores total</text>
-        <rect class="box" x="175" y="288" width="128" height="76" rx="5"/>
-        <text x="187" y="312" class="t" style="font-size:12px">Memory</text><text x="187" y="332">256 GB ECC</text><text x="187" y="350">corrects bit errors</text>
-        <rect class="box" x="316" y="288" width="128" height="76" rx="5"/>
-        <text x="328" y="312" class="t" style="font-size:12px">System disks</text><text x="328" y="332">RAID 1</text><text x="328" y="350">2× 480 GB SSD</text>
-        <rect class="box" x="457" y="288" width="128" height="76" rx="5"/>
-        <text x="469" y="312" class="t" style="font-size:12px">Data disks</text><text x="469" y="332">RAID 10, encrypted</text><text x="469" y="350">4× 3.84 TB SSD</text>
-        <rect class="box" x="598" y="288" width="128" height="76" rx="5"/>
-        <text x="610" y="312" class="t" style="font-size:12px">Network</text><text x="610" y="332">2× 10 GbE</text><text x="610" y="350">bonded (LACP)</text>
-        <rect class="box" x="739" y="288" width="128" height="76" rx="5"/>
-        <text x="751" y="312" class="t" style="font-size:12px">Resilience</text><text x="751" y="332">2 PSU on UPS</text><text x="751" y="350">iDRAC · TPM 2.0</text>
-      </g>
-    </svg>
-    </div>
-    <figcaption>Read it bottom-up. The seven VMs use 24 vCPU and 88 GB of RAM, so the host keeps room to grow and to restore a VM quickly. Example models: Dell PowerEdge R760 or HPE ProLiant DL380 Gen11. ARCH01 stores the archive on a LUKS-encrypted disk.</figcaption>
-  </figure>
-
-  <div class="callouts">
-    <div class="plain"><span class="lbl">In plain words</span><p>The server is one big building split into apartments (the VMs). The hypervisor is the building manager: it gives each apartment its own walls, water and electricity. <b>RAID 1</b> means two disks write the same thing, so if one dies the other keeps going.</p></div>
-    <div class="say c-sys"><span class="lbl">Say it</span><p>"One VM per role, with only the packages it needs: less software means fewer doors for the Greys."</p></div>
-  </div>
-
-  <h3>Why these choices</h3>
-  <div class="tbl"><table>
-    <thead><tr><th>Choice</th><th>Why</th><th>Alternative we considered</th></tr></thead>
-    <tbody>
-      <tr><td class="k">Proxmox VE</td><td>Free, open source, built-in snapshots and native link with Proxmox Backup Server.</td><td>VMware ESXi (licence cost), Hyper-V</td></tr>
-      <tr><td class="k">Windows Server 2022</td><td>Active Directory is the standard for accounts, roles (RBAC), group policies and file shares.</td><td>Samba AD on Linux</td></tr>
-      <tr><td class="k">Debian 13 minimal</td><td>Stable and light. Installed without desktop, SSH only: the smallest possible attack surface.</td><td>Rocky Linux, Ubuntu Server</td></tr>
-      <tr><td class="k">Dedicated ARCH01</td><td>The archive is isolated from every other service, in its own VLAN, on an encrypted disk.</td><td>Archive stored on the file server</td></tr>
-      <tr><td class="k">Two domain controllers</td><td>If DC01 stops, users can still log in through DC02.</td><td>One DC (single point of failure)</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>Installation, step by step</h3>
-  <ol class="steps c-sys">
-    <li><b>Rack and cable</b>Mount the dedicated server, plug both power supplies into the UPS, connect both 10 GbE links.</li>
-    <li><b>Secure the firmware</b>Update BIOS and iDRAC, set a BIOS password, enable Secure Boot and TPM.</li>
-    <li><b>Build the RAID</b>RAID 1 for the system, RAID 10 for VM data, with disk encryption.</li>
-    <li><b>Install Proxmox VE</b>Static IP in VLAN 10, updates, admin account with MFA.</li>
-    <li><b>Configure the network</b>LACP bond, VLAN-aware bridge, one VLAN tag per VM (VLAN 50 for ARCH01).</li>
-    <li><b>Create the VMs</b>From hardened templates, minimal packages only, deployed by Ansible.</li>
-    <li><b>Deploy Active Directory</b>Create the zone67.lan domain, DNS and DHCP, then add DC02.</li>
-    <li><b>Deploy the services</b>Archive vault, file shares with rights per role, intranet, SIEM, bastion.</li>
-    <li><b>Raise the Shield</b>Apply ANSSI / CIS hardening (see the Shield section).</li>
-    <li><b>Start Godkiller</b>Schedule the backup jobs and run a first full restore test.</li>
-  </ol>
-
-  <h3>Technical details</h3>
-  <div class="cards">
-    <div class="card"><h3>Create the domain (PowerShell on DC01)</h3>
-<pre><span class="cm"># install the AD role</span>
-Install-WindowsFeature AD-Domain-Services `
-  -IncludeManagementTools
-<span class="cm"># create the forest + DNS</span>
-Install-ADDSForest -DomainName "zone67.lan" `
-  -InstallDns</pre></div>
-    <div class="card"><h3>Harden SSH (Debian VMs)</h3>
-<pre><span class="cm"># /etc/ssh/sshd_config</span>
+# harden SSH (Debian VMs) — /etc/ssh/sshd_config
 PermitRootLogin no
 PasswordAuthentication no
-AllowGroups ssh-admins
-
-<span class="cm"># automatic security updates</span>
-sudo apt install unattended-upgrades fail2ban</pre></div>
-  </div>
-</section>
-
-<!-- NETWORK -->
-<section id="network">
-  <div class="sec-head">
-    <div class="head-row"><span class="who c-net">Presented by · FORGE (network zones) &amp; SENTINEL (remote access)</span><span class="declass">Declassified for training</span></div>
-    <h2>Network and remote access</h2>
-    <p>The network is split into VLANs, and the firewall decides who can talk to whom. Admins working from outside never touch a server directly: they go through a VPN, then through the bastion. <a class="ref" href="#src3">[3]</a></p>
-  </div>
-
-  <h3>Addressing plan</h3>
-  <div class="tbl"><table>
-    <thead><tr><th>VLAN</th><th>Name</th><th>Subnet</th><th>Gateway</th><th>Who lives here</th></tr></thead>
-    <tbody>
-      <tr><td class="k"><span class="tag c-sec">10</span></td><td>Management</td><td class="k">10.67.10.0/24</td><td class="k">10.67.10.1</td><td>iDRAC, Proxmox UI, bastion</td></tr>
-      <tr><td class="k"><span class="tag c-sys">20</span></td><td>Servers</td><td class="k">10.67.20.0/24</td><td class="k">10.67.20.1</td><td>DC01, DC02, FS01, WEB01, SIEM01</td></tr>
-      <tr><td class="k"><span class="tag">30</span></td><td>Users</td><td class="k">10.67.30.0/24</td><td class="k">10.67.30.1</td><td>Workstations, printers (DHCP)</td></tr>
-      <tr><td class="k"><span class="tag c-bak">40</span></td><td>Backup</td><td class="k">10.67.40.0/24</td><td class="k">10.67.40.1</td><td>PBS #1 only</td></tr>
-      <tr><td class="k"><span class="tag c-lead">50</span></td><td><svg class="gl" aria-hidden="true"><use href="#sym-r451"/></svg> Archive vault</td><td class="k">10.67.50.0/24</td><td class="k">10.67.50.1</td><td>ARCH01 only</td></tr>
-      <tr><td class="k"><span class="tag">99</span></td><td>VPN clients</td><td class="k">10.67.99.0/24</td><td class="k">—</td><td>Remote admins, once connected</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>Firewall matrix: who can talk to whom</h3>
-  <div class="tbl"><table class="matrix">
-    <thead><tr><th>From ↓ &nbsp; To →</th><th>Management</th><th>Servers</th><th>Users</th><th>Archive</th><th>Backup</th><th>Internet</th></tr></thead>
-    <tbody>
-      <tr><td class="k">Management</td><td class="cell-yes"><span class="yes">✓</span></td><td class="cell-yes"><span class="yes">✓</span> SSH, RDP, 8006</td><td class="cell-yes"><span class="yes">✓</span> support</td><td class="cell-yes"><span class="yes">✓</span> SSH via bastion</td><td class="cell-yes"><span class="yes">✓</span> 8007 UI</td><td class="cell-yes"><span class="yes">✓</span> updates only</td></tr>
-      <tr><td class="k">Servers</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> AD replication</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> 8007 (host only)</td><td class="cell-yes"><span class="yes">✓</span> updates only</td></tr>
-      <tr><td class="k">Users</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> 53, 88, 389/636, 445, 443</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> 443, archive role + MFA</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> web via proxy</td></tr>
-      <tr><td class="k">Archive</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span> logs to SIEM, AD auth</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span> never</td></tr>
-      <tr><td class="k">Backup</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-yes"><span class="yes">✓</span></td><td class="cell-no"><span class="no">✗</span> IPsec pull only</td></tr>
-      <tr><td class="k">VPN clients</td><td class="cell-yes"><span class="yes">✓</span> 443 bastion only</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td></tr>
-      <tr><td class="k">Internet</td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td class="cell-no"><span class="no">✗</span></td><td>—</td></tr>
-    </tbody>
-  </table></div>
-  <p class="note">From the internet, the only open port is OpenVPN (1194/udp) on the firewall itself. Everything not marked ✓ is blocked and logged. The archive never talks to the internet, and only users with the archive role, plus MFA, can reach it.</p>
-
-  <h3>Remote access: four checkpoints</h3>
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 900 200" role="img" aria-label="Remote admin path: the admin laptop opens an OpenVPN tunnel with certificate and MFA to pfSense, which only lets it reach the bastion on port 443; the bastion asks for a second MFA and records the session before opening RDP or SSH to the target server.">
-      <defs>
-        <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
-      </defs>
-      <rect class="box" x="20" y="60" width="170" height="96" rx="6"/>
-      <text class="lab" x="34" y="82">1</text>
-      <text class="t" x="105" y="102" text-anchor="middle">Admin laptop</text>
-      <text class="s" x="105" y="122" text-anchor="middle">managed, encrypted disk</text>
-      <text class="s" x="105" y="140" text-anchor="middle">VPN certificate</text>
-      <rect class="z-sec" x="250" y="60" width="170" height="96" rx="6"/>
-      <text class="lab" x="264" y="82">2</text>
-      <text class="t" x="335" y="102" text-anchor="middle">pfSense</text>
-      <text class="s" x="335" y="122" text-anchor="middle">checks cert + password</text>
-      <text class="s" x="335" y="140" text-anchor="middle">+ TOTP code (MFA)</text>
-      <rect class="z-sec" x="480" y="60" width="170" height="96" rx="6" style="fill:color-mix(in srgb,var(--sec) 6%,var(--surface))"/>
-      <text class="lab" x="494" y="82">3</text>
-      <text class="t" x="565" y="102" text-anchor="middle">Bastion BAST01</text>
-      <text class="s" x="565" y="122" text-anchor="middle">second MFA login</text>
-      <text class="s" x="565" y="140" text-anchor="middle">sessions recorded</text>
-      <rect class="z-sys" x="710" y="60" width="170" height="96" rx="6"/>
-      <text class="lab" x="724" y="82">4</text>
-      <text class="t" x="795" y="102" text-anchor="middle">Target server</text>
-      <text class="s" x="795" y="122" text-anchor="middle">never exposed</text>
-      <text class="s" x="795" y="140" text-anchor="middle">to the outside</text>
-      <line class="wire dash" x1="190" y1="108" x2="248" y2="108" marker-end="url(#ar2)"/>
-      <text class="lab" x="219" y="34" text-anchor="middle">tunnel</text>
-      <text class="lab" x="219" y="46" text-anchor="middle">OpenVPN</text>
-      <line class="wire" x1="420" y1="108" x2="478" y2="108" marker-end="url(#ar2)"/>
-      <text class="lab" x="449" y="34" text-anchor="middle">port 443</text>
-      <text class="lab" x="449" y="46" text-anchor="middle">only</text>
-      <line class="wire" x1="650" y1="108" x2="708" y2="108" marker-end="url(#ar2)"/>
-      <text class="lab" x="679" y="34" text-anchor="middle">RDP / SSH</text>
-      <text class="lab" x="679" y="46" text-anchor="middle">in browser</text>
-      <text class="s" x="450" y="188" text-anchor="middle">A stolen password alone is useless: the attacker would also need the certificate and two MFA codes.</text>
-    </svg>
-    </div>
-    <figcaption>The bastion is the only door to the servers. It records every admin session like a video, so a fake "official audit" leaves a full trace of what it did.</figcaption>
-  </figure>
-
-  <div class="callouts">
-    <div class="plain"><span class="lbl">In plain words</span><p>A <b>VLAN</b> is a separate corridor in the same building. The <b>VPN</b> is a private tunnel through the public internet, so nobody can listen in. The <b>bastion</b> is the security desk: you sign in, you are escorted, and the camera is recording.</p></div>
-    <div class="say c-net"><span class="lbl">Say it</span><p>"Admins never connect straight to a server. They pass four checkpoints, and every session is recorded."</p></div>
-  </div>
-</section>
-
-<!-- SECURITY -->
-<section id="security">
-  <div class="sec-head">
-    <div class="head-row"><span class="who c-sec">Presented by · SENTINEL (cyber security expert)</span><span class="declass">Declassified for training</span></div>
-    <h2><svg class="emb sh" aria-hidden="true"><use href="#sym-shield"/></svg>The Shield: defence in depth</h2>
-    <p>No single protection is perfect, so we stack them. An attacker, or an insider working for the Greys, has to break every layer to reach the archive, and each layer raises an alarm. <a class="ref" href="#src3">[3]</a></p>
-  </div>
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 900 350" role="img" aria-label="Six nested security layers around the Recorder 451 archive: physical, perimeter, network, host, identity, and data at the centre.">
-      <rect x="20" y="20" width="860" height="310" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 4%,var(--surface))"/>
-      <text class="lab" x="36" y="40"><tspan style="font-weight:600;fill:var(--sec)">1 PHYSICAL</tspan> · locked server room, badge access, CCTV, UPS</text>
-      <rect x="70" y="50" width="760" height="260" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 7%,var(--surface))"/>
-      <text class="lab" x="86" y="70"><tspan style="font-weight:600;fill:var(--sec)">2 PERIMETER</tspan> · pfSense default deny, Suricata IDS, one open port (VPN)</text>
-      <rect x="120" y="80" width="660" height="210" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 10%,var(--surface))"/>
-      <text class="lab" x="136" y="100"><tspan style="font-weight:600;fill:var(--sec)">3 NETWORK</tspan> · VLANs, archive vault, firewall matrix</text>
-      <rect x="170" y="110" width="560" height="160" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 13%,var(--surface))"/>
-      <text class="lab" x="186" y="130"><tspan style="font-weight:600;fill:var(--sec)">4 HOST</tspan> · hardening, patches, vulnerability scans, Wazuh</text>
-      <rect x="220" y="140" width="460" height="110" rx="10" class="z-sec" style="fill:color-mix(in srgb,var(--sec) 16%,var(--surface))"/>
-      <text class="lab" x="236" y="160"><tspan style="font-weight:600;fill:var(--sec)">5 IDENTITY</tspan> · MFA, RBAC, least privilege, zero trust</text>
-      <rect x="270" y="176" width="360" height="56" rx="8" class="box" style="stroke:var(--lead);stroke-width:1.8"/>
-      <text class="t" x="450" y="200" text-anchor="middle" style="fill:var(--lead)">6 RECORDER 451 ARCHIVE</text>
-      <text class="s" x="450" y="219" text-anchor="middle">encrypted at rest and in transit · every access logged</text>
-    </svg>
-    </div>
-    <figcaption>Like an onion: to reach the archive in the centre, an attacker must get through every ring, and each ring reports what it sees to the SIEM.</figcaption>
-  </figure>
-
-  <div class="cards">
-    <div class="card"><h3>Strong authentication &amp; RBAC</h3><ul><li>Personal accounts only, no shared "admin"</li><li>MFA on VPN, bastion, Proxmox and the archive</li><li>Roles: archive reader, archive admin, backup operator, auditor</li><li>Two-person rule: no single account can delete the archive</li><li>LAPS: a unique local admin password per machine</li></ul></div>
-    <div class="card"><h3>Encryption everywhere</h3><ul><li><b>At rest:</b> LUKS on ARCH01, BitLocker on Windows VMs, encrypted backups</li><li><b>In transit:</b> TLS 1.3, SSH, OpenVPN, IPsec</li><li>No clear-text protocols (no Telnet, FTP, HTTP)</li><li>Keys kept apart from the data they protect</li></ul></div>
-    <div class="card"><h3>Firewall &amp; lockdown</h3><ul><li>Default deny on every VLAN</li><li>SSH and RDP only from the bastion</li><li>SSH keys only, no root login</li><li>fail2ban and account lockout after failed logins</li><li>USB storage blocked by GPO</li></ul></div>
-    <div class="card"><h3>Detection &amp; patching</h3><ul><li>Wazuh agent on every VM, logs kept 1 year</li><li>Suricata IDS on the firewall</li><li>Alerts: new admin, archive access at night, mass deletion, backup failure</li><li>Monthly patching window</li><li>Monthly vulnerability scan (OpenVAS)</li></ul></div>
-  </div>
-
-  <div class="callouts">
-    <div class="plain"><span class="lbl">In plain words</span><p>The <b>SIEM</b> is the control room with all the camera screens. It collects every log from every machine and rings an alarm when something looks wrong, like someone opening the archive at 3 a.m. or deleting 10,000 files at once.</p></div>
-    <div class="say c-sec"><span class="lbl">Say it</span><p>"We assume that one layer will fail one day. That is why we have six, and why every layer is watched."</p></div>
-  </div>
-</section>
-
-<!-- BACKUP -->
-<section id="backup">
-  <div class="sec-head">
-    <div class="head-row"><span class="who c-bak">Presented by · CIPHER &amp; RELAY (developers · backup managers)</span><span class="declass">Declassified for training</span></div>
-    <h2><svg class="emb gk" aria-hidden="true"><use href="#sym-godkiller"/></svg>The Godkiller protocol: automated backups</h2>
-    <p>If the Greys destroy the archive, Godkiller brings it back. We follow the 3-2-1-1-0 rule, an extended version of 3-2-1 made for ransomware and sabotage. Every job runs by itself; humans only read the reports and test restores. <a class="ref" href="#src1">[1]</a> <a class="ref" href="#src2">[2]</a></p>
-  </div>
-
-  <div class="cards five">
-    <div class="card"><span class="big">3</span><b>copies of the data</b><span class="muted">the live data + 2 backups (we keep 4)</span></div>
-    <div class="card"><span class="big">2</span><b>types of media</b><span class="muted">disks (PBS) and LTO tape</span></div>
-    <div class="card"><span class="big">1</span><b>copy off-site</b><span class="muted">PBS #2 at another ministry site</span></div>
-    <div class="card"><span class="big">1</span><b>copy immutable</b><span class="muted">WORM tape in a safe, no network</span></div>
-    <div class="card"><span class="big">0</span><b>errors</b><span class="muted">verified every week, restore tested every month</span></div>
-  </div>
-
-  <h3>Full, incremental, differential</h3>
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 900 260" role="img" aria-label="Comparison of backup types over one week: a full backup copies everything every day; an incremental copies only the changes since the previous backup; a differential copies all changes since the last full, so it grows during the week.">
-      <g class="lab" text-anchor="middle">
-        <text x="245" y="248">Sun</text><text x="340" y="248">Mon</text><text x="435" y="248">Tue</text><text x="530" y="248">Wed</text><text x="625" y="248">Thu</text><text x="720" y="248">Fri</text><text x="815" y="248">Sat</text>
-      </g>
-      <text class="t" x="20" y="40">Full</text>
-      <text class="s" x="20" y="58">copies everything</text>
-      <text class="lab" x="20" y="76">restore: 1 backup</text>
-      <g class="f-sys"><rect x="220" y="26" width="50" height="50"/><rect x="315" y="26" width="50" height="50"/><rect x="410" y="26" width="50" height="50"/><rect x="505" y="26" width="50" height="50"/><rect x="600" y="26" width="50" height="50"/><rect x="695" y="26" width="50" height="50"/><rect x="790" y="26" width="50" height="50"/></g>
-      <line class="grid" x1="200" y1="76" x2="860" y2="76"/>
-
-      <text class="t" x="20" y="112">Incremental</text>
-      <text class="s" x="20" y="130">changes since the last backup</text>
-      <text class="lab" x="20" y="148">restore: full + all incr.</text>
-      <g class="f-net"><rect x="220" y="98" width="50" height="50" class="f-sys"/><rect x="315" y="138" width="50" height="10"/><rect x="410" y="138" width="50" height="10"/><rect x="505" y="138" width="50" height="10"/><rect x="600" y="138" width="50" height="10"/><rect x="695" y="138" width="50" height="10"/><rect x="790" y="138" width="50" height="10"/></g>
-      <line class="grid" x1="200" y1="148" x2="860" y2="148"/>
-
-      <text class="t" x="20" y="184">Differential</text>
-      <text class="s" x="20" y="202">changes since the last full</text>
-      <text class="lab" x="20" y="220">restore: full + last diff.</text>
-      <g class="f-bak"><rect x="220" y="170" width="50" height="50" class="f-sys"/><rect x="315" y="210" width="50" height="10"/><rect x="410" y="203" width="50" height="17"/><rect x="505" y="196" width="50" height="24"/><rect x="600" y="189" width="50" height="31"/><rect x="695" y="182" width="50" height="38"/><rect x="790" y="175" width="50" height="45"/></g>
-      <line class="grid" x1="200" y1="220" x2="860" y2="220"/>
-    </svg>
-    </div>
-    <figcaption>The height of each block is the amount of data copied that day. Full is the simplest to restore but the heaviest; incremental is the lightest but needs the whole chain; differential sits in between.</figcaption>
-  </figure>
-
-  <div class="tbl"><table>
-    <thead><tr><th>Type</th><th>When</th><th>What</th><th>Why</th></tr></thead>
-    <tbody>
-      <tr><td><span class="tag c-sys">Full</span></td><td>Sunday 01:00</td><td>All 7 VMs, then written to WORM tape</td><td>A clean starting point every week</td></tr>
-      <tr><td><span class="tag c-bak">Differential</span></td><td>Mon–Sat 01:00</td><td>All VMs, changes since Sunday</td><td>Fast restore: full + one differential</td></tr>
-      <tr><td><span class="tag c-net">Incremental</span></td><td>Every 4 h</td><td>Tier 1: ARCH01, DC01, DC02, FS01</td><td>Lose at most 4 hours of archive work</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>Backup architecture</h3>
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 900 320" role="img" aria-label="Backup flow: the Proxmox host encrypts and backs up the VMs to PBS number 1 on-site; the encryption key is kept in a separate safe; PBS 2 off-site pulls the backups every night; PBS 1 writes WORM tape every Sunday; PBS 2 is used for a monthly restore test.">
-      <defs>
-        <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
-      </defs>
-      <rect class="z-sys" x="20" y="112" width="160" height="86" rx="6"/>
-      <text class="t" x="100" y="140" text-anchor="middle">Proxmox host</text>
-      <text class="s" x="100" y="160" text-anchor="middle">7 VMs incl. ARCH01</text>
-      <text class="lab" x="100" y="184" text-anchor="middle">copy 1 · live</text>
-
-      <rect class="z-lead" x="20" y="240" width="160" height="64" rx="6" style="stroke-dasharray:5 4"/>
-      <text class="t" x="100" y="264" text-anchor="middle">Encryption key</text>
-      <text class="s" x="100" y="284" text-anchor="middle">paper copy, other safe</text>
-      <line class="wire dash" x1="100" y1="238" x2="100" y2="200" marker-end="url(#ar3)"/>
-      <text class="lab" x="108" y="224">encrypts</text>
-
-      <rect class="z-bak" x="270" y="112" width="170" height="86" rx="6"/>
-      <text class="t" x="355" y="140" text-anchor="middle">PBS #1 · on-site</text>
-      <text class="s" x="355" y="160" text-anchor="middle">dedup + AES-256</text>
-      <text class="lab" x="355" y="184" text-anchor="middle">copy 2 · disk</text>
-
-      <rect class="z-bak" x="530" y="20" width="170" height="86" rx="6"/>
-      <text class="t" x="615" y="48" text-anchor="middle">PBS #2 · off-site</text>
-      <text class="s" x="615" y="68" text-anchor="middle">separate admins</text>
-      <text class="lab" x="615" y="92" text-anchor="middle">copy 3 · far away</text>
-
-      <rect class="z-bak" x="530" y="204" width="170" height="86" rx="6" style="stroke-dasharray:5 4"/>
-      <text class="t" x="615" y="232" text-anchor="middle">WORM tape</text>
-      <text class="s" x="615" y="252" text-anchor="middle">cannot be erased</text>
-      <text class="lab" x="615" y="276" text-anchor="middle">copy 4 · offline</text>
-
-      <rect class="box" x="760" y="20" width="120" height="86" rx="6" style="stroke:var(--ok)"/>
-      <text class="t" x="820" y="48" text-anchor="middle">Restore test</text>
-      <text class="s" x="820" y="68" text-anchor="middle">sandbox VM</text>
-      <text class="lab" x="820" y="92" text-anchor="middle" style="fill:var(--ok)">0 errors ✓</text>
-
-      <line class="wire" x1="180" y1="155" x2="268" y2="155" marker-end="url(#ar3)"/>
-      <text class="lab" x="224" y="128" text-anchor="middle">full · diff</text>
-      <text class="lab" x="224" y="140" text-anchor="middle">· incr</text>
-      <path class="wire dash" d="M440 135 H485 V63 H528" marker-end="url(#ar3)"/>
-      <text class="lab" x="478" y="100" text-anchor="end">pulled 03:00</text>
-      <path class="wire" d="M440 175 H485 V247 H528" marker-end="url(#ar3)"/>
-      <text class="lab" x="478" y="222" text-anchor="end">Sunday full</text>
-      <line class="wire" x1="700" y1="63" x2="758" y2="63" marker-end="url(#ar3)"/>
-      <text class="lab" x="729" y="54" text-anchor="middle">monthly</text>
-      <text class="lab" x="820" y="150" text-anchor="middle">PBS also re-reads</text>
-      <text class="lab" x="820" y="164" text-anchor="middle">every chunk weekly</text>
-      <text class="lab" x="820" y="178" text-anchor="middle">(verify job)</text>
-    </svg>
-    </div>
-    <figcaption>Four copies on two kinds of media in two places. The off-site server pulls the backups itself: Zone 67 admins have no account on it, so a compromised admin cannot delete them. The key that decrypts the backups never sits next to them.</figcaption>
-  </figure>
-
-  <h3>The Godkiller safeguards</h3>
-  <div class="cards three">
-    <div class="card"><h3>Keys stored apart</h3><p>Backups are encrypted on the host with AES-256. The key lives on paper in a sealed envelope, in a different safe, held by COMMAND. A stolen backup is unreadable.</p></div>
-    <div class="card"><h3>Pull, not push</h3><p>PBS #2 connects to PBS #1 and pulls the data. Nobody in Zone 67 has an account on PBS #2, so an infiltrated admin cannot wipe the off-site copy.</p></div>
-    <div class="card"><h3>WORM tape</h3><p>Write Once, Read Many: once written, the tape cannot be modified or erased, not even by an administrator.</p></div>
-    <div class="card"><h3>Two-person rule</h3><p>Deleting backups or changing the retention needs two approvals (COMMAND + SENTINEL). One traitor is not enough.</p></div>
-    <div class="card"><h3>Monitoring &amp; alerts</h3><p>RELAY's dashboard shows every job in green or red. A failed or missing backup sends an email and a Wazuh alert within minutes.</p></div>
-    <div class="card"><h3>Retention</h3><p>PBS #1: 7 daily, 4 weekly, 6 monthly. PBS #2: 12 monthly. Tape: 12 monthly + 5 yearly, kept in the safe.</p></div>
-  </div>
-
-  <h3>How often, and for how long</h3>
-  <div class="tbl"><table>
-    <thead><tr><th>Tier</th><th>Machines</th><th>Backup frequency</th><th>RPO (max data lost)</th><th>RTO (max downtime)</th></tr></thead>
-    <tbody>
-      <tr><td><span class="tag c-sec">Tier 1 · critical</span></td><td class="k">ARCH01 · DC01 · DC02 · FS01</td><td>every 4 h + nightly</td><td>4 h</td><td>4 h</td></tr>
-      <tr><td><span class="tag c-bak">Tier 2 · important</span></td><td class="k">WEB01 · SIEM01 · BAST01</td><td>nightly</td><td>24 h</td><td>8 h</td></tr>
-    </tbody>
-  </table></div>
-
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 900 262" role="img" aria-label="Weekly schedule: full backup Sunday 01:00, differential Monday to Saturday 01:00, off-site pull 03:00 daily, tier 1 incremental every four hours, WORM tape Sunday 07:00 and verify job Wednesday 06:00.">
-      <g class="lab">
-        <text x="20" y="44">Mon</text><text x="20" y="72">Tue</text><text x="20" y="100">Wed</text><text x="20" y="128">Thu</text><text x="20" y="156">Fri</text><text x="20" y="184">Sat</text><text x="20" y="212">Sun</text>
-      </g>
-      <g>
-        <line class="grid" x1="70" y1="26" x2="70" y2="222"/><line class="grid" x1="200" y1="26" x2="200" y2="222"/><line class="grid" x1="330" y1="26" x2="330" y2="222"/><line class="grid" x1="460" y1="26" x2="460" y2="222"/><line class="grid" x1="590" y1="26" x2="590" y2="222"/><line class="grid" x1="720" y1="26" x2="720" y2="222"/><line class="grid" x1="850" y1="26" x2="850" y2="222"/>
-      </g>
-      <g class="lab" text-anchor="middle">
-        <text x="70" y="240">00:00</text><text x="200" y="240">04:00</text><text x="330" y="240">08:00</text><text x="460" y="240">12:00</text><text x="590" y="240">16:00</text><text x="720" y="240">20:00</text><text x="850" y="240">24:00</text>
-      </g>
-      <g class="f-bak">
-        <circle cx="102.5" cy="40" r="6"/><circle cx="102.5" cy="68" r="6"/><circle cx="102.5" cy="96" r="6"/><circle cx="102.5" cy="124" r="6"/><circle cx="102.5" cy="152" r="6"/><circle cx="102.5" cy="180" r="6"/>
-      </g>
-      <circle cx="102.5" cy="208" r="8" class="f-sys"/>
-      <g class="f-net">
-        <rect x="161.5" y="34" width="12" height="12" transform="rotate(45 167.5 40)"/><rect x="161.5" y="62" width="12" height="12" transform="rotate(45 167.5 68)"/><rect x="161.5" y="90" width="12" height="12" transform="rotate(45 167.5 96)"/><rect x="161.5" y="118" width="12" height="12" transform="rotate(45 167.5 124)"/><rect x="161.5" y="146" width="12" height="12" transform="rotate(45 167.5 152)"/><rect x="161.5" y="174" width="12" height="12" transform="rotate(45 167.5 180)"/><rect x="161.5" y="202" width="12" height="12" transform="rotate(45 167.5 208)"/>
-      </g>
-      <g class="f-sec">
-        <rect x="228" y="36" width="9" height="9"/><rect x="358" y="36" width="9" height="9"/><rect x="488" y="36" width="9" height="9"/><rect x="618" y="36" width="9" height="9"/><rect x="748" y="36" width="9" height="9"/>
-        <rect x="228" y="64" width="9" height="9"/><rect x="358" y="64" width="9" height="9"/><rect x="488" y="64" width="9" height="9"/><rect x="618" y="64" width="9" height="9"/><rect x="748" y="64" width="9" height="9"/>
-        <rect x="228" y="92" width="9" height="9"/><rect x="358" y="92" width="9" height="9"/><rect x="488" y="92" width="9" height="9"/><rect x="618" y="92" width="9" height="9"/><rect x="748" y="92" width="9" height="9"/>
-        <rect x="228" y="120" width="9" height="9"/><rect x="358" y="120" width="9" height="9"/><rect x="488" y="120" width="9" height="9"/><rect x="618" y="120" width="9" height="9"/><rect x="748" y="120" width="9" height="9"/>
-        <rect x="228" y="148" width="9" height="9"/><rect x="358" y="148" width="9" height="9"/><rect x="488" y="148" width="9" height="9"/><rect x="618" y="148" width="9" height="9"/><rect x="748" y="148" width="9" height="9"/>
-        <rect x="228" y="176" width="9" height="9"/><rect x="358" y="176" width="9" height="9"/><rect x="488" y="176" width="9" height="9"/><rect x="618" y="176" width="9" height="9"/><rect x="748" y="176" width="9" height="9"/>
-        <rect x="228" y="204" width="9" height="9"/><rect x="358" y="204" width="9" height="9"/><rect x="488" y="204" width="9" height="9"/><rect x="618" y="204" width="9" height="9"/><rect x="748" y="204" width="9" height="9"/>
-      </g>
-      <polygon class="f-lead" points="297.5,200 305.5,216 289.5,216"/>
-      <text class="lab" x="310" y="212">tape</text>
-      <polygon class="f-sys" points="265,88 273,104 257,104"/>
-      <text class="lab" x="278" y="100">verify</text>
-    </svg>
-    </div>
-    <div class="legend">
-      <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" style="fill:var(--sys)"/></svg>Sun 01:00 full</span>
-      <span><svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" style="fill:var(--bak)"/></svg>Mon–Sat 01:00 differential</span>
-      <span><svg viewBox="0 0 14 14"><rect x="3" y="3" width="8" height="8" transform="rotate(45 7 7)" style="fill:var(--net)"/></svg>03:00 off-site pull</span>
-      <span><svg viewBox="0 0 14 14"><rect x="2.5" y="2.5" width="9" height="9" style="fill:var(--sec)"/></svg>every 4 h incremental, tier 1</span>
-      <span><svg viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" style="fill:var(--lead)"/></svg>Sun 07:00 WORM tape</span>
-      <span><svg viewBox="0 0 14 14"><polygon points="7,1 13,13 1,13" style="fill:var(--sys)"/></svg>Wed 06:00 verify</span>
-    </div>
-    <figcaption>Heavy jobs run at night when nobody works; the incremental backups during the day only copy what changed and take a few minutes.</figcaption>
-  </figure>
-
-  <div class="callouts">
-    <div class="plain"><span class="lbl">In plain words</span><p>Keep your house keys in three places: in your pocket, in a drawer at home, and at a friend's place in another city. Now lock one copy in a safe that nobody can open, not even you. Even a traitor with all your keys cannot destroy that one.</p></div>
-    <div class="say c-bak"><span class="lbl">Say it</span><p>"Even if the Greys steal an admin account, they cannot erase the off-site copy or the tape. That is the Godkiller protocol."</p></div>
-  </div>
-</section>
-
-<!-- RECOVERY -->
-<section id="recovery">
-  <div class="sec-head">
-    <div class="head-row"><span class="who c-bak">Presented by · CIPHER &amp; RELAY (developers · backup managers)</span><span class="declass">Declassified for training</span></div>
-    <h2>Disaster recovery plan</h2>
-    <p>Two numbers drive the whole plan. RPO is how much recent work we can afford to lose. RTO is how long the service can stay down. <a class="ref" href="#src4">[4]</a> <a class="ref" href="#src1">[1]</a></p>
-  </div>
-  <figure>
-    <div class="scroll">
-    <svg viewBox="0 0 900 180" role="img" aria-label="Timeline: last good backup at 09:00, incident at 11:30, service restored at 13:30. The gap before the incident is the RPO, the lost data; the gap after is the RTO, the downtime.">
-      <defs>
-        <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker>
-      </defs>
-      <line class="wire" x1="40" y1="96" x2="860" y2="96" marker-end="url(#ar4)"/>
-      <text class="lab" x="860" y="120" text-anchor="end">time →</text>
-      <rect x="220" y="80" width="230" height="32" class="z-bak"/>
-      <text class="t" x="335" y="60" text-anchor="middle" style="fill:var(--bak)">RPO · 2 h 30 of data lost</text>
-      <text class="s" x="335" y="76" text-anchor="middle">target: less than 4 h</text>
-      <rect x="450" y="80" width="240" height="32" class="z-sys"/>
-      <text class="t" x="570" y="60" text-anchor="middle" style="fill:var(--sys)">RTO · 2 h of downtime</text>
-      <text class="s" x="570" y="76" text-anchor="middle">target: less than 4 h</text>
-      <circle cx="220" cy="96" r="7" class="f-bak"/>
-      <text class="t" x="220" y="140" text-anchor="middle">09:00</text><text class="s" x="220" y="158" text-anchor="middle">last good backup</text>
-      <circle cx="450" cy="96" r="8" class="f-sec"/>
-      <text class="t" x="450" y="140" text-anchor="middle">11:30</text><text class="s" x="450" y="158" text-anchor="middle">incident</text>
-      <circle cx="690" cy="96" r="7" class="f-sys"/>
-      <text class="t" x="690" y="140" text-anchor="middle">13:30</text><text class="s" x="690" y="158" text-anchor="middle">archive back online</text>
-    </svg>
-    </div>
-    <figcaption>Example for ARCH01 (tier 1). More frequent backups shrink the orange part; a fast, rehearsed restore shrinks the blue part.</figcaption>
-  </figure>
-
-  <h3>Six scenarios, six answers</h3>
-  <div class="tbl"><table>
-    <thead><tr><th>Scenario</th><th>What we do</th><th>RTO</th><th>RPO</th></tr></thead>
-    <tbody>
-      <tr><td><b>A disk dies</b></td><td>RAID keeps running. Hot-swap the disk, the array rebuilds on its own.</td><td class="k">0</td><td class="k">0</td></tr>
-      <tr><td><b>Someone deletes a file</b></td><td>Restore the file from shadow copies or from PBS file-level restore.</td><td class="k">15 min</td><td class="k">≤ 4 h</td></tr>
-      <tr><td><b>The server dies</b></td><td>Restore the VMs from PBS #1 onto the spare host, ARCH01 first.</td><td class="k">4 h</td><td class="k">≤ 4 h</td></tr>
-      <tr><td><b>Ransomware</b></td><td>Isolate the network, find the last clean restore point, rebuild from PBS. If PBS is touched, restore from tape.</td><td class="k">24 h</td><td class="k">≤ 4 h (PBS) · ≤ 7 days (tape)</td></tr>
-      <tr><td><b>An insider wipes the archive</b></td><td>Lock the account, keep the logs as evidence, restore ARCH01 from PBS #2 (pulled, separate admins) or from WORM tape.</td><td class="k">8 h</td><td class="k">≤ 24 h</td></tr>
-      <tr><td><b>Fire or flood</b></td><td>Restart ARCH01 and the critical VMs at the off-site DR site from PBS #2.</td><td class="k">48 h</td><td class="k">≤ 24 h</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>When disaster strikes</h3>
-  <ol class="steps three c-bak">
-    <li><b>Detect</b>An alert from Wazuh, from RELAY's backup dashboard or a user report.</li>
-    <li><b>Assess</b>What is hit, since when, is it spreading, is it an insider?</li>
-    <li><b>Declare</b>COMMAND triggers the plan and informs the ministry.</li>
-    <li><b>Contain</b>Isolate the infected zone and lock suspect accounts before restoring anything.</li>
-    <li><b>Restore</b>ARCH01 and tier 1 first, then tier 2, using RELAY's restore scripts.</li>
-    <li><b>Verify &amp; review</b>Check the archive's integrity, write the report, improve the plan.</li>
-  </ol>
-
-  <div class="callouts">
-    <div class="plain"><span class="lbl">In plain words</span><p>A disaster recovery plan is a fire drill for computers. Everybody knows their role before the fire, so nobody panics during it. We rehearse it twice a year.</p></div>
-    <div class="say c-bak"><span class="lbl">Say it</span><p>"For each scenario, we know what to do, who does it, and how long it takes."</p></div>
-  </div>
-</section>
-
-<!-- DOCS -->
-<section id="docs">
-  <div class="sec-head">
-    <span class="who c-lead">Deliverable 4</span>
-    <h2>Documentation</h2>
-    <p>If the documentation is only on the server, it disappears with the server. So every document exists in the internal wiki and as a printed copy in the safe.</p>
-  </div>
-  <div class="cards">
-    <div class="card c-sys"><span class="pill">FORGE</span><h3>Installation &amp; configuration guide</h3><ul><li>Hardware, RAID and firmware settings</li><li>Minimal OS install, VLAN plan, IP plan</li><li>Configuration of every service</li><li>Ansible playbooks to rebuild a VM</li></ul></div>
-    <div class="card c-sec"><span class="pill">SENTINEL · COMMAND</span><h3>Security policy &amp; incident response</h3><ul><li>Roles (RBAC) and who can access the archive</li><li>Password, MFA and two-person rules</li><li>Incident procedure: detect, contain, eradicate, recover, report</li><li>Who to call at the ministry</li></ul></div>
-    <div class="card c-bak"><span class="pill">CIPHER · RELAY</span><h3>Backup &amp; disaster recovery runbook</h3><ul><li>Backup schedule and retention</li><li>Step-by-step restore for each scenario</li><li>RTO / RPO targets per tier</li><li>Log of every restore test</li></ul></div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team">
-  <div class="sec-head">
-    <span class="who c-lead">Organisation</span>
-    <h2>The team and who presents what</h2>
-    <p>The brief asks for three roles. Our team has five members, each with a code name. COMMAND opens and closes, SENTINEL gets a dedicated security part, and the two developers share the Godkiller protocol.</p>
-  </div>
-  <h3>Agent files</h3>
-  <p class="note" style="font-size:14px">Each agent has a code name, a job and a personality. On stage, each member introduces their own file in one or two sentences.</p>
-  <div class="agents"><article class="agent c-lead"><span class="cn">COMMAND</span><span class="rl">Team lead</span><p>A natural leader with a strong character, always ready to fight for her team. Loves fashion and never looks out of style, even in a bunker. Behind the armour hides a very kind heart: she is the first to help anyone in trouble.</p><div class="tr"><span class="tag c-lead">Leadership</span><span class="tag c-lead">Style</span><span class="tag c-lead">Protective</span></div></article><article class="agent c-sys"><span class="cn">FORGE</span><span class="rl">DevOps</span><p>Grew up in the countryside, son of a mechanics salesman: he knows how machines work. Infrastructure and networks are his passion, and he knows every new tool before it ships. Sociable, with a sense of humour that never switches off.</p><div class="tr"><span class="tag c-sys">Infra geek</span><span class="tag c-sys">Humour</span><span class="tag c-sys">Sociable</span></div></article><article class="agent c-sec"><span class="cn">SENTINEL</span><span class="rl">Cyber security expert</span><p>Works best away from crowds and speaks through actions more than words, which people sometimes misread. Always there when someone needs help. Leaves no trace: no photos, no videos, no data about himself.</p><div class="tr"><span class="tag c-sec">Discreet</span><span class="tag c-sec">Loyal</span><span class="tag c-sec">Zero footprint</span></div></article><article class="agent c-bak"><span class="cn">CIPHER</span><span class="rl">Developer</span><p>The team extrovert: once he starts on an idea, nobody can stop him. Always dressed like a bad boy, headphones around his neck, as if nothing mattered, but he is a little genius who switches on for projects that excite him, and then gives 200%.</p><div class="tr"><span class="tag c-bak">Extrovert</span><span class="tag c-bak">Genius</span><span class="tag c-bak">All-in</span></div></article><article class="agent c-net"><span class="cn">RELAY</span><span class="rl">Apprentice developer</span><p>The youngest agent. Lives in her own world, headphones on: getting her attention takes patience, and following her logic takes even more. Her ideas land where nobody expected them.</p><div class="tr"><span class="tag c-net">Youngest</span><span class="tag c-net">Own wavelength</span><span class="tag c-net">Surprising ideas</span></div></article></div>
-  <div class="tbl"><table>
-    <thead><tr><th>Order</th><th>Role in the brief</th><th>Code name</th><th>Team member</th><th>Covers</th></tr></thead>
-    <tbody>
-      <tr><td class="k">1</td><td><span class="tag c-lead">Introduction</span></td><td class="k">COMMAND</td><td>Team lead</td><td>Mission, threat model, big picture</td></tr>
-      <tr><td class="k">2</td><td><span class="tag c-sys">System engineer</span></td><td class="k">FORGE</td><td>DevOps</td><td>Hardware, OS, services, installation, automation</td></tr>
-      <tr><td class="k">3</td><td><span class="tag c-net">Network technician</span></td><td class="k">FORGE &amp; SENTINEL</td><td>DevOps and cyber expert</td><td>FORGE: VLANs and firewall matrix · SENTINEL: remote access</td></tr>
-      <tr><td class="k">4</td><td><span class="tag c-sec">Security</span></td><td class="k">SENTINEL</td><td>Cyber expert</td><td>The Shield: hardening, encryption, detection</td></tr>
-      <tr><td class="k">5</td><td><span class="tag c-bak">Backup manager</span></td><td class="k">CIPHER · RELAY</td><td>Developer &amp; apprentice developer</td><td>Godkiller protocol, disaster recovery</td></tr>
-      <tr><td class="k">6</td><td><span class="tag c-lead">Conclusion</span></td><td class="k">COMMAND</td><td>Team lead</td><td>Summary, documentation, questions</td></tr>
-    </tbody>
-  </table></div>
-  <div class="cards">
-    <div class="card"><h3>CIPHER · in the scenario</h3><p>Builds the internal tools: access control and logging applications. On stage: encryption keys, immutability and the two-person rule.</p></div>
-    <div class="card"><h3>RELAY · in the scenario</h3><p>Builds integration scripts, monitoring dashboards and restore tooling. On stage: the schedule, the alerts and the disaster recovery plan.</p></div>
-  </div>
-</section>
-
-<!-- CONCLUSION -->
-<section id="conclusion">
-  <div class="sec-head">
-    <span class="who c-lead">Presented by · COMMAND (team lead)</span>
-    <h2>Conclusion</h2>
-    <p>A hardened server, layered defences and a tested, automated backup strategy: together they keep the knowledge of Recorder 451 available, intact, and out of the Greys' reach.</p>
-  </div>
-  <blockquote class="epigraph">“Watching is not enough. You must act.”<cite>— COMMAND</cite></blockquote>
-</section>
-
-<!-- SOURCES -->
-<section id="sources">
-  <div class="sec-head">
-    <span class="who c-lead">Documentary research</span>
-    <h2>Sources that justify our choices</h2>
-    <p>Four reliable English sources: two official government guides, one U.S. standard and one industry survey. The small tags like <a class="ref" href="#src1">[1]</a> across the page show where each source supports a choice.</p>
-  </div>
-  <div class="src-list">
-    <article class="src c-bak" id="src1">
-      <div class="src-top"><span class="src-n">[1]</span><h3>#StopRansomware Guide</h3><span class="star">★ Main source for the oral</span></div>
-      <dl>
-        <dt>Reference</dt><dd class="cite">CISA, FBI, NSA &amp; MS-ISAC (U.S. government), updated September 2023. <a href="https://www.cisa.gov/stopransomware/ransomware-guide" target="_blank" rel="noopener">https://www.cisa.gov/stopransomware/ransomware-guide</a></dd>
-        <dt>Key idea</dt><dd><blockquote>“Maintain offline, encrypted backups of critical data, and regularly test the availability and integrity of backups in a disaster recovery scenario.”</blockquote></dd>
-        <dt>In our own words</dt><dd>Ransomware looks for backups it can reach and destroys them. So at least one copy must be unplugged, all copies must be encrypted, and a backup only counts if you have tested the restore.</dd>
-        <dt>Why it is relevant</dt><dd>Written jointly by U.S. cyber and intelligence agencies, so it is an official reference. It directly justifies our offline WORM tape, the AES-256 encryption and our monthly restore test.</dd>
-        <dt>Used in</dt><dd><a href="#backup">Godkiller protocol</a> · <a href="#recovery">Disaster recovery</a></dd>
-      </dl>
-    </article>
-    <article class="src c-bak" id="src2">
-      <div class="src-top"><span class="src-n">[2]</span><h3>2023 Ransomware Trends Report</h3><span class="star">★ Main source for the oral</span></div>
-      <dl>
-        <dt>Reference</dt><dd class="cite">Veeam Software, press release of 23 May 2023, survey of 1,200 organisations hit by ransomware. <a href="https://www.businesswire.com/news/home/20230523005553/en" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20230523005553/en</a></dd>
-        <dt>Key idea</dt><dd><blockquote>“Attackers almost always (93%+) target backups during cyber-attacks”, and 75% of victims lost at least some of their backup repositories.</blockquote></dd>
-        <dt>In our own words</dt><dd>In almost every attack, the criminals go after the backups first, because without backups the victim is forced to pay. Three victims out of four lost part of their backups.</dd>
-        <dt>Why it is relevant</dt><dd>It gives real numbers that show why backups must be isolated, pulled by a separate server and kept immutable, exactly what Godkiller does. It is a vendor survey, so we use it for the trend and check it against the CISA guide.</dd>
-        <dt>Used in</dt><dd><a href="#overview">Big picture</a> · <a href="#backup">Godkiller protocol</a></dd>
-      </dl>
-    </article>
-    <article class="src c-sec" id="src3">
-      <div class="src-top"><span class="src-n">[3]</span><h3>Recommendations to secure administration of IT systems</h3></div>
-      <dl>
-        <dt>Reference</dt><dd class="cite">ANSSI (French National Cybersecurity Agency), guide ANSSI-PA-022-EN, English version, 2018. <a href="https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems" target="_blank" rel="noopener">https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems</a></dd>
-        <dt>Key idea</dt><dd><blockquote>The guide sets “security objectives and the principles for developing a secure technical architecture for administration”.</blockquote></dd>
-        <dt>In our own words</dt><dd>Administrator accounts are the keys to everything, so admin work must happen in a separate, protected zone, through controlled entry points, with strong authentication.</dd>
-        <dt>Why it is relevant</dt><dd>ANSSI is the French government agency that advises state administrations, including the Ministry of Defence, our client. It justifies our management VLAN, the bastion and MFA for admins, our first defence against infiltrated insiders.</dd>
-        <dt>Used in</dt><dd><a href="#network">Remote access</a> · <a href="#security">The Shield</a></dd>
-      </dl>
-    </article>
-    <article class="src c-sys" id="src4">
-      <div class="src-top"><span class="src-n">[4]</span><h3>SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems</h3></div>
-      <dl>
-        <dt>Reference</dt><dd class="cite">NIST (U.S. National Institute of Standards and Technology), 2010. <a href="https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf" target="_blank" rel="noopener">https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf</a></dd>
-        <dt>Key idea</dt><dd><blockquote>Defines the Recovery Time Objective (RTO) and the Recovery Point Objective (RPO) as the targets that drive a recovery plan.</blockquote></dd>
-        <dt>In our own words</dt><dd>Before choosing backup tools, you decide how much data you can lose and how long you can be down. Those two numbers decide how often you back up and how fast you must restore.</dd>
-        <dt>Why it is relevant</dt><dd>It is the international reference for disaster recovery planning. Our tiers, backup frequencies and the RPO/RTO timeline follow its method.</dd>
-        <dt>Used in</dt><dd><a href="#recovery">Disaster recovery</a></dd>
-      </dl>
-    </article>
-  </div>
-  <p class="note">The brief asks for at least two sources: [1] and [2] are the ones to explain in class; [3] and [4] support the answers to questions.</p>
-</section>
-
-<!-- GLOSSARY -->
-<section id="glossary">
-  <div class="sec-head">
-    <h2>Glossary</h2>
-    <p>Useful for the audience, and for the questions at the end.</p>
-  </div>
-  <dl class="gloss">
-    <div><dt>CIA triad</dt><dd>Confidentiality, Integrity, Availability: the three goals of security.</dd></div>
-    <div><dt>Zero trust</dt><dd>Never trust by default; check every user and every request.</dd></div>
-    <div><dt>RBAC</dt><dd>Role-Based Access Control: rights are given to roles, not to people.</dd></div>
-    <div><dt>Hypervisor</dt><dd>Software that runs several virtual machines on one physical server.</dd></div>
-    <div><dt>VM (virtual machine)</dt><dd>A complete computer simulated in software.</dd></div>
-    <div><dt>Active Directory (AD)</dt><dd>Microsoft's central directory of users, computers and permissions.</dd></div>
-    <div><dt>RAID</dt><dd>Several disks working as one, so a single disk failure loses nothing.</dd></div>
-    <div><dt>VLAN</dt><dd>A virtual network that isolates groups of machines on the same switch.</dd></div>
-    <div><dt>Firewall</dt><dd>The device that allows or blocks traffic between networks.</dd></div>
-    <div><dt>VPN</dt><dd>An encrypted tunnel across the internet.</dd></div>
-    <div><dt>MFA</dt><dd>Multi-factor authentication: a password plus a second proof, like a phone code.</dd></div>
-    <div><dt>Bastion</dt><dd>The single, monitored entry point for administrators.</dd></div>
-    <div><dt>SIEM</dt><dd>A system that collects all logs and raises security alerts.</dd></div>
-    <div><dt>Hardening</dt><dd>Removing everything unnecessary and locking down settings.</dd></div>
-    <div><dt>Full / incremental / differential</dt><dd>Copy everything / only changes since the last backup / all changes since the last full.</dd></div>
-    <div><dt>Immutable · WORM</dt><dd>A backup that cannot be changed or deleted once written (Write Once, Read Many).</dd></div>
-    <div><dt>PBS</dt><dd>Proxmox Backup Server: the backup software and storage.</dd></div>
-    <div><dt>Air gap</dt><dd>A copy with no network connection at all.</dd></div>
-    <div><dt>RPO</dt><dd>Recovery Point Objective: maximum data we accept to lose.</dd></div>
-    <div><dt>RTO</dt><dd>Recovery Time Objective: maximum time the service can be down.</dd></div>
-  </dl>
-</section>
-
-<footer>Fictional training scenario for an English project (BTS SIO). Zone 67, Recorder 451, the Greys, the addresses and the sizing are invented for the exercise.</footer>
-</div>
-<div class="classif">Top secret // RECORDER-451 // Eyes only</div>
-<!--DECK-START--><div id="deck" hidden role="dialog" aria-modal="true" aria-label="Operation RECORDER-451 briefing">
+AllowGroups ssh-admins</code></pre></div></details>
+<div class="nxt"><a href="#secu">Next file : SECURITY →</a></div>
+</section><section class="dos" id="secu" role="tabpanel" aria-labelledby="tab-secu" style="--c:#A3322C" hidden>
+<div class="idc"><div class="pols"><div class="pol"><img src="portraits/sentinel.jpg" alt=""><b>SENTINEL</b><i>Cyber expert</i></div></div><div><span class="code">SECURITY</span><h2>Remote access & the Shield</h2><p class="mis">Keep the Greys out, and see them if they try.</p><div class="chips"><span class="chip">▶ Briefing: slides 14–17</span><a class="chip" href="#src-secu">Source: ANSSI [3]</a></div></div></div>
+<h3 class="lab">Key points</h3><div class="ess"><div class="es"><span class="big">4</span><b>Four checkpoints</b><p>VPN, firewall, bastion, then the server. No admin ever connects directly.</p></div><div class="es"><span class="big">6</span><b>Six layers of defence</b><p>If one layer gives way, the next one stops the attacker.</p></div><div class="es"><span class="big">AES</span><b>Encrypted everywhere</b><p>On the disks and on the network. No protocol in clear text.</p></div><div class="es"><span class="big">24/7</span><b>Everything watched</b><p>The SIEM collects every log and raises the alarm.</p></div></div>
+<h3 class="lab">The diagram</h3><div class="fig"><figure class="paper"><h3>Working from outside: four checkpoints</h3><svg viewBox="0 0 1000 540" role="img" aria-label="Remote admin path, step by step"><defs><marker id="an-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="currentColor"/></marker><marker id="an-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sec)"/></marker><marker id="an-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ok)"/></marker><marker id="an-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--bak)"/></marker><marker id="an-ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sys)"/></marker><marker id="an-av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--lead)"/></marker><marker id="an-an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--net)"/></marker></defs><g data-s="0"><rect class="box" x="30" y="200" width="170" height="110" rx="8"/><text class="t" x="115.0" y="253" text-anchor="middle" style="font-size:17px">Admin at home</text><text class="s" x="115.0" y="274" text-anchor="middle" style="font-size:13px">laptop</text><rect x="330" y="40" width="16" height="470" rx="4" style="fill:color-mix(in srgb,var(--sec) 35%,var(--surface))"/><text x="338" y="530" text-anchor="middle" style="fill:var(--sec);font:600 12px var(--mono)">ZONE 67 WALL</text><rect class="z-sys" x="800" y="200" width="170" height="110" rx="8"/><text class="t" x="885.0" y="253" text-anchor="middle" style="font-size:17px">Server</text><text class="s" x="885.0" y="274" text-anchor="middle" style="font-size:13px">DC01 · FS01 …</text><path d="M200 255 C 450 140 600 140 798 240" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="9 6" marker-end="url(#an-a)"/><text x="500" y="150" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">direct access?</text></g><g data-s="1"><path d="M200 255 H360" stroke="var(--net)" stroke-width="22" stroke-linecap="round" opacity=".25"/><path d="M200 255 H372" fill="none" stroke="var(--net)" stroke-width="3" marker-end="url(#an-an)"/><rect class="z-sec" x="374" y="200" width="150" height="110" rx="8"/><text class="t" x="449.0" y="253" text-anchor="middle" style="font-size:17px">Firewall</text><text class="s" x="449.0" y="274" text-anchor="middle" style="font-size:13px">guard post</text><text x="282" y="300" text-anchor="middle" style="fill:var(--net);font:600 13px var(--mono)">ID + phone code</text></g><g data-s="2"><g transform="translate(620 165)"><circle r="17" fill="var(--sec)"/><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><text x="620" y="125" text-anchor="middle" style="fill:var(--sec);font:600 15px var(--mono)">NO</text><path d="M524 255 H578" fill="none" stroke="var(--ok)" stroke-width="3" marker-end="url(#an-ag)"/></g><g data-s="3"><rect class="z-lead" x="580" y="200" width="160" height="110" rx="8"/><text class="t" x="660.0" y="253" text-anchor="middle" style="font-size:17px">Bastion</text><text class="s" x="660.0" y="274" text-anchor="middle" style="font-size:13px">escorted door</text><g transform="translate(660 360)"><rect x="-24" y="-15" width="36" height="30" rx="4" fill="var(--sec)"/><path d="M12 -8 L26 -15 V15 L12 8Z" fill="var(--sec)"/><circle cx="-6" cy="0" r="5" fill="#fff"/></g><text x="660" y="405" text-anchor="middle" style="fill:var(--sec);font:600 13px var(--mono)">session recorded</text></g><g data-s="4"><path d="M740 255 H798" fill="none" stroke="var(--ok)" stroke-width="3.5" marker-end="url(#an-ag)"/><g transform="translate(885 175)"><circle r="15" fill="var(--ok)"/><path d="M-7 0 L-2 6 L8 -6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g></svg></figure><ol class="stp"><li>An admin at home needs to fix a server inside Zone 67. No direct access is allowed.</li><li>Checkpoint 1: a private, encrypted tunnel (VPN). To open it: a digital ID card and a code on the phone.</li><li>Checkpoint 2: the guard post (firewall) lets the tunnel reach only one door.</li><li>Checkpoint 3: that door, the bastion, is an escorted entrance. It asks for a second code and films everything.</li><li>Checkpoint 4: only then does the bastion open the server. Every action is traced.</li></ol></div><div class="fig"><figure class="paper"><h3>Defence in depth</h3><svg viewBox="0 0 1000 540" role="img" aria-label="Security layers around the archive"><defs><marker id="an-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="currentColor"/></marker><marker id="an-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sec)"/></marker><marker id="an-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ok)"/></marker><marker id="an-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--bak)"/></marker><marker id="an-ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sys)"/></marker><marker id="an-av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--lead)"/></marker><marker id="an-an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--net)"/></marker></defs><g data-s="0"><rect class="z-mute" x="40" y="30" width="800" height="490" rx="14" style="stroke-width:2"/><text x="56.0" y="56.0" text-anchor="start" style="fill:var(--ink);font:600 14px var(--mono)">PHYSICAL · locked room, badge, camera</text><rect class="z-sec" x="105" y="66" width="670" height="418" rx="14" style="stroke-width:2"/><text x="121.0" y="92.0" text-anchor="start" style="fill:var(--ink);font:600 14px var(--mono)">PERIMETER · firewall, default deny</text></g><g data-s="1"><rect class="z-net" x="170" y="102" width="540" height="346" rx="14" style="stroke-width:2"/><text x="186.0" y="128.0" text-anchor="start" style="fill:var(--ink);font:600 14px var(--mono)">NETWORK · separate buildings (VLANs)</text><rect class="z-sys" x="235" y="138" width="410" height="274" rx="14" style="stroke-width:2"/><text x="251.0" y="164.0" text-anchor="start" style="fill:var(--ink);font:600 14px var(--mono)">MACHINES · minimal and up to date</text></g><g data-s="2"><rect class="z-bak" x="300" y="174" width="280" height="202" rx="14" style="stroke-width:2"/><text x="316.0" y="200.0" text-anchor="start" style="fill:var(--ink);font:600 14px var(--mono)">IDENTITY · password + phone code</text><rect class="z-lead" x="365" y="210" width="150" height="130" rx="10" style="stroke-width:2"/><use href="#sym-r451" x="410" y="236" width="60" height="60" style="color:var(--lead)"/><text x="440" y="322" text-anchor="middle" style="fill:var(--lead);font:600 13px var(--mono)">ARCHIVE · encrypted</text></g><g data-s="3"><rect class="z-sec" x="860" y="210" width="125" height="110" rx="8"/><text class="t" x="922.5" y="263" text-anchor="middle" style="font-size:18px">SIEM</text><text class="s" x="922.5" y="284" text-anchor="middle" style="font-size:13px">control room</text><g transform="translate(922 175)"><path d="M-14 8 C-14 -12 14 -12 14 8 L18 13 H-18Z" fill="var(--sec)"/><circle cy="17" r="4" fill="var(--sec)"/></g><path d="M0 275 H150" fill="none" stroke="var(--sec)" stroke-width="3.5" stroke-dasharray="9 6" class="an-dash" marker-end="url(#an-ar)"/><g transform="translate(162 275)"><circle r="17" fill="var(--sec)"/><path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><text x="162" y="318" text-anchor="middle" style="fill:var(--sec);font:600 13px var(--mono)">stopped</text><path d="M776 300 H856" fill="none" stroke="var(--sec)" stroke-width="2.5" stroke-dasharray="9 6" marker-end="url(#an-ar)"/><text x="816" y="290" text-anchor="middle" style="fill:var(--sec);font:600 12px var(--mono)">alert</text></g></svg></figure><ol class="stp"><li>Like the walls of a fortress, one after the other. Outside: a locked room with badge and camera, then the guard post.</li><li>Inside: separate buildings, and machines with only what they need, always up to date.</li><li>At the centre: personal accounts with a password and a phone code, and an archive that is encrypted.</li><li>An attacker who breaks one wall meets the next, and every wall sounds the alarm in our control room (the SIEM).</li></ol></div>
+<div class="duo"><div class="note"><h3>In plain words</h3>The bastion is the guard post: you sign the register, you are escorted, and the camera is rolling. The SIEM is the CCTV room.</div><div class="quote"><h3>Say it at the oral</h3>“An admin never connects straight to a server. He goes through four checkpoints, and every session is recorded.”</div></div>
+<h3 class="lab" id="src-secu">English source</h3><div class="srcs"><div class="src"><span class="n">[3]</span><b>Recommendations to secure administration of IT systems</b><small>ANSSI · 2018</small><q>“Security objectives and the principles for developing a secure technical architecture for administration.”</q><a href="https://cyber.gouv.fr/en/publications/recommendations-secure-administration-it-systems" target="_blank" rel="noopener">Open the source ↗</a></div></div>
+<h3 class="lab">Words to know</h3><dl class="words"><div><dt>VPN</dt><dd>An encrypted tunnel through the Internet.</dd></div><div><dt>MFA</dt><dd>A password plus a second proof, like a code on your phone.</dd></div><div><dt>Bastion</dt><dd>The only, recorded entrance for admins.</dd></div><div><dt>SIEM</dt><dd>Collects all logs and raises security alerts.</dd></div><div><dt>RBAC</dt><dd>Rights are given to roles, and people get a role.</dd></div></dl>
+<h3 class="lab">Technical sheet — going further</h3><details><summary>Strong authentication & roles</summary><div class="db"><ul class="dl"><li>Named accounts only, no shared “admin” account.</li><li>MFA on the VPN, the bastion, Proxmox and the archive.</li><li>Roles: archive reader, archive admin, backup operator, auditor.</li><li>Two-person rule: no single account can delete the archive.</li><li>LAPS: a different local admin password on every machine.</li></ul></div></details><details><summary>Encryption</summary><div class="db"><ul class="dl"><li>At rest: LUKS on ARCH01, BitLocker on Windows VMs, encrypted backups.</li><li>In transit: TLS 1.3, SSH, OpenVPN, IPsec.</li><li>No Telnet, FTP or HTTP.</li><li>Keys are never stored next to the data they protect.</li></ul></div></details><details><summary>Firewall & lockdown</summary><div class="db"><ul class="dl"><li>Default deny on every VLAN.</li><li>SSH and RDP only from the bastion; SSH by key, no root login.</li><li>fail2ban and account lockout after failed attempts.</li><li>USB sticks blocked by GPO.</li></ul></div></details><details><summary>Detection & patching</summary><div class="db"><ul class="dl"><li>Wazuh agent on every VM, logs kept for one year.</li><li>Suricata IDS on the firewall.</li><li>Alerts: new admin, archive opened at night, mass deletion, failed backup.</li><li>Monthly patching window and monthly vulnerability scan (OpenVAS).</li></ul></div></details>
+<div class="nxt"><a href="#dev">Next file : DEV →</a></div>
+</section><section class="dos" id="dev" role="tabpanel" aria-labelledby="tab-dev" style="--c:#A8620E" hidden>
+<div class="idc"><div class="pols"><div class="pol"><img src="portraits/relay.jpg" alt=""><b>RELAY</b><i>Apprentice developer</i></div><div class="pol"><img src="portraits/cipher.jpg" alt=""><b>CIPHER</b><i>Developer</i></div></div><div><span class="code">DEV</span><h2>Godkiller & recovery</h2><p class="mis">Automate the backups and know how to bring everything back after a disaster.</p><div class="chips"><span class="chip">▶ Briefing: RELAY 18–21 · CIPHER 22–24</span><a class="chip" href="#src-dev">Source: Veeam [2]</a><a class="chip" href="#src-dev">Source: CISA [1]</a><a class="chip" href="#src-dev">Source: NIST [4]</a></div></div></div>
+<h3 class="lab">Key points</h3><div class="ess"><div class="es"><span class="big">3-2-1-1-0</span><b>The backup rule</b><p>3 copies, 2 media, 1 off-site, 1 untouchable, 0 errors at the restore test.</p></div><div class="es"><span class="big">WORM</span><b>One copy nobody can erase</b><p>Write-once tape in the vault, and an off-site server that pulls its own copies.</p></div><div class="es"><span class="big">4 h</span><b>Recovery targets</b><p>For the archive: never more than 4 h of lost work, never more than 4 h of downtime.</p></div></div>
+<h3 class="lab">The diagram</h3><div class="fig"><figure class="paper"><h3>The Godkiller architecture</h3><svg viewBox="0 0 1000 540" role="img" aria-label="Godkiller backup flow, step by step"><defs><marker id="an-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="currentColor"/></marker><marker id="an-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sec)"/></marker><marker id="an-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ok)"/></marker><marker id="an-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--bak)"/></marker><marker id="an-ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sys)"/></marker><marker id="an-av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--lead)"/></marker><marker id="an-an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--net)"/></marker></defs><g data-s="0"><rect class="z-sys" x="30" y="190" width="210" height="140" rx="8"/><text class="t" x="135.0" y="258" text-anchor="middle" style="font-size:17px">Zone 67 server</text><text class="s" x="135.0" y="279" text-anchor="middle" style="font-size:13px">the 7 rooms</text><path d="M240 260 H378" fill="none" stroke="var(--bak)" stroke-width="3.5" marker-end="url(#an-ab)"/><g transform="translate(309 236) scale(0.9)"><rect x="-11" y="-2" width="22" height="17" rx="3" fill="var(--bak)"/><path d="M-6 -2 V-8 A6 6 0 0 1 6 -8 V-2" fill="none" stroke="var(--bak)" stroke-width="3.5"/></g><text x="309" y="290" text-anchor="middle" style="fill:var(--bak);font:600 13px var(--mono)">encrypted</text><rect class="z-bak" x="380" y="190" width="210" height="140" rx="8"/><text class="t" x="485.0" y="258" text-anchor="middle" style="font-size:17px">Backup vault #1</text><text class="s" x="485.0" y="279" text-anchor="middle" style="font-size:13px">on site · other room</text></g><g data-s="1"><rect class="box" x="30" y="395" width="210" height="120" rx="8" style="stroke:var(--lead);stroke-width:2"/><text class="t" x="135.0" y="453" text-anchor="middle" style="font-size:16px">Key on paper</text><text class="s" x="135.0" y="474" text-anchor="middle" style="font-size:13px">separate safe</text><g transform="translate(212 420)"><rect x="-16" y="-11" width="32" height="22" rx="2" fill="var(--lead)"/><path d="M-16 -11 L0 3 L16 -11" fill="none" stroke="var(--surface)" stroke-width="2"/></g><path d="M135 395 V335" stroke="var(--lead)" stroke-width="2" stroke-dasharray="4 5"/><text x="145" y="372" text-anchor="start" style="fill:var(--lead);font:600 12px var(--mono)">never together</text></g><g data-s="2"><rect class="z-bak" x="740" y="40" width="230" height="130" rx="8" style="stroke-dasharray:7 5;stroke-width:2"/><text class="t" x="855.0" y="103" text-anchor="middle" style="font-size:17px">Backup vault #2</text><text class="s" x="855.0" y="124" text-anchor="middle" style="font-size:13px">another ministry site</text><path d="M592 200 C 620 150 660 110 738 105" fill="none" stroke="var(--bak)" stroke-width="3.5" stroke-dasharray="9 6" class="an-dash" marker-end="url(#an-ab)"/><text x="640" y="120" text-anchor="end" style="fill:var(--bak);font:600 13px var(--mono)">pulled 03:00</text><text x="855" y="195" text-anchor="middle" style="fill:var(--sec);font:600 13px var(--mono)">no Zone 67 account</text></g><g data-s="3"><rect class="box" x="740" y="360" width="230" height="130" rx="8" style="stroke:var(--bak);stroke-width:2"/><text class="t" x="855.0" y="423" text-anchor="middle" style="font-size:17px">Write-once tape</text><text class="s" x="855.0" y="444" text-anchor="middle" style="font-size:13px">in a safe · no cable</text><path d="M590 300 C 650 330 690 380 738 410" fill="none" stroke="var(--bak)" stroke-width="3" marker-end="url(#an-ab)"/><text x="645" y="395" text-anchor="middle" style="fill:var(--bak);font:600 13px var(--mono)">Sunday</text><text x="855" y="515" text-anchor="middle" style="fill:var(--ink);font:600 13px var(--mono)">write once · cannot be erased</text></g><g data-s="4"><rect x="300" y="405" width="400" height="110" rx="10" style="fill:color-mix(in srgb,var(--sec) 10%,var(--surface));stroke:var(--sec);stroke-width:2"/><g transform="translate(330 455)"><circle r="12" fill="none" stroke="var(--sec)" stroke-width="4"/><path d="M12 0 H40 M30 0 V10 M38 0 V8" stroke="var(--sec)" stroke-width="4" fill="none"/></g><g transform="translate(420 455)"><circle r="12" fill="none" stroke="var(--sec)" stroke-width="4"/><path d="M12 0 H40 M30 0 V10 M38 0 V8" stroke="var(--sec)" stroke-width="4" fill="none"/></g><text x="560" y="450" text-anchor="middle" style="fill:var(--sec);font:700 14px var(--mono)">DELETE =</text><text x="560" y="475" text-anchor="middle" style="fill:var(--ink);font:600 13px var(--mono)">COMMAND + SENTINEL</text><text x="500" y="503" text-anchor="middle" style="fill:var(--ok);font:600 13px var(--mono)">restore test every month ✓</text></g></svg></figure><ol class="stp"><li>Every night, the server sends an encrypted copy to backup vault #1, in another room.</li><li>The key lives on paper, in a different safe. A stolen backup is useless without it.</li><li>Vault #2, on another ministry site, comes to fetch the copies itself. Nobody in Zone 67 can log into it.</li><li>Every Sunday, a tape that can be written only once: nobody can erase it. It rests in a safe, with no cable.</li><li>Deleting a backup needs two people. And every month we test a restore.</li></ol></div><div class="fig"><figure class="paper"><h3>How much can we lose? How long can we wait?</h3><svg viewBox="0 210 1000 320" role="img" aria-label="Recovery timeline"><defs><marker id="an-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="currentColor"/></marker><marker id="an-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sec)"/></marker><marker id="an-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--ok)"/></marker><marker id="an-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--bak)"/></marker><marker id="an-ay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--sys)"/></marker><marker id="an-av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--lead)"/></marker><marker id="an-an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="var(--net)"/></marker></defs><g data-s="0"><line x1="60" y1="300" x2="940" y2="300" stroke="var(--line)" stroke-width="3"/><line x1="80" y1="292" x2="80" y2="308" stroke="var(--line)" stroke-width="2"/><text x="80" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">08:00</text><line x1="200" y1="292" x2="200" y2="308" stroke="var(--line)" stroke-width="2"/><text x="200" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">09:00</text><line x1="320" y1="292" x2="320" y2="308" stroke="var(--line)" stroke-width="2"/><text x="320" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">10:00</text><line x1="440" y1="292" x2="440" y2="308" stroke="var(--line)" stroke-width="2"/><text x="440" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">11:00</text><line x1="560" y1="292" x2="560" y2="308" stroke="var(--line)" stroke-width="2"/><text x="560" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">12:00</text><line x1="680" y1="292" x2="680" y2="308" stroke="var(--line)" stroke-width="2"/><text x="680" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">13:00</text><line x1="800" y1="292" x2="800" y2="308" stroke="var(--line)" stroke-width="2"/><text x="800" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">14:00</text><line x1="920" y1="292" x2="920" y2="308" stroke="var(--line)" stroke-width="2"/><text x="920" y="334" text-anchor="middle" style="fill:var(--muted);font:600 14px var(--mono)">15:00</text><circle cx="200" cy="300" r="13" fill="var(--ok)"/><text x="200" y="265" text-anchor="middle" style="fill:var(--ok);font:600 14px var(--mono)">last good backup</text></g><g data-s="1"><path d="M490.0 250 L506.0 250 L496.0 280 L512.0 280 L492.0 318 L498.0 288 L484.0 288Z" fill="var(--sec)"/><text x="500.0" y="230" text-anchor="middle" style="fill:var(--sec);font:600 14px var(--mono)">11:30 · ransomware</text></g><g data-s="2"><rect x="200" y="360" width="300.0" height="44" rx="6" style="fill:color-mix(in srgb,var(--bak) 25%,var(--surface));stroke:var(--bak);stroke-width:2"/><text x="350.0" y="388" text-anchor="middle" style="fill:var(--bak);font:700 17px var(--mono)">RPO</text><text x="350.0" y="430" text-anchor="middle" style="fill:var(--bak);font:600 14px var(--mono)">2 h 30 of work lost</text></g><g data-s="3"><rect x="500.0" y="360" width="240.0" height="44" rx="6" style="fill:color-mix(in srgb,var(--sys) 25%,var(--surface));stroke:var(--sys);stroke-width:2"/><text x="620.0" y="388" text-anchor="middle" style="fill:var(--sys);font:700 17px var(--mono)">RTO</text><text x="620.0" y="430" text-anchor="middle" style="fill:var(--sys);font:600 14px var(--mono)">2 h without service</text><g transform="translate(740.0 300)"><circle r="14" fill="var(--ok)"/><path d="M-6 0 L-1 6 L7 -6" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g><text x="740.0" y="265" text-anchor="middle" style="fill:var(--ok);font:600 14px var(--mono)">13:30 · back online</text></g><g data-s="4"><rect x="200" y="455" width="600" height="66" rx="10" style="fill:color-mix(in srgb,var(--lead) 14%,var(--surface));stroke:var(--lead);stroke-width:2"/><text x="500" y="484" text-anchor="middle" style="fill:var(--lead);font:700 13px var(--mono)">OUR TARGET FOR THE ARCHIVE</text><text x="500" y="508" text-anchor="middle" style="fill:var(--ink);font:700 16px var(--mono)">RPO ≤ 4 h · RTO ≤ 4 h · met ✓</text></g></svg></figure><ol class="stp"><li>09:00: the last good backup. Everything before this point is safe.</li><li>11:30: ransomware hits the archive.</li><li>The work done since 09:00 is lost. That gap is the RPO: how much we accept to lose.</li><li>Back online at 13:30. The time without service is the RTO: how long we accept to wait.</li><li>Our target for the archive: never more than 4 hours of either. Here, we are within it.</li></ol></div>
+<div class="duo"><div class="note"><h3>In plain words</h3>Keep your house keys in three places: your pocket, a drawer, and a friend in another town. Add a copy locked in a safe nobody can open. A traitor with all the other keys still can’t destroy that one.</div><div class="quote"><h3>Say it at the oral</h3>“Even if the Greys steal an admin account, they can delete neither the off-site copy nor the tape. That is the Godkiller protocol.”</div></div>
+<h3 class="lab" id="src-dev">English source</h3><div class="srcs"><div class="src"><span class="n">[2]</span><b>2023 Ransomware Trends Report</b><small>Veeam Software · 2023</small><q>“Attackers almost always (93%+) target backups during cyber-attacks.”</q><a href="https://www.businesswire.com/news/home/20230523005553/en" target="_blank" rel="noopener">Open the source ↗</a></div><div class="src"><span class="n">[1]</span><b>#StopRansomware Guide</b><small>CISA, FBI, NSA & MS-ISAC · 2023</small><q>“Maintain offline, encrypted backups of critical data, and regularly test the availability and integrity of backups in a disaster recovery scenario.”</q><a href="https://www.cisa.gov/stopransomware/ransomware-guide" target="_blank" rel="noopener">Open the source ↗</a></div><div class="src"><span class="n">[4]</span><b>SP 800-34 Rev. 1 — Contingency Planning Guide</b><small>NIST · 2010</small><q>Defines the Recovery Time Objective (RTO) and the Recovery Point Objective (RPO).</q><a href="https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf" target="_blank" rel="noopener">Open the source ↗</a></div></div>
+<h3 class="lab">Words to know</h3><dl class="words"><div><dt>Full / incremental / differential</dt><dd>Everything / what changed since the last backup / what changed since the last full.</dd></div><div><dt>WORM</dt><dd>Write Once, Read Many: can never be changed or deleted.</dd></div><div><dt>RPO</dt><dd>How much recent work we accept to lose.</dd></div><div><dt>RTO</dt><dd>How long the service may stay down.</dd></div><div><dt>PRA / DRP</dt><dd>Disaster recovery plan: who does what when everything breaks.</dd></div></dl>
+<h3 class="lab">Technical sheet — going further</h3><details><summary>Who does what</summary><div class="db"><dl class="kv"><dt>RELAY</dt><dd>Backup scripts, the green/red dashboard, alerts, restore tools.</dd><dt>CIPHER</dt><dd>Encryption keys, immutability, two-person rule, recovery plan.</dd></dl></div></details><details><summary>The 3-2-1-1-0 rule in detail</summary><div class="db"><dl class="kv"><dt>3</dt><dd>copies of the data: production + 2 backups (we keep 4)</dd><dt>2</dt><dd>types of media: disks (backup server) and LTO tape</dd><dt>1</dt><dd>off-site copy: backup server #2 on another ministry site</dd><dt>1</dt><dd>immutable copy: WORM tape in the vault, offline</dd><dt>0</dt><dd>errors: weekly check, monthly restore test</dd></dl></div></details><details><summary>Backup schedule</summary><div class="db"><div class="tw"><table><thead><tr><th>Type</th><th>When</th><th>What</th></tr></thead><tbody><tr><td>Full</td><td>Sunday 01:00</td><td>All 7 VMs, then copied to WORM tape</td></tr><tr><td>Differential</td><td>Mon–Sat 01:00</td><td>Everything changed since Sunday</td></tr><tr><td>Incremental</td><td>Every 4 h</td><td>ARCH01, DC01, DC02, FS01</td></tr><tr><td>Off-site pull</td><td>03:00</td><td>Server #2 fetches the night’s backups</td></tr></tbody></table></div></div></details><details><summary>Godkiller safeguards</summary><div class="db"><ul class="dl"><li><b>Separate keys</b>: AES-256 encryption, key on paper in another safe kept by COMMAND.</li><li><b>Pull, not push</b>: server #2 fetches the data; nobody in Zone 67 has an account on it.</li><li><b>WORM tape</b>: once written, nobody can modify or erase it, not even an admin.</li><li><b>Two-person rule</b>: deleting backups needs COMMAND + SENTINEL.</li><li><b>Alerts</b>: a failed or missing backup triggers an e-mail and a Wazuh alert within minutes.</li><li><b>Retention</b>: server #1 7 daily, 4 weekly, 6 monthly · server #2 12 monthly · tape 12 monthly + 5 yearly.</li></ul></div></details><details><summary>Recovery targets by tier</summary><div class="db"><div class="tw"><table><thead><tr><th>Tier</th><th>Machines</th><th>RPO</th><th>RTO</th></tr></thead><tbody><tr><td>1 · critical</td><td>ARCH01 · DC01 · DC02 · FS01</td><td>4 h</td><td>4 h</td></tr><tr><td>2 · important</td><td>WEB01 · SIEM01 · BAST01</td><td>24 h</td><td>8 h</td></tr></tbody></table></div></div></details><details><summary>Six scenarios, six answers</summary><div class="db"><div class="tw"><table><thead><tr><th>Scenario</th><th>Our answer</th><th>RTO</th></tr></thead><tbody><tr><td>A disk fails</td><td>RAID holds; hot-swap the disk.</td><td>0</td></tr><tr><td>A file is deleted</td><td>Restore it from a snapshot or from the backup server.</td><td>15 min</td></tr><tr><td>The server dies</td><td>Restore the VMs on the standby host, ARCH01 first.</td><td>4 h</td></tr><tr><td>Ransomware</td><td>Isolate, find the last clean point, rebuild; tape if needed.</td><td>24 h</td></tr><tr><td>An insider wipes the archive</td><td>Lock his account, keep the logs, restore from server #2 or tape.</td><td>8 h</td></tr><tr><td>Fire or flood</td><td>Restart the critical VMs on the backup site.</td><td>48 h</td></tr></tbody></table></div></div></details><details><summary>When disaster strikes</summary><div class="db"><ol class="steps"><li><b>Detect</b> Wazuh alert, RELAY’s dashboard or a user report.</li><li><b>Assess</b> what is hit, since when, is it spreading?</li><li><b>Declare</b> COMMAND triggers the plan and warns the ministry.</li><li><b>Contain</b> isolate the zone, lock suspicious accounts.</li><li><b>Restore</b> ARCH01 and tier 1 first, then tier 2.</li><li><b>Check & learn</b> check the archive’s integrity, write the report.</li></ol></div></details>
+<div class="nxt"><a href="#chef">Next file : PROJECT LEAD →</a></div>
+</section></main>
+<script>document.documentElement.classList.add('js');(function(){
+var tabs=[].slice.call(document.querySelectorAll('.ftab')),ids=tabs.map(function(t){return t.getAttribute('href').slice(1)});
+function go(id,scroll){if(ids.indexOf(id)<0)return false;tabs.forEach(function(t){var on=t.getAttribute('href')==='#'+id;t.setAttribute('aria-selected',on);document.getElementById(t.getAttribute('href').slice(1)).hidden=!on});
+if(scroll)document.querySelector('.ftabs').scrollIntoView({behavior:'smooth'});return true}
+function fromHash(s){var h=location.hash.slice(1);if(ids.indexOf(h)>=0)go(h,s);else{var el=h&&document.getElementById(h);if(el){var p=el.closest('.dos');if(p){go(p.id,false);if(el.tagName==='DETAILS')el.open=true;el.scrollIntoView()}}}}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(ids.indexOf(id)>=0){e.preventDefault();history.replaceState(null,'','#'+id);go(id,!a.classList.contains('ftab'))}});
+addEventListener('hashchange',function(){fromHash(true)});fromHash(false)})();</script>
+<div id="deck" hidden role="dialog" aria-modal="true" aria-label="Operation RECORDER-451 briefing">
   <div class="dk-top"><span class="dk-tag" id="dk-tag"></span><div class="dk-btns"><button type="button" id="dk-fs">Full screen</button><button type="button" id="dk-close">Close ✕</button></div></div>
   <div class="dk-stage" id="dk-stage"></div>
   <div class="dk-bottom"><button type="button" id="dk-prev" class="dk-nav" aria-label="Previous" style="font:600 16px var(--mono);background:none;border:0;color:var(--ink);cursor:pointer">‹</button><span id="dk-count">1 / 1</span><div class="dk-bar"><i id="dk-bar"></i></div><span>← → to navigate · F full screen · Esc to close</span><button type="button" id="dk-next" class="dk-nav" aria-label="Next" style="font:600 16px var(--mono);background:none;border:0;color:var(--ink);cursor:pointer">›</button></div>
@@ -1190,7 +423,6 @@ document.addEventListener('fullscreenchange',()=>{});
 let tx=null;stage.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
 stage.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40)(dx<0?next():prev());tx=null});
 })();
-</script><!--DECK-END-->
-
+</script>
 </body>
 </html>
