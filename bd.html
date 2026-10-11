@@ -52,7 +52,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--mono)}
 <div class="bp-bar"><button type="button" id="bp-prev" aria-label="Planche précédente">‹</button><button type="button" id="bp-play" aria-label="Lecture / pause">❚❚</button><button type="button" id="bp-next" aria-label="Planche suivante">›</button>
 <span class="bp-t" id="bp-t">Planche 1 · L'arrivée</span><div class="bp-prog" id="bp-prog"><i style="left:11.05%"></i><i style="left:20.90%"></i><i style="left:30.41%"></i><i style="left:39.89%"></i><i style="left:48.88%"></i><i style="left:60.89%"></i><i style="left:73.14%"></i><i style="left:84.86%"></i><b id="bp-fill"></b></div>
 <span class="bp-cr">Musique : « Chaos Theory » · VasilYatsevich · Pixabay</span><button type="button" id="bp-close" aria-label="Fermer">✕</button></div>
-<audio id="bp-audio" src="music/chaos.mp3" preload="auto"></audio></div>
+<audio id="bp-audio" src="music/chaos-calme.mp3" preload="auto"></audio></div>
 <style>
 .bp-launch{max-width:900px;margin:18px auto 6px;padding:0 16px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;font:13px "IBM Plex Mono",monospace;color:#a7aab1}
 #bp-open{display:inline-flex;align-items:center;gap:12px;background:#b3262c;color:#fff;border:0;padding:15px 24px;font:700 16px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:4px 4px 0 #000}
@@ -75,7 +75,7 @@ body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--mono)}
 var C=[0.0, 16.18, 30.6, 44.51, 58.4, 71.56, 89.14, 107.07, 124.23, 146.39],N=["L'arrivée", "Les sécurités", "La descente", "Chacun son monde", "Chacun son monde", "L'appel", "Le dossier", "Ce qu'on protège", "La décision"];
 var bp=document.getElementById('bp'),au=document.getElementById('bp-audio'),A=document.getElementById('bp-a'),B=document.getElementById('bp-b'),
  t=document.getElementById('bp-t'),fill=document.getElementById('bp-fill'),play=document.getElementById('bp-play'),cur=-1,front=A,last;
-for(var i=1;i<=9;i++){var im=new Image();im.src='bd/planche-'+i+'.jpg';}
+au.volume=0.8;for(var i=1;i<=9;i++){var im=new Image();im.src='bd/planche-'+i+'.jpg';}
 function idx(s){var k=0;for(var i=0;i<9;i++)if(s>=C[i])k=i;return k}
 function show(k){if(k===cur)return;cur=k;var back=front===A?B:A;back.classList.remove('on','zoom');back.style.setProperty('--d',(C[k+1]-C[k])+'s');
  back.src='bd/planche-'+(k+1)+'.jpg';back.alt='Planche '+(k+1)+' : '+N[k];void back.offsetWidth;back.classList.add('on','zoom');front.classList.remove('on');front=back;
